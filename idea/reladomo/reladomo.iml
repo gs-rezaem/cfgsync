@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-util-classes" />
+    <content url="file://$MODULE_DIR$/../../../reladomo">
+      <sourceFolder url="file://$MODULE_DIR$/../../../reladomo/reladomo/src/main/grammar" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../reladomo/reladomo/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../reladomo/reladomo/src/main/reladomo-xml" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../reladomo/reladomo/src/main/xsd" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../reladomo/reladomo/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../reladomo/reladomo/src/test/reladomo-xml" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../reladomo/reladomo/src/test/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../reladomo/reladomo/src/test-util/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../reladomo/reladomogen/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../reladomo/reladomogen/src/main/templates" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../reladomo/reladomogen/src/main/xsd" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../reladomo/reladomogenutil/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../reladomo/reladomogenutil/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../reladomo/reladomogs/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../reladomo/libboot/src/main/java" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="build-lib" level="project" />
+    <orderEntry type="library" name="compile" level="project" />
+    <orderEntry type="library" scope="TEST" name="test" level="project" />
+    <orderEntry type="module-library" scope="RUNTIME">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/reladomo/target/test-classes-onheap" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" scope="RUNTIME">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/reladomo/target/classes" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" scope="RUNTIME">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/reladomo/target/test-util-classes" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" scope="RUNTIME">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/reladomo/src/test/resources" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>

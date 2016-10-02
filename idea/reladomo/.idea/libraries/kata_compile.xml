@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="kata-compile">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/reladomo-kata/lib/compile" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/reladomo-kata/lib/compile" recursive="false" />
+  </library>
+</component>

@@ -1,0 +1,79 @@
+- git initial setup
+ git config --global user.name "Mohammad Rezaei"
+ git config user.email "mohammad.rezaei@gs.com"
+ git config --global core.editor /c/devel/notepadpp/notepad++.exe
+ 
+ 
+- initial release to github (under goldmansachs)
+
+	- create team/repo on github
+	- clone repo in your projects directory (e.g. c:\projects). git will create the subdirectory automatically.
+		git clone https://github.com/goldmansachs/gs-xsd2bean.git
+	- copy files into that directory
+	- add to git
+		git add .
+	- do any other edits and git commit
+		git commit -m "Initial release of xsd2bean"
+	- to see what would happen if pushed:
+		git push --dry-run
+	- then push
+		git push
+	- now remove/rename that directory
+	
+- fork on github via interface
+
+- clone github
+	git clone https://github.com/gs-rezaem/gs-xsd2bean.git
+- cd into the new directory
+- setup upstream 
+	git remote add upstream https://github.com/goldmansachs/gs-xsd2bean.git
+
+	- typically want to immediately sync after the setup (see sync below)
+- to show the links:
+git remote -v
+
+- syncing local then github fork (do this before local code changes):
+
+git fetch upstream
+(or git fetch --all)
+git rebase upstream/master
+git push
+(if there are unmerged commits on gs-rezaem/repo, use git push --force)
+
+
+- sqaushing local commits: https://git-scm.com/docs/git-rebase#_interactive_mode
+	git rebase -i HEAD~3
+	- opens an editor with top 3 commits. with the word "pick" in front of them
+	- replace "pick" with squash on bottom two rows. close editor.
+- squahing remote side:
+	- squash local, then 
+	git push --force origin master
+
+- tagging. Needs a special push. can't push to upstream. use github ui, or a direct clone
+
+git tag -a xsd2bean-1.5.0 -m "Release 1.5.0"
+git push origin xsd2bean-1.5.0
+
+
+- list tags:
+
+git tag
+
+- look at history:
+git log
+git log --graph --decorate
+git show <commit sha>
+git show <tag name>
+
+--------------
+
+less usual stuff:
+
+- nuking a commit:
+
+git reset -hard HEAD~1
+
+ (~1 means one commit. ~3 would be 3, etc)
+ 
+
+

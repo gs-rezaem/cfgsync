@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list id="d15962bd-ffb1-4cfc-be25-f070fb194cc4" name="Default" comment="" />
+    <list default="true" id="9f410a4c-432d-482e-8f6b-52b5e90848fc" name="multi-update without or" comment="multi-update without or" />
+    <ignored path="reladomo.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/reladomo$TestJavaTypesInPk_testMultiUpdateChangeInt.coverage" NAME="TestJavaTypesInPk.testMultiUpdateChangeInt Coverage Results" MODIFIED="1474579729052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.gs.fw.common.mithra.test.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="C:\projects" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="reladomo" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="reladomo.iml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/reladomo.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Mohammad Rezaei &lt;mohammad.rezaei@gs.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../reladomo" />
+    <option name="WARN_ABOUT_CRLF" value="false" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/reladomo/src/test/java/com/gs/fw/common/mithra/test/mithraTestResource/TestMithraRuntimeConfigVerifier.java" />
+        <option value="$PROJECT_DIR$/build/pom-templates/pom-reladomogen.xml" />
+        <option value="$PROJECT_DIR$/build/pom-templates/pom-reladomo.xml" />
+        <option value="$PROJECT_DIR$/build/pom-templates/pom-reladomo-test-util.xml" />
+        <option value="$PROJECT_DIR$/build/pom-templates/pom-reladomo-gen-util.xml" />
+        <option value="$PROJECT_DIR$/build/sign-release.bat" />
+        <option value="$PROJECT_DIR$/build/reladomolib.spec" />
+        <option value="$PROJECT_DIR$/reladomo-kata/build/buildlib.spec" />
+        <option value="$PROJECT_DIR$/reladomo-kata/build/build.xml" />
+        <option value="$PROJECT_DIR$/reladomo-kata/.gitignore" />
+        <option value="$PROJECT_DIR$/reladomo-kata/build/katalib.spec" />
+        <option value="$PROJECT_DIR$/reladomo-kata/src/test/java/kata/test/AbstractMithraTest.java" />
+        <option value="$PROJECT_DIR$/reladomo-kata/src/main/reladomoxml/Customer.xml" />
+        <option value="$PROJECT_DIR$/reladomo-kata/src/test/java/kata/test/ExercisesAdvancedFinder.java" />
+        <option value="$PROJECT_DIR$/reladomo-kata/src/test/java/kata/test/ExercisesBasicFinder.java" />
+        <option value="$PROJECT_DIR$/reladomogen/src/main/templates/readonly/Finder.jsp" />
+        <option value="$PROJECT_DIR$/reladomo/target/test-generated-offheap-src/com/gs/fw/common/mithra/test/domain/OrderFinder.java" />
+        <option value="$PROJECT_DIR$/reladomo/src/test/java/com/gs/fw/common/mithra/test/TestFindByPrimaryKey.java" />
+        <option value="$PROJECT_DIR$/build/reladomo-config.xml" />
+        <option value="$PROJECT_DIR$/reladomo/src/test/resources/MithraConfigFullCache.xml" />
+        <option value="$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/database/MithraAbstractDatabaseObject.java" />
+        <option value="$PROJECT_DIR$/reladomo-kata/src/main/java/kata/domain/AccountBalance.java" />
+        <option value="$PROJECT_DIR$/build/build.xml" />
+        <option value="$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/MithraObjectPortal.java" />
+        <option value="$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/portal/UninitializedPortal.java" />
+        <option value="$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/portal/DatedUpdateDataChooser.java" />
+        <option value="$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/portal/MithraAbstractObjectPortal.java" />
+        <option value="$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/transaction/UpdateOperation.java" />
+        <option value="$PROJECT_DIR$/reladomo/src/test/resources/log4jWarn.config" />
+        <option value="$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/transaction/MultiUpdateOperation.java" />
+        <option value="$PROJECT_DIR$/reladomo.iml" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="10" />
+    <option name="width" value="1902" />
+    <option name="height" value="1020" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reladomo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reladomo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reladomo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../reladomo" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.gs.fw" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\reladomo\reladomo-kata\build" />
+      <recent name="C:\projects\reladomo\build\pom-templates" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.Partial Cache Suite">
+    <configuration default="false" name="TestJavaTypesInPk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.gs.fw.common.mithra.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="reladomo" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.gs.fw.common.mithra.test" />
+      <option name="MAIN_CLASS_NAME" value="com.gs.fw.common.mithra.test.TestJavaTypesInPk" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-XX:MaxPermSize=256m -Dlog4j.configuration=log4jWarn.config -Dmithra.xml.config=MithraConfigPartialCache.xml" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestJavaTypesInPk.testMultiUpdateChangeInt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.gs.fw.common.mithra.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="reladomo" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.gs.fw.common.mithra.test" />
+      <option name="MAIN_CLASS_NAME" value="com.gs.fw.common.mithra.test.TestJavaTypesInPk" />
+      <option name="METHOD_NAME" value="testMultiUpdateChangeInt" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-XX:MaxPermSize=256m -Dlog4j.configuration=log4jWarn.config -Dmithra.xml.config=MithraConfigPartialCache.xml" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestJavaTypesInPk.testMultiUpdateChangeLongChar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.gs.fw.common.mithra.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="reladomo" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.gs.fw.common.mithra.test" />
+      <option name="MAIN_CLASS_NAME" value="com.gs.fw.common.mithra.test.TestJavaTypesInPk" />
+      <option name="METHOD_NAME" value="testMultiUpdateChangeLongChar" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-XX:MaxPermSize=256m -Dlog4j.configuration=log4jWarn.config -Dmithra.xml.config=MithraConfigPartialCache.xml" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestCopyTransactionalObjectAttributes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.gs.fw.common.mithra.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="reladomo" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.gs.fw.common.mithra.test" />
+      <option name="MAIN_CLASS_NAME" value="com.gs.fw.common.mithra.test.TestCopyTransactionalObjectAttributes" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-XX:MaxPermSize=256m -Dlog4j.configuration=log4jWarn.config -Dmithra.xml.config=MithraConfigPartialCache.xml" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestDatedBitemporal.testMultiUpdateIncrementTwice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.gs.fw.common.mithra.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="reladomo" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.gs.fw.common.mithra.test" />
+      <option name="MAIN_CLASS_NAME" value="com.gs.fw.common.mithra.test.TestDatedBitemporal" />
+      <option name="METHOD_NAME" value="testMultiUpdateIncrementTwice" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-XX:MaxPermSize=256m -Dlog4j.configuration=log4jWarn.config -Dmithra.xml.config=MithraConfigPartialCache.xml" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="BatchConfigurationType" factoryName="Batch">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-XX:MaxPermSize=256m -Dlog4j.configuration=log4jWarn.config -Dmithra.xml.config=MithraConfigPartialCache.xml" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method>
+        <option name="Make" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="reladomo" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="Partial Cache Suite" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="reladomo" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.gs.fw.common.mithra.test" />
+      <option name="MAIN_CLASS_NAME" value="com.gs.fw.common.mithra.test.MithraTestSuite" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-XX:MaxPermSize=256m -Dlog4j.configuration=log4jWarn.config -Dmithra.xml.config=MithraConfigPartialCache.xml" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.Partial Cache Suite" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.TestJavaTypesInPk" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TestJavaTypesInPk.testMultiUpdateChangeInt" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TestJavaTypesInPk.testMultiUpdateChangeLongChar" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TestCopyTransactionalObjectAttributes" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.TestDatedBitemporal.testMultiUpdateIncrementTwice" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TestDatedBitemporal.testMultiUpdateIncrementTwice" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TestCopyTransactionalObjectAttributes" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TestJavaTypesInPk.testMultiUpdateChangeLongChar" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TestJavaTypesInPk" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.TestJavaTypesInPk.testMultiUpdateChangeInt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d15962bd-ffb1-4cfc-be25-f070fb194cc4" name="Default" comment="" />
+      <changelist id="9f410a4c-432d-482e-8f6b-52b5e90848fc" name="multi-in without or" comment="" />
+      <created>1473730663937</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1473730663937</updated>
+    </task>
+    <task id="LOCAL-00001" summary="prepare ossrh release">
+      <created>1473799029148</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1473799029148</updated>
+    </task>
+    <task id="LOCAL-00002" summary="prepare ossrh release">
+      <created>1473799406191</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1473799406191</updated>
+    </task>
+    <task id="LOCAL-00003" summary="kata build">
+      <created>1474296192624</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1474296192624</updated>
+    </task>
+    <task id="LOCAL-00004" summary="kata build">
+      <created>1474299434787</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1474299434787</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fix findBy and none-cache">
+      <created>1474477573783</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1474477573783</updated>
+    </task>
+    <task id="LOCAL-00006" summary="multi-update without or">
+      <created>1474592192227</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1474592192227</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix findBy and none-cache&#10;">
+      <created>1474646639084</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1474646639084</updated>
+    </task>
+    <task id="LOCAL-00008" summary="multi-update without or&#10;">
+      <created>1474646659019</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1474646659019</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Partial_Cache_Suite - 2016.09.22 at 19h 57m 10s.xml">
+      <configuration name="Partial Cache Suite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Partial_Cache_Suite - 2016.09.22 at 19h 58m 29s.xml">
+      <configuration name="Partial Cache Suite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Partial_Cache_Suite - 2016.09.22 at 20h 06m 57s.xml">
+      <configuration name="Partial Cache Suite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Partial_Cache_Suite - 2016.09.23 at 12h 14m 33s.xml">
+      <configuration name="Partial Cache Suite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCopyTransactionalObjectAttributes - 2016.09.22 at 19h 32m 37s.xml">
+      <configuration name="TestCopyTransactionalObjectAttributes" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCopyTransactionalObjectAttributes - 2016.09.22 at 19h 33m 46s.xml">
+      <configuration name="TestCopyTransactionalObjectAttributes" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestDatedBitemporal_testMultiUpdateIncrementTwice - 2016.09.22 at 19h 46m 46s.xml">
+      <configuration name="TestDatedBitemporal.testMultiUpdateIncrementTwice" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestDatedBitemporal_testMultiUpdateIncrementTwice - 2016.09.22 at 19h 47m 19s.xml">
+      <configuration name="TestDatedBitemporal.testMultiUpdateIncrementTwice" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestDatedBitemporal_testMultiUpdateIncrementTwice - 2016.09.22 at 19h 53m 43s.xml">
+      <configuration name="TestDatedBitemporal.testMultiUpdateIncrementTwice" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestDatedBitemporal_testMultiUpdateIncrementTwice - 2016.09.22 at 19h 55m 18s.xml">
+      <configuration name="TestDatedBitemporal.testMultiUpdateIncrementTwice" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="10" width="1902" height="1020" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.58419245" sideWeight="0.50215286" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4631579" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24890591" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45964912" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299025" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24972914" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5953757" sideWeight="0.49784714" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="prepare ossrh release" />
+    <MESSAGE value="kata build" />
+    <MESSAGE value="fix findBy and none-cache" />
+    <MESSAGE value="multi-update without or" />
+    <MESSAGE value="fix findBy and none-cache&#10;" />
+    <MESSAGE value="multi-update without or&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="multi-update without or&#10;" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/reladomo/src/test/java/com/gs/fw/common/mithra/test/TestJavaTypesInPk.java</url>
+          <line>136</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/reladomo/src/test/java/com/gs/fw/common/mithra/test/TestJavaTypesInPk.java</url>
+          <line>139</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/transaction/AbstractTxOperations.java</url>
+          <line>164</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/transaction/AbstractTxOperations.java</url>
+          <line>187</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="9" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/reladomo-kata/src/test/java/kata/test/ExercisesAdvancedFinder.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo-kata/src/test/resources/testdata/data_Person.txt" />
+    <entry file="file://$PROJECT_DIR$/reladomo-kata/target/generated-src/kata/domain/PersonAbstract.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo-kata/src/main/java/kata/domain/Person.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo-kata/src/test/java/kata/test/ExercisesBasicFinder.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo-kata/src/main/reladomoxml/Person.xml" />
+    <entry file="file://$PROJECT_DIR$/reladomogen/src/main/templates/datedreadonly/Finder.jsp" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/portal/MithraTransactionalPortal.java" />
+    <entry file="file://$PROJECT_DIR$/reladomogen/src/main/templates/readonly/Finder.jsp" />
+    <entry file="file://$PROJECT_DIR$/reladomo/target/test-generated-offheap-src/com/gs/fw/common/mithra/test/domain/OrderFinder.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/test/resources/MithraConfigPartialCache.xml" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/test/resources/testdata/mithraTestDataDefaultSource.txt" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/test/java/com/gs/fw/common/mithra/test/TestFindByPrimaryKey.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/test/java/com/gs/fw/common/mithra/test/MithraTestAbstract.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/finder/MultiInOperation.java" />
+    <entry file="file://$PROJECT_DIR$/build/reladomo-config.xml" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/remote/RemoteMultiBatchUpdateResult.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/databasetype/Udb82DatabaseType.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/test/resources/MithraConfigFullCache.xml" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/MithraDataObject.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/target/test-generated-offheap-src/com/gs/fw/common/mithra/test/domain/ParaBalanceFinder.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/SingleColumnIntegerAttribute.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo-kata/src/main/java/kata/domain/AccountBalance.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/test/java/com/gs/fw/common/mithra/test/MithraTestSuite.java" />
+    <entry file="file://$PROJECT_DIR$/build/build.xml" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/database/MithraAbstractDatabaseObject.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/target/test-generated-offheap-src/com/gs/fw/common/mithra/test/domain/AllJavaTypesInPkListAbstract.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/list/DelegatingList.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/list/AbstractOperationBasedList.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/transaction/MithraRootTransaction.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/transaction/TxOperationsForIndependentClass.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/test/java/com/gs/fw/common/mithra/test/TestJavaTypesInPk.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/remote/ExternalizableBatchUpdateOperation.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/behavior/AbstractTemporalContainerWithBusinessDate.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/behavior/TransactionalBehavior.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/MithraObjectPortal.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/remote/RemoteMithraObjectPersister.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/portal/UpdateDataChooser.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/portal/DatedUpdateDataChooser.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/portal/MithraAbstractObjectPortal.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/transaction/UpdateOperation.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/portal/UninitializedPortal.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/test/java/com/gs/fw/common/mithra/test/TestDatedBitemporal.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/update/AttributeUpdateWrapper.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/transaction/AbstractTxOperations.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/transaction/TransactionOperation.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/update/DoubleIncrementUpdateWrapper.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/test/resources/log4jWarn.config" />
+    <entry file="file://$PROJECT_DIR$/h" />
+    <entry file="file://$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/transaction/MultiUpdateOperation.java" />
+    <entry file="file://$PROJECT_DIR$/reladomo.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.6.0_45</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>reladomo</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.58850574" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.6.0_45</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>kata-test</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
