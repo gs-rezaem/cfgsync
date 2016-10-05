@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/reladomo.iml" filepath="$PROJECT_DIR$/reladomo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/reladomo-kata/reladomo-kata.iml" filepath="$PROJECT_DIR$/reladomo-kata/reladomo-kata.iml" />
     </modules>
   </component>
 </project>
