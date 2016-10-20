@@ -77,3 +77,9 @@ git reset -hard HEAD~1
  
 
 
+-------------
+proxy settings:
+git config --global http.proxy http://proxyuser:proxypwd@proxy.server.com:8080
+git config --global --get http.proxy
+
+git config --global --unset http.proxy
