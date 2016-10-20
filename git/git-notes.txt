@@ -83,3 +83,6 @@ git config --global http.proxy http://proxyuser:proxypwd@proxy.server.com:8080
 git config --global --get http.proxy
 
 git config --global --unset http.proxy
+
+ssl certificate:
+git config --global http.sslCAInfo /whatever/cert.pem
