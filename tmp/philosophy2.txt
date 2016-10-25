@@ -1,0 +1,72 @@
+- code must be generated properly
+	- bad code generation is worse than bad
+- Java's write once, run anywhere pormize has been a great boon for code sharing
+	- anything that threatens that is an anti-pattern
+	- everything in java.lang must be usable by any code.
+		- this includes java.lang.Thread, java.lang.ThreadLocal and all methods on java.lang.Class
+			- environments that do no provide a correct implementation of java, and java.lang specifically, are not supported.
+- A database is not a public API
+	- it's private storage
+	- all access must be from a singular code base
+- views are a temporay last resort.
+	- can't write
+	- can't cache
+	- can't reason about identity
+	- implementations are typically problematic
+- We will not comprimise on primary keys.
+- Database magic is an anti-pattern
+	- identity generation
+	- triggers (especially when they modify)
+	- db2 bitemporal
+
+- stored procs:
+	- understanding how an existing piece of code works requires intimate knowledge of both java and sql
+	- in a mixed sp/app environment, it's virtually impossible to come up with guidelines regarding where a particular
+		piece of business logic should be implemented.
+	- After converting hundreds of stored procs, we've concluded that the equivalent Java code is faster for 2 reasons:
+		- In java, it's much easier to use better algorithms. Better collections (maps, trees, sets, bags, etc) and better
+			language constructs (e.g. polymorphism) help tremendously with this.
+		- A stored proc has a very limited number of params. This makes it impossible to reduce IO by batching. Batched,
+			multi-threaded java code can be an order of magnitude faster.
+	- A well written piece of code in Java communicates its intent. A well written piece of SQL typically doesn't.
+	- SQL is a poor programming environment:
+		- procedural
+		- violates DRY, especially when it comes to relationship navigation
+		- it promotes a "data stirfry" mentality. this further breaks domain based encapsulation.
+		- it's very far from modern programming environments:
+			- requires a live db to develop.
+			- changes to sp's make it hard to share the db.
+			- no debuggers in the modern sense: breakpoints, watches, etc.
+			- not easily testable
+			- it's difficult to perform routine tasks: loops, conditionals, etc
+			- it's not easily modularizable. This is provable by simply looking at the total number of third party
+				libraries avaialble for Java and comparing that to SQL. This further violates DRY.
+			- Modern OO facilities (refactoring, usage analysis, code coverage, dependency analysis, etc) are missing.
+			- lack of basic exception handling (try/catch/finally)
+		- no notion of compiling/strong typing. Schema modifications often result in failed sp's at runtime.
+		- Writing sql is difficult and error prone. Writing java to interface with the sp doubly so.
+		- compared to a declared mapping layer (ORM), code that invokes sp's is very tightly bound to the database. 
+			this makes modern agile approaches much harder with sp's.
+		- not even a semi-standard. vendor lock-in is guaranteed.
+		- applications that require highly dynamic, user driven queries are nearly impossible to code with stored procs.
+
+- "In truth, this basic approach–to slave one model into the terms and approach of the other–has been the traditional answer to the impedance mismatch, effectively “solving” the problem by ignoring one half of it."
+
+- inheritance doesn't map well
+
+- The Schema-Ownership Conflict
+	- the database schema itself is not under the direct control of developers, but instead is owned by another group 
+
+- The Dual-Schema Problem
+	- refactoring has to happen simultaneously
+- Entity Identity Issues
+	- if two separate user sessions interact with the same relation in storage, the relational database system’s concurrency systems kick in and ensure some form of concurrent access, typically via the transactional metaphor (ACID). If an O/R system retrieves a relation out of storage (essentially forming a “view” over the data), we now have a second source of data identity, one in the database (protected by the aforementioned transactional scheme), and one in the in-memory object representation of that data, which has no consistent transactional support aside from that built into the language
+
+	- what does this say about transactional integrity if the application code believes the write to have occurred when in fact it hasn’t?
+	
+- The Data Retrieval Mechansim Concern
+	- query language not expressive
+
+- The Partial-Object Problem and the Load-Time Paradox
+	- For most O/R layers, this means that objects and/or fields of objects must be retrieved in a lazy-loaded manner, obtaining the field data on demand, because retrieving all of the fields of all of the Person objects/relations would “clearly” be a huge waste of bandwidth for this particular scenario. 
+

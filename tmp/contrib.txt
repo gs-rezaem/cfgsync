@@ -1,0 +1,79 @@
+scenario 1: Developer D working for Corp C (not GS). Copyright is Corp C, author is Developer D or other Corp C employees.
+
+Dev D must certify:
+1) Corp C is the copyright owner
+2) Dev D is authorized by Corp C to contribute under BSD
+
+First pull request:
+A) dco/corp-c-dev-d-dco
+Reladomo Developer's Certificate of Origin and Copyright Holder:
+
+1) The work is copyright Corp C. 
+2) I, Dev D, certify that I am authorized by Corp C to contribute this work under the BSD license.
+3) I understand and agree all contribution including all
+            personal information I submit with it is
+            maintained indefinitely and may be redistributed consistent with
+            the open source license(s) involved.
+            
+B)
+BSD license with Corp C in the text.
+
+C)
+NOTICE.txt is modified to mention Corp C, under BSD
+
+D) commit message:
+signed-off-by: Dev D
+
+Subsequent pull requests:
+1) the file modified must contain copyright notice:
+	// Modifications Copyright Corp C, under BSD license
+2) if a new file, the full license and copyright notice must appear in the file.
+3) the commit message must contain:
+covered by: corp-c-dev-d-dco
+
+------------------------
+scenario 2: Developer D under no emplyment agreement, or not related to current employer. Copyright is Dev D, author is Dev D
+
+Dev D must certify:
+1) Dev D is original author
+2) Dev D is copyright holder
+3) Dev D is agreed to contributing under BSD
+3) I understand and agree all contribution including all
+            personal information I submit with it is
+            maintained indefinitely and may be redistributed consistent with
+            the open source license(s) involved.
+            
+NOTICE.txt is modified to mention Dev D.
+
+First pull request:
+A) dco/dev-d-dco
+Reladomo Developer's Certificate of Origin and Copyright Holder:
+
+1) I, Dev D, certify that I am the original author of the contributed work. 
+2) I certify that I'm under no employment or other agreement that would assign the copyright of this work to another person or entity.  
+
+B)
+BSD license with Dev D in the text.
+
+C)
+NOTICE.txt is modified to mention Dev D, under BSD
+
+
+Subsequent pull requests:
+1) the file modified must contain copyright notice:
+	// Modifications Copyright Dev D, under BSD license
+2) if a new file, the full license and copyright notice must appear in the file.
+3) the commit message must contain:
+covered by: dev-d-dco
+
+------------------------
+scenario 3: Starting from another existing OSS code fragment, copyright OSS project P, under license L, 
+	and contributing it with changes.
+
+scenario 1/2 must already be in effect. License L must be compatible with Apache 2.0.
+The pull request will have:
+1) The license of the original Project P is added to licenses directory
+2) A change to NOTICE.txt mentioning Project P, License L.
+3) changes to the code according to scenario 1/2 rules.
+
+The pull request must contain two git commits: one with the original code, unmodified, second with the modifications on top.

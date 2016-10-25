@@ -1,0 +1,20 @@
+JPA:
+	- need to create a special class for composite PK
+	- must code the bean by hand and add annotations
+	- Procedural (C-library like) calls with "EntityManager"
+		- disallows polymorphism
+	- no transaction retries
+	- requires calling flush on EntityManager in a transaction
+	- requires a string-based query language
+		- string-based query languages are an anti-pattern, not a feature
+	- criteria api is not type safe
+		- very verbose
+	- "persistence context" is an anti-pattern that leads to many bugs
+		- LazyInitializationException
+	- no parameterized relationships
+	- no timezone handling
+	- no sharding
+	- no temporal data
+	- no junit integration
+	- no uniquing
+	- no object cache
