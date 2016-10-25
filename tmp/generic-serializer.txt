@@ -20,16 +20,20 @@
 		- serialize(reladomoObject, List<Navigation)
 		- is given a list of navigations to follow
 			- this will come from the deep fetches on a list automatically
+		- can exclude attributes
+		- can use a named configuration
 		- outputs links for the rest of the navigations
-		- writeStart
-		- writeInt(name, value), writeLong, ...
-		- writeNull(name)
-		- writeList
-		- writeLink
-		- writeObject
-		- writeEnd
-		- names starting with _ are reladomo internal
-			- _reladomoState: 1 (in-memory), 4 (detached)
+		abstract methods:
+			- always passes in the original object
+			- writeStart(reladomoObject)
+			- writeInt(reladomoObject, name, value), writeLong, ...
+			- writeNull(reladomoObject, name)
+			- writeList
+			- writeLink(reladomoObject, linkName, linkAttributes, linkParams)
+			- writeObject(reladomoObject, attrName, objectToWrite)
+			- writeEnd(reladomoObject)
+			- names starting with _ are reladomo internal
+				- _reladomoState: 1 (in-memory), 4 (detached)
 		
 gson example:
 	serialize(reladomoObject, type, context)
@@ -39,10 +43,10 @@ gson example:
 		return j;
 	}
 
-jackson example:
+jackson example: org.codehaus.jackson.map.JsonSerializer
 	serialize(reladomoObject, JsonGenerator jgen, SerializerProvider provider) 
 	{
 		new JacksonReladomoSerializationContext(jgen, provider).serialize(reladomoObject);
 	}
-	
+
 xml example:
