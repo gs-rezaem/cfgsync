@@ -5,7 +5,7 @@ Dev D must certify:
 2) Dev D is authorized by Corp C to contribute under Apache
 
 First pull request:
-A) dco/corp-c-dev-d-dco
+A) dco/dev-d-corp-c.dco
 Reladomo Developer's Certificate of Origin and Copyright Holder:
 
 1) The work is copyright Corp C. 
@@ -26,7 +26,7 @@ Subsequent pull requests:
 	// Modifications Copyright Corp C, under Apache license
 2) if a new file, the full license and copyright notice must appear in the file.
 3) the commit message must contain:
-covered by: dco/dev-d-corp-c.dco
+covered by: dev-d-corp-c.dco
 
 ------------------------
 scenario 2: Developer D under no emplyment agreement, or not related to current employer. Copyright is Dev D, author is Dev D
@@ -43,7 +43,7 @@ Dev D must certify:
 NOTICE.txt is modified to mention Dev D.
 
 First pull request:
-A) dco/dev-d-dco
+A) dco/dev-d.dco
 Reladomo Developer's Certificate of Origin and Copyright Holder:
 
 1) I, Dev D, certify that I am the original author of the contributed work. 
@@ -58,7 +58,7 @@ Subsequent pull requests:
 	// Modifications Copyright Dev D, under Apache license
 2) if a new file, the full license and copyright notice must appear in the file.
 3) the commit message must contain:
-covered by: dco/dev-d.dco
+covered by: dev-d.dco
 
 ------------------------
 scenario 3: Starting from another existing OSS code fragment, copyright OSS project P, under license L, 

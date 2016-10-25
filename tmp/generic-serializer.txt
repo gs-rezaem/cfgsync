@@ -23,7 +23,7 @@
 		- can exclude attributes
 		- can use a named configuration
 		- outputs links for the rest of the navigations
-		abstract methods:
+		- abstract methods:
 			- always passes in the original object
 			- writeStart(reladomoObject)
 			- writeInt(reladomoObject, name, value), writeLong, ...
