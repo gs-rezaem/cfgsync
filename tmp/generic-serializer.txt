@@ -1,0 +1,48 @@
+- must handle persistent, detached and in-memory cases
+- The act of serializing a persistent object is equivalent to detach, then serialize
+	- the effect of this is make the objects coming back to be in a detached state
+- detached objects should come back as detached
+- in-memory objects should come back as in-memory
+- read-only objects are either persisted, or in-memory
+	- deserialization of persisted read-only objects retrieves the unique instance.
+		- try to IO optimize this on a list deserialization
+
+- generic serializer:
+	- usually a framework, like gson, will call something like:
+			serialize(reladomoObject, serializationContext)
+		on a registered implementation of the serializer
+	- to delegate, let's wrap serializationContext into a ReladomoSerializationContext
+	- must register serializers for both reladomo objects and lists
+	- exception handling?
+	
+	ReladomoSerializationContext:
+		- serialize(reladomoObject)
+		- serialize(reladomoObject, List<Navigation)
+		- is given a list of navigations to follow
+			- this will come from the deep fetches on a list automatically
+		- outputs links for the rest of the navigations
+		- writeStart
+		- writeInt(name, value), writeLong, ...
+		- writeNull(name)
+		- writeList
+		- writeLink
+		- writeObject
+		- writeEnd
+		- names starting with _ are reladomo internal
+			- _reladomoState: 1 (in-memory), 4 (detached)
+		
+gson example:
+	serialize(reladomoObject, type, context)
+	{
+		j = new JsonObject()
+		new GsonReladomoSerializationContext(j, context).serialize(reladomoObject);
+		return j;
+	}
+
+jackson example:
+	serialize(reladomoObject, JsonGenerator jgen, SerializerProvider provider) 
+	{
+		new JacksonReladomoSerializationContext(jgen, provider).serialize(reladomoObject);
+	}
+	
+xml example:

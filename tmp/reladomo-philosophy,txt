@@ -1,0 +1,49 @@
+- not right or wrong, but more like good or bad.
+	- even better to think in terms of good-fit, bad-fit
+
+
+Reladomo core values/philosophy:
+	- it's critical to know what you don't want
+		- stored procedures are an anti-pattern
+			- not testable
+			- not vendor neutral; not even a semi-standard
+			- does not fit well with a domain based OO paradigm: business logic leaks into the SP
+			- cannot accept batch data from the application: causes bad IO patterns (ping pong) for non-trivial use cases.
+		- DAO is an anti-pattern
+			- queries naturally belong to a specific code site, not 
+				- code sharing/abstraction for queries should follow normal OO practice, not C library practice
+			- 1 method per query doesn't scale; leads to re-using unfit queries
+			- does not properly address object identity
+		- Repository/Manager is an anti-pattern
+			- C library not DomainOO
+		- Anemic domain is an anti-pattern
+			- Business logic must reside in the domain
+		- Services that act as remote procedures are an anti-pattern
+			- Services that don't delegate to the domain are an anti-pattern
+		- ETL between the physical schema and the domain is an anti-pattern
+			- makes writing a near impossibility
+			- makes caching a near impossibility
+			- makes uniquing a near impossibility
+		- string based query language is an anti-pattern
+			- makes refactoring nearly impossible
+			- makes find-usages nearly impossible
+			- makes abstraction nearly impossible
+		- pluggable cache is an anti-pattern -- a cache is not a map
+		- result sets are not domain objects. Reladomo does not faciliate result-set based programming.
+	- an ORM must solve the set/object impedance mismatch
+		- deepFetch and the List objects in Reladomo do that to a great extent
+	- testability is key -- see Testing Philosophy
+		- tests should allow reasoning about IO
+	- object identity must have a sensible contract
+	- ACID is king
+	- IO latency reduction is important; bandwidth is not critical on a per-row basis
+	- vendor neutrality
+	- schemaless leads to unreadable data in the long run
+	- temporal persistence must be handled at the framework level, not by the application
+		- temporal persistence implementation needs new code and data structures
+		- it cannot be composed on top of non-temporal persistence code and data structures
+	- the "surface area" provided by the Reladomo object/finder api is large
+		- attempts at wrapping these will lead to eventual failure
+		- Reladomo objects are the application/domain objects
+			- hiding these objects (via wrappers, copies, dto's, etc is an anti-pattern)
+		- Reladomo finder API are the correct way to find objects.
