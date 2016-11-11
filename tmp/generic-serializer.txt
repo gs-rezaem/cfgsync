@@ -32,8 +32,8 @@
 			- writeLink(reladomoObject, linkName, linkAttributes, linkParams)
 			- writeObject(reladomoObject, attrName, objectToWrite)
 			- writeEnd(reladomoObject)
-			- names starting with _ are reladomo internal
-				- _reladomoState: 1 (in-memory), 4 (detached)
+			- names starting with _rdo are reladomo internal
+				- _rdoState: 1 (in-memory), 4 (detached)
 		
 gson example:
 	serialize(reladomoObject, type, context)
