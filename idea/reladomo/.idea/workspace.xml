@@ -29,16 +29,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="MithraMultiVmTestSuite.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/MithraMultiVmTestSuite.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="45" column="48" selection-start-line="45" selection-start-column="48" selection-end-line="45" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TestSerializationAcrossTimezones.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/TestSerializationAcrossTimezones.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -93,11 +83,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReladomoSerializationContext.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ReladomoSerializationContext.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/ReladomoSerializationContext.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="735">
               <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PersistedState.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/behavior/state/PersistedState.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PersistenceState.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/behavior/state/PersistenceState.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -122,16 +132,6 @@
                 <element signature="e#36038#36039#0" expanded="true" />
                 <element signature="e#36105#36106#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestEmbeddedValueObjectsRemote.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/evo/TestEmbeddedValueObjectsRemote.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -162,7 +162,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/build/reladomo-config.xml" />
         <option value="$PROJECT_DIR$/reladomo/src/test/resources/MithraConfigFullCache.xml" />
         <option value="$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/database/MithraAbstractDatabaseObject.java" />
         <option value="$PROJECT_DIR$/reladomo-kata/src/main/java/kata/domain/AccountBalance.java" />
@@ -213,6 +212,7 @@
         <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/TestApplicationNotification.java" />
         <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/finder/NotExistsOperation.java" />
         <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/ReladomoSerializationContext.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/behavior/state/PersistedState.java" />
       </list>
     </option>
   </component>
@@ -1218,22 +1218,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/SerializationConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/TestAdhocDeepFetch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="58" column="35" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/finder/MappedOperation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -1680,6 +1664,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
           <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/behavior/state/PersistedState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/behavior/state/PersistenceState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
           <folding />
         </state>
       </provider>

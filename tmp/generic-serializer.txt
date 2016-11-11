@@ -6,6 +6,10 @@
 - read-only objects are either persisted, or in-memory
 	- deserialization of persisted read-only objects retrieves the unique instance.
 		- try to IO optimize this on a list deserialization
+- two choices for navigation following:
+	- tree based. just like reladomo deep fetches
+	- class based. with max depth.
+		- for each config, each class specifies what to navigate.
 
 - generic serializer:
 	- usually a framework, like gson, will call something like:
@@ -33,7 +37,8 @@
 			- writeObject(reladomoObject, attrName, objectToWrite)
 			- writeEnd(reladomoObject)
 			- names starting with _rdo are reladomo internal
-				- _rdoState: 1 (in-memory), 4 (detached)
+				- _rdoState: 1 (in-memory), 4 (detached), 100 (read-only)
+				- _rdoClass: java class name
 		
 gson example:
 	serialize(reladomoObject, type, context)
