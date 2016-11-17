@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list id="d15962bd-ffb1-4cfc-be25-f070fb194cc4" name="Default" comment="" />
-    <list default="true" id="9f410a4c-432d-482e-8f6b-52b5e90848fc" name="multi-update without or" comment="implement equalitySubstituteWithMultiEquality in ChainedMapper">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/ReladomoSerializationContext.java" afterPath="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/ReladomoSerializationContext.java" />
-    </list>
+    <list default="true" id="9f410a4c-432d-482e-8f6b-52b5e90848fc" name="multi-update without or" comment="wip" />
     <list id="a1533562-3bc2-4015-9d76-54348e23eb24" name="don't commit" comment="" />
     <ignored path="reladomo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,10 +40,10 @@
       <file leaf-file-name="RemoteTestSuite.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/RemoteTestSuite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
+            <state relative-caret-position="285">
+              <caret line="39" column="60" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
               <folding>
-                <marker date="1478886972000" expanded="true" signature="1861:2103" ph="//..." />
+                <marker date="1478903657572" expanded="true" signature="1863:2105" ph="//..." />
               </folding>
             </state>
           </provider>
@@ -64,10 +62,10 @@
       <file leaf-file-name="ChainedMapper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/finder/ChainedMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="761">
-              <caret line="378" column="5" selection-start-line="378" selection-start-column="5" selection-end-line="378" selection-end-column="5" />
+            <state relative-caret-position="926">
+              <caret line="389" column="5" selection-start-line="389" selection-start-column="5" selection-end-line="389" selection-end-column="5" />
               <folding>
-                <element signature="e#0#19770#0" expanded="true" />
+                <element signature="e#0#20203#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,10 +81,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReladomoSerializationContext.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ReladomoSerializationContext.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/ReladomoSerializationContext.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
+            <state relative-caret-position="870">
               <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
               <folding />
             </state>
@@ -103,7 +101,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PersistenceState.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PersistenceState.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/behavior/state/PersistenceState.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
@@ -1051,7 +1049,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478205782984</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="wip">
+      <created>1478903575500</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1478903575500</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1180,10 +1185,10 @@
     <MESSAGE value="add javadocs and no-shard test for MultiThreadedBatchProcessor" />
     <MESSAGE value="fix # of deep fetch threads" />
     <MESSAGE value="release 16.1.0" />
-    <MESSAGE value="wip" />
     <MESSAGE value="remote tests fix and cleanup" />
     <MESSAGE value="implement equalitySubstituteWithMultiEquality in ChainedMapper" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement equalitySubstituteWithMultiEquality in ChainedMapper" />
+    <MESSAGE value="wip" />
+    <option name="LAST_COMMIT_MESSAGE" value="wip" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1599,10 +1604,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/RemoteTestSuite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
+        <state relative-caret-position="285">
+          <caret line="39" column="60" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
           <folding>
-            <marker date="1478886972000" expanded="true" signature="1861:2103" ph="//..." />
+            <marker date="1478903657572" expanded="true" signature="1863:2105" ph="//..." />
           </folding>
         </state>
       </provider>
@@ -1625,10 +1630,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/finder/ChainedMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="761">
-          <caret line="378" column="5" selection-start-line="378" selection-start-column="5" selection-end-line="378" selection-end-column="5" />
+        <state relative-caret-position="926">
+          <caret line="389" column="5" selection-start-line="389" selection-start-column="5" selection-end-line="389" selection-end-column="5" />
           <folding>
-            <element signature="e#0#19770#0" expanded="true" />
+            <element signature="e#0#20203#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1660,14 +1665,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/ReladomoSerializationContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/behavior/state/PersistedState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1680,6 +1677,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/ReladomoSerializationContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
           <folding />
         </state>
       </provider>

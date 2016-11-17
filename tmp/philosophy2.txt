@@ -44,6 +44,7 @@
 			- Modern OO facilities (refactoring, usage analysis, code coverage, dependency analysis, etc) are missing.
 			- lack of basic exception handling (try/catch/finally)
 		- no notion of compiling/strong typing. Schema modifications often result in failed sp's at runtime.
+		- how do you make a REST call from an sp?
 		- Writing sql is difficult and error prone. Writing java to interface with the sp doubly so.
 		- compared to a declared mapping layer (ORM), code that invokes sp's is very tightly bound to the database. 
 			this makes modern agile approaches much harder with sp's.

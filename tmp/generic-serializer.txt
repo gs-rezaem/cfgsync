@@ -1,4 +1,4 @@
-- must handle persistent, detached and in-memory cases
+- must handle persistent, detached, read-only and in-memory cases
 - The act of serializing a persistent object is equivalent to detach, then serialize
 	- the effect of this is make the objects coming back to be in a detached state
 - detached objects should come back as detached
@@ -7,9 +7,20 @@
 	- deserialization of persisted read-only objects retrieves the unique instance.
 		- try to IO optimize this on a list deserialization
 - two choices for navigation following:
-	- tree based. just like reladomo deep fetches
+	- navigation based, rooted at one point. just like reladomo deep fetches
+		- a little harder to reuse/abstract out, but quite possible if the code is just like deep fetch.
 	- class based. with max depth.
 		- for each config, each class specifies what to navigate.
+		- while this is interesting, it's not consistent with the existing deepFetch semantics
+			- supporting this could mean supporting a different kind of deepFetch
+				- only seems interesting for navigations that have loops
+
+- annotations:
+	- used for methods declared on the concrete classes
+	- only support parameterless methods
+	- @ReladomoSerializable
+	- @ReladomoSerializable("contextName")
+	- can be excluded (like attributes) from a particular path in a config
 
 - generic serializer:
 	- usually a framework, like gson, will call something like:
