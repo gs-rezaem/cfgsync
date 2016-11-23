@@ -27,50 +27,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="TestSerializationAcrossTimezones.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/TestSerializationAcrossTimezones.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RemoteTestSuite.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/RemoteTestSuite.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="39" column="60" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
-              <folding>
-                <marker date="1478903657572" expanded="true" signature="1863:2105" ph="//..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestApplicationNotification.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/TestApplicationNotification.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
-              <caret line="1077" column="0" selection-start-line="1077" selection-start-column="0" selection-end-line="1077" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChainedMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/finder/ChainedMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="926">
-              <caret line="389" column="5" selection-start-line="389" selection-start-column="5" selection-end-line="389" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#20203#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MapperStack.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/finder/MapperStack.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -81,11 +37,54 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReladomoSerializationContext.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ReladomoSerializationContext.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/ReladomoSerializationContext.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
+            <state relative-caret-position="480">
+              <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RelationshipType.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomogen/src/main/java/com/gs/fw/common/mithra/generator/metamodel/RelationshipType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RelationshipAttribute.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomogen/src/main/java/com/gs/fw/common/mithra/generator/RelationshipAttribute.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="273" column="22" selection-start-line="273" selection-start-column="22" selection-end-line="273" selection-end-column="22" />
+              <folding>
+                <element signature="e#9311#9312#0" expanded="true" />
+                <element signature="e#9349#9350#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MithraObjectTypeWrapper.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomogen/src/main/java/com/gs/fw/common/mithra/generator/MithraObjectTypeWrapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="606">
+              <caret line="741" column="42" selection-start-line="741" selection-start-column="42" selection-end-line="741" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderByAttribute.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomogen/src/main/java/com/gs/fw/common/mithra/generator/OrderByAttribute.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -1092,7 +1091,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-3" y="0" width="1926" height="1050" extended-state="6" />
+    <frame x="-3" y="0" width="1926" height="1050" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1223,38 +1222,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/finder/MappedOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="589" column="45" selection-start-line="589" selection-start-column="45" selection-end-line="589" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/finder/MultiEqualityOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="843" column="21" selection-start-line="843" selection-start-column="21" selection-end-line="843" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/SmallSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/finder/AbstractAtomicOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="67" column="21" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../reladomo/build/reladomo-config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1683,8 +1650,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/ReladomoSerializationContext.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
+        <state relative-caret-position="480">
+          <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomogen/src/main/java/com/gs/fw/common/mithra/generator/metamodel/RelationshipType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomogen/src/main/java/com/gs/fw/common/mithra/generator/OrderByAttribute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomogen/src/main/java/com/gs/fw/common/mithra/generator/RelationshipAttribute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="273" column="22" selection-start-line="273" selection-start-column="22" selection-end-line="273" selection-end-column="22" />
+          <folding>
+            <element signature="e#9311#9312#0" expanded="true" />
+            <element signature="e#9349#9350#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomogen/src/main/java/com/gs/fw/common/mithra/generator/MithraObjectTypeWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="741" column="42" selection-start-line="741" selection-start-column="42" selection-end-line="741" selection-end-column="42" />
           <folding />
         </state>
       </provider>

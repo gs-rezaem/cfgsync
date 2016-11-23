@@ -1,0 +1,114 @@
+# Preface
+I am not a lawyer. Even if you find language
+that sounds legalize within, this is not legal advice. 
+This document describes the various ways
+in which open source software developers organize and attribute their work from a 
+copyright and licensing perspective. The emphasis here is on the internal organization
+of the artifacts (code, documentation, agreements, etc), not the external representation.
+More specifically, we can think of an open source project as having a means for consuming
+incoming changes and a means to produce artifacts for usage. From a licensing and agreement
+perspective this document describes the incoming set of rules (the 
+"contribution model"), which are not always the same as the outgoing set (the "licensing model").
+
+At the end of this document, we'll discuss why we have chosen a particular
+contribution model (In == Out with DCO, using same/same transfer/storage)
+for our projects.
+
+A word of caution: if you google around, you'll find many different and contradictory 
+explanations of this subject. Most of it is authored by non-lawyers (including this one!).
+That's just the nature of the internet. Read everything with a critical eye.
+
+# Target Audience
+If you are the owner of an open source project, this document might help you
+choose a contribution model for your project.
+If you want to contribute to an open source project, this document might help
+you understand your rights and responsiblities with respect to the contribution
+model chosen by the project you want to contribute to.
+
+You should think about this document as a layman's attempt to describe to other lay-folk 
+the basic features of contribution models.
+
+# Open Source Contribution Models
+
+There are 4 main models, with some sub-variaties in each. Roughly in historical order, these are:
+
+1. Copyright assignment agreement
+2. Contribution license agreement (CLA)
+3. In == Out
+4. In == Out with developer certificate of origin (DCO)
+
+In all of these, there is one shared concern: if person X writes some code Y, 
+who owns the copyright to code Y? In many cases, the answer is not person X,
+because person X may (knowingly or not) have entered into a contract
+(for example, an employment agreement under US law) that assigns copyright
+to someone else. The full extent of this is beyond the scope of this document.
+
+From a legal perspective, the contribution (and any implied or explicit agreements)
+must be authorized by the copyright holder, which is not necessarily the code
+author. In the remainder of this document, we'll assume that is the case.
+
+## Copyright Assignment 
+In this case, the copyright holder enters into an agreement with the product owner
+to assign copyright to the product owner. This assignment form typically contains language
+like: 
+```
+I, NAME OF PERSON, hereby transfer to the NAME OF FOUNDATION my entire right, title,
+and interest (including all rights under copyright) in my changes and enhancements 
+to the program NAME OF PROGRAM,
+```
+
+Free Sofware Foundation (FSF) copyrighted
+packages work under this model. FSF provides justification for this 
+[choice](https://www.gnu.org/licenses/why-assign.en.html).
+
+Copyright assignment is generally considered the most restrictive of all the 
+contribution models for the contributor. If not worded carefully, it may strip the original
+author of all rights to the code. It is the most empowering model for the project owner. 
+
+## Contribution License Agreement
+A contribution license agreement is an agreement between the contributor and the
+project owner that gives the project owner certain rights and privileges, typically
+well beyond the project license. Let's make that clear with an example: Apache 
+foundation requires individual and corporate CLA's signed by contributors to its projects.
+The Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0) differs from
+the [contribution agreement](https://www.apache.org/licenses/icla.txt) 
+for someone contributing code to Apache.
+Specifically, there are two substantive differences:
+1. Apache 2.0 license has a large "Redistribution" clause (#4). Someone consuming
+software under Apache 2.0 has to abide by all these rules, but Apache foundation
+has no such restrictions in using code that was contributed to it. You can think of
+this as a super-permissive incoming license: the contributors are putting code in under
+a BSD-like license, and Apache is free to incorporate that into an Apache licensed code base.
+2. In the contribution agreement, the contributor is attesting to certain things
+such as the origin of the code and the contributor's legal rights to contribute such code.
+
+The asymmetry in this arrangement can be source of contention and CLA's can be considered
+heavy-weight. 
+[OpenStack](https://wiki.openstack.org/wiki/OpenStackAndItsCLA#OpenStack_and_its_Contributor_License_Agreement)
+and 
+[Chef](https://blog.chef.io/2016/09/19/introducing-developer-certificate-of-origin/)
+are examples of projects that have switched from CLA's to DCO (described below).
+
+## In == Out
+When the incoming contributor code is licensed under the same license as the outgoing artifacts, 
+the model is called "In == Out" (
+The Linux kernel used to be under this model, but after the legal wranglings with 
+[SCO](http://lkml.iu.edu/hypermail/linux/kernel/0405.2/1301.html), 
+they adopted a "In == out with DCO" (described below) model.
+
+While this is clearly the most light weight and equitable model, it may not provide
+the kinds of legal protection that a project owner might want.
+
+Even for licenses like Apache 2.0, which have an explicit contribution clause, 
+there is some notion that there should be some explicit acknowledgement:
+
+[Rick Clark](https://lists.launchpad.net/openstack/msg06467.html) on OpenStack history:
+```
+IANAL, but I was told by lawyers when we were in the planning stages of
+starting Openstack, that while in the US submitting code under the
+Apache License 2.0 was enough to bind the submitter to it, that is not
+the case in all countries.  Some countries require explicit acceptance
+to be bound by it.
+```
+## In == Out with Developer Certificate of Origin (DCO)
+
