@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="false">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_6" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-util-classes" />
     <content url="file://$MODULE_DIR$/../../../reladomo">
@@ -22,7 +22,7 @@
       <sourceFolder url="file://$MODULE_DIR$/../../../reladomo/reladomo/target/test-generated-onheap-src" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../reladomo/reladomo/target/generated-src" isTestSource="false" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.6.0_45" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="build-lib" level="project" />
     <orderEntry type="library" name="compile" level="project" />

@@ -11,7 +11,7 @@ perspective this document describes the incoming set of rules (the
 "contribution model"), which are not always the same as the outgoing set (the "licensing model").
 
 At the end of this document, we'll discuss why we have chosen a particular
-contribution model (In == Out with DCO, using same/same transfer/storage)
+contribution model ("In == Out, DCO pull request")
 for our projects.
 
 A word of caution: if you google around, you'll find many different and contradictory 
@@ -32,20 +32,24 @@ the basic features of contribution models.
 
 There are 4 main models, with some sub-variaties in each. Roughly in historical order, these are:
 
-1. Copyright assignment agreement
+1. Copyright assignment agreement (CAA)
 2. Contribution license agreement (CLA)
 3. In == Out
 4. In == Out with developer certificate of origin (DCO)
 
 In all of these, there is one shared concern: if person X writes some code Y, 
-who owns the copyright to code Y? In many cases, the answer is not person X,
+who owns the copyright to code Y before its contributed? 
+In many cases, the answer is not person X,
 because person X may (knowingly or not) have entered into a contract
 (for example, an employment agreement under US law) that assigns copyright
 to someone else. The full extent of this is beyond the scope of this document.
 
 From a legal perspective, the contribution (and any implied or explicit agreements)
 must be authorized by the copyright holder, which is not necessarily the code
-author. In the remainder of this document, we'll assume that is the case.
+author. In the remainder of this document, we'll assume the copyright holder is 
+agreeing through the actions of the actual contributor. Many of the procedures
+below are bifurcated between a "contributor is copyright holder" vs. a 
+"contributor represents the copyright holder" procedures.
 
 ## Copyright Assignment 
 In this case, the copyright holder enters into an agreement with the product owner
@@ -111,4 +115,76 @@ the case in all countries.  Some countries require explicit acceptance
 to be bound by it.
 ```
 ## In == Out with Developer Certificate of Origin (DCO)
+As discussed above, In == Out can be considered insufficient for providing
+legal protection. The Developer Certificate of Origin (DCO) was introduced to
+make the following two points explicit:
+1. The contributor attests that they are legally entitled to make the contribution
+under the Out license.
+2. The contributor agrees that everything about this interaction is essentially public
+(under the terms of the license) and kept forever.
+The second point is necessary because of European 
+[retention laws](http://www.linuxtoday.com/developer/2005061402426OSKNDV),
+and we'll leave it at that.
+
+So how does a contributor agree to the DCO? There are two common methods
+for that: implicit and explicit.
+
+With implicit acceptance, the contribution procdures for the project reference
+the DCO and the contributor adds a line to every commit that says:
+```
+Signed-off-by: Random J Developer <random@xxxxxxxxxxxxx>
+```
+It's not really clear how a line like that on a code commit establishes acceptance of anoher document, 
+so some projects opt for explicit acceptance. This usually entails some sort of 
+email, snail mail or click through acceptance, plus the ```Signed-off-by:``` commit message.
+
+# Comparing the 4 models:
+We can roughly rate these different models along three criteria:
+1. Equitability: how symmetric is rights of a contributor compared to 
+the project owner?
+2. Bureaucracy: how much work is it for a contributor to be onboarded
+and continue to contribute?
+3. Legal protection: how much legal protection does the model provide?
+Note that these ratings are neither vetted by a lawyer, nor tested in 
+a court of law.
+
+| Contribution Model             | Equitability | Bureaucracy   | Legal protection |
+------------------------------------------------------------------------------------
+| Copyright Assignment           | Low          | High          | High             |
+| Contributor License Agreement  | Medium       | Medium - High | Medium           |
+| In == Out                      | High         | None          | Low              |
+| In == Out with DCO             | High         | Low - High    | Medium           |
+
+# The Transfer and Storage Problem
+With any sort of explicit agreement or contract, the acceptance must be somehow documented.
+There are two things to consider here: how is the information transfered, and once tranferred, 
+how is it stored?
+
+Older procedures required paper copies to be signed and mailed in. Clearly in this case,
+the agreement was stored separately from the code.
+
+Newer procedures span the gamut of electronic methods from sending an email to clicking on a button
+on a web page. Most of these methods still store the document separately from the code.
+
+If we consider the agreement and its acceptance to be just data, we recognize that such data
+is not different in form from a code contribution (although it is very different in content).
+Since code also has to be transfered and stored, we therefore have 4 choices (not considering
+cases where there are multiple ways of achieving each):
+1. Different transfer, different storage compared to code.
+2. Different transfer, same storage compared to code.
+3. Same transfer, different storage compared to code.
+4. Same transfer, same storage compared to code.
+
+Oddly, the most common case is (1). For example, it's nearly impossible for an outside party
+to know who has signed a contribution agreement with the FSF (CAA), 
+the Apache foundation (CLA) or the Eclipse foundation (DCO).
+In the long term, this can become a problem, as projects join a foundation or move
+away, or the foundation changes (split, merge, cease to exist), or when a project
+itself changes its contribution model.
+
+Choice (4), where the transfer and storage of the document are the same as code has the
+advantage that as long as the code is around, the agreements that went into creating 
+that code are also available. An example of this is our "In == Out, DCO pull request" model described below.
+
+# The Chain of Custody Problem
 
