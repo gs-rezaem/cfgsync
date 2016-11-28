@@ -22,7 +22,7 @@ That's just the nature of the internet. Read everything with a critical eye.
 If you are the owner of an open source project, this document might help you
 choose a contribution model for your project.
 If you want to contribute to an open source project, this document might help
-you understand your rights and responsiblities with respect to the contribution
+you understand your rights and responsibilities with respect to the contribution
 model chosen by the project you want to contribute to.
 
 You should think about this document as a layman's attempt to describe to other lay-folk 
@@ -30,7 +30,7 @@ the basic features of contribution models.
 
 # Open Source Contribution Models
 
-There are 4 main models, with some sub-variaties in each. Roughly in historical order, these are:
+There are 4 main models, with some sub-varieties in each. Roughly in historical order, these are:
 
 1. Copyright assignment agreement (CAA)
 2. Contribution license agreement (CLA)
@@ -38,7 +38,7 @@ There are 4 main models, with some sub-variaties in each. Roughly in historical 
 4. In == Out with developer certificate of origin (DCO)
 
 In all of these, there is one shared concern: if person X writes some code Y, 
-who owns the copyright to code Y before its contributed? 
+who owns the copyright to code Y before it's contributed? 
 In many cases, the answer is not person X,
 because person X may (knowingly or not) have entered into a contract
 (for example, an employment agreement under US law) that assigns copyright
@@ -61,7 +61,7 @@ and interest (including all rights under copyright) in my changes and enhancemen
 to the program NAME OF PROGRAM,
 ```
 
-Free Sofware Foundation (FSF) copyrighted
+Free Software Foundation (FSF) copyrighted
 packages work under this model. FSF provides justification for this 
 [choice](https://www.gnu.org/licenses/why-assign.en.html).
 
@@ -74,10 +74,11 @@ A contribution license agreement is an agreement between the contributor and the
 project owner that gives the project owner certain rights and privileges, typically
 well beyond the project license. Let's make that clear with an example: Apache 
 foundation requires individual and corporate CLA's signed by contributors to its projects.
-The Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0) differs from
+The Apache 2.0 [License](https://www.apache.org/licenses/LICENSE-2.0) differs from
 the [contribution agreement](https://www.apache.org/licenses/icla.txt) 
 for someone contributing code to Apache.
 Specifically, there are two substantive differences:
+
 1. Apache 2.0 license has a large "Redistribution" clause (#4). Someone consuming
 software under Apache 2.0 has to abide by all these rules, but Apache foundation
 has no such restrictions in using code that was contributed to it. You can think of
@@ -96,7 +97,7 @@ are examples of projects that have switched from CLA's to DCO (described below).
 ## In == Out
 When the incoming contributor code is licensed under the same license as the outgoing artifacts, 
 the model is called "In == Out" (
-The Linux kernel used to be under this model, but after the legal wranglings with 
+The Linux kernel used to be under this model, but after the legal wrangling with 
 [SCO](http://lkml.iu.edu/hypermail/linux/kernel/0405.2/1301.html), 
 they adopted a "In == out with DCO" (described below) model.
 
@@ -129,27 +130,28 @@ and we'll leave it at that.
 So how does a contributor agree to the DCO? There are two common methods
 for that: implicit and explicit.
 
-With implicit acceptance, the contribution procdures for the project reference
+With implicit acceptance, the contribution procedures for the project reference
 the DCO and the contributor adds a line to every commit that says:
 ```
 Signed-off-by: Random J Developer <random@xxxxxxxxxxxxx>
 ```
-It's not really clear how a line like that on a code commit establishes acceptance of anoher document, 
+It's not really clear how a line like that on a code commit establishes acceptance of another document, 
 so some projects opt for explicit acceptance. This usually entails some sort of 
 email, snail mail or click through acceptance, plus the ```Signed-off-by:``` commit message.
 
 # Comparing the 4 models:
 We can roughly rate these different models along three criteria:
+
 1. Equitability: how symmetric is rights of a contributor compared to 
 the project owner?
-2. Bureaucracy: how much work is it for a contributor to be onboarded
+2. Bureaucracy: how much work is it for a contributor to be on-boarded
 and continue to contribute?
 3. Legal protection: how much legal protection does the model provide?
 Note that these ratings are neither vetted by a lawyer, nor tested in 
 a court of law.
 
 | Contribution Model             | Equitability | Bureaucracy   | Legal protection |
-------------------------------------------------------------------------------------
+|--------------------------------|--------------|---------------|------------------|
 | Copyright Assignment           | Low          | High          | High             |
 | Contributor License Agreement  | Medium       | Medium - High | Medium           |
 | In == Out                      | High         | None          | Low              |
@@ -157,7 +159,7 @@ a court of law.
 
 # The Transfer and Storage Problem
 With any sort of explicit agreement or contract, the acceptance must be somehow documented.
-There are two things to consider here: how is the information transfered, and once tranferred, 
+There are two things to consider here: how is the information transfered, and once transfered, 
 how is it stored?
 
 Older procedures required paper copies to be signed and mailed in. Clearly in this case,
@@ -170,6 +172,7 @@ If we consider the agreement and its acceptance to be just data, we recognize th
 is not different in form from a code contribution (although it is very different in content).
 Since code also has to be transfered and stored, we therefore have 4 choices (not considering
 cases where there are multiple ways of achieving each):
+
 1. Different transfer, different storage compared to code.
 2. Different transfer, same storage compared to code.
 3. Same transfer, different storage compared to code.
@@ -186,5 +189,45 @@ Choice (4), where the transfer and storage of the document are the same as code 
 advantage that as long as the code is around, the agreements that went into creating 
 that code are also available. An example of this is our "In == Out, DCO pull request" model described below.
 
+# Our model: In == Out, with DCO pull request
+In choosing our model, we wanted to have high equitability, which immediately suggests
+an In == Out model. But the low legal protection of pure In == Out was a concern, so 
+we opted for In == Out with DCO. 
+
+From a pure legal perspective, the entirety of open source licensing regime is predicated
+on copyright law. As such, establishing copyright provenance (who owns the copyright to 
+a particular piece of code) is in line with how the law handles this. As noted earlier, 
+that is not the same as who authored the code. Taking this into account, led us to 
+bifurcate our DCO along the lines of the contributor-is-copyright-holder vs. 
+contributor-represents-copyright-holder. Instead of a ```Signed-off-by:```
+commit message, we chose a ```Covered-by:``` commit message, referencing a particular
+document.
+
+The above consideration and the concern that some jurisdictions may require explicit 
+agreement led us to require an explicit agreement. Furthermore, the document
+referenced by the ```Covered-by:``` commit message fit well in the repository itself.
+We already have lots of meta data (LICENSE, CONTRIBUTING, NOTICE, etc.) and the 
+DCO's are no different. The mechanism to get anything into our repository is a pull
+request, which now completes the picture: to contribute to our projects, do a one time
+pull request with an appropriate DCO and reference that DCO in subsequent (code) commits.
+This a "same transfer, same storage" model as described above.
+
 # The Chain of Custody Problem
+A lot of development in open source is highly collaborative. A particular piece of code
+might be edited my multiple people (which sometimes, but not always, means different
+copyright holders). It's also possible to start from an existing piece of OSS code
+and modify it for use in another project. 
+
+We've chosen a git-centric copyright provenance resolution. If a piece of code
+has mixed copyright provenance, it must be represented as a series of commits, 
+with each commit properly attributing each copyright (via a ```Covered-by:``` commit message
+and potentially a by-line in the affected file).
+
+This is very similar to the Linux Kernel ```Signed-off-by:``` semantics with two 
+notable differences:
+
+1. We care about copyright-owner, as declared in the ```Covered-by:``` DCO, not the
+contributor.
+2. We don't allow squashed commits with multiple ```Covered-by:``` lines.
+
 
