@@ -1,10 +1,21 @@
-# Preface
+# Disclaimer
+This document was prepared by Mohammad Rezaei in his personal capacity. 
+The opinions expressed in this article are the author's own and do not reflect the view of 
+anyone else, including but not limited to my employer.
 I am not a lawyer. Even if you find language
-that sounds legalize within, this is not legal advice. 
+that sounds legalese within, this is not legal advice. 
+
+A word of caution: if you google around, you'll find many different and contradictory 
+explanations of this subject. Most of them are authored by non-lawyers (including this one!).
+That's just the nature of the internet. Read everything with a critical eye.
+Consult a lawyer for legal matters.
+
+# Preface
 This document describes the various ways
 in which open source software developers organize and attribute their work from a 
 copyright and licensing perspective. The emphasis here is on the internal organization
-of the artifacts (code, documentation, agreements, etc), not the external representation.
+of the artifacts (code, documentation, agreements, etc.), not the external representation 
+(licensed binaries, documentation, etc.).
 More specifically, we can think of an open source project as having a means for consuming
 incoming changes and a means to produce artifacts for usage. From a licensing and agreement
 perspective this document describes the incoming set of rules (the 
@@ -13,10 +24,6 @@ perspective this document describes the incoming set of rules (the
 At the end of this document, we'll discuss why we have chosen a particular
 contribution model ("In == Out, DCO pull request")
 for our projects.
-
-A word of caution: if you google around, you'll find many different and contradictory 
-explanations of this subject. Most of it is authored by non-lawyers (including this one!).
-That's just the nature of the internet. Read everything with a critical eye.
 
 # Target Audience
 If you are the owner of an open source project, this document might help you
@@ -48,8 +55,8 @@ From a legal perspective, the contribution (and any implied or explicit agreemen
 must be authorized by the copyright holder, which is not necessarily the code
 author. In the remainder of this document, we'll assume the copyright holder is 
 agreeing through the actions of the actual contributor. Many of the procedures
-below are bifurcated between a "contributor is copyright holder" vs. a 
-"contributor represents the copyright holder" procedures.
+below are bifurcated into two scenarios: "contributor is copyright holder" and 
+"contributor represents the copyright holder".
 
 ## Copyright Assignment 
 In this case, the copyright holder enters into an agreement with the product owner
@@ -83,7 +90,8 @@ Specifically, there are two substantive differences:
 software under Apache 2.0 has to abide by all these rules, but Apache foundation
 has no such restrictions in using code that was contributed to it. You can think of
 this as a super-permissive incoming license: the contributors are putting code in under
-a BSD-like license, and Apache is free to incorporate that into an Apache licensed code base.
+a [BSD](https://opensource.org/licenses/BSD-2-Clause)-like license, 
+and Apache is free to incorporate that into an Apache licensed code base.
 2. In the contribution agreement, the contributor is attesting to certain things
 such as the origin of the code and the contributor's legal rights to contribute such code.
 
@@ -96,7 +104,7 @@ are examples of projects that have switched from CLA's to DCO (described below).
 
 ## In == Out
 When the incoming contributor code is licensed under the same license as the outgoing artifacts, 
-the model is called "In == Out" (
+the model is called "In == Out".
 The Linux kernel used to be under this model, but after the legal wrangling with 
 [SCO](http://lkml.iu.edu/hypermail/linux/kernel/0405.2/1301.html), 
 they adopted a "In == out with DCO" (described below) model.
@@ -119,13 +127,21 @@ to be bound by it.
 As discussed above, In == Out can be considered insufficient for providing
 legal protection. The Developer Certificate of Origin (DCO) was introduced to
 make the following two points explicit:
+
 1. The contributor attests that they are legally entitled to make the contribution
 under the Out license.
 2. The contributor agrees that everything about this interaction is essentially public
 (under the terms of the license) and kept forever.
+
 The second point is necessary because of European 
 [retention laws](http://www.linuxtoday.com/developer/2005061402426OSKNDV),
 and we'll leave it at that.
+
+Note how a DCO differs from a CLA: the contributor is not imparting any rights
+or privileges to the product owner. The contributor is merely attesting that
+he's legally entitled to license the contributed code under the given license.
+In a sense, the contributor is no longer contributing to the project per-se, 
+but rather to anyone who is willing to accept that license.
 
 So how does a contributor agree to the DCO? There are two common methods
 for that: implicit and explicit.
@@ -137,12 +153,13 @@ Signed-off-by: Random J Developer <random@xxxxxxxxxxxxx>
 ```
 It's not really clear how a line like that on a code commit establishes acceptance of another document, 
 so some projects opt for explicit acceptance. This usually entails some sort of 
-email, snail mail or click through acceptance, plus the ```Signed-off-by:``` commit message.
+email, snail mail or click through acceptance, plus 
+the ```Signed-off-by:``` commit message.
 
 # Comparing the 4 models:
 We can roughly rate these different models along three criteria:
 
-1. Equitability: how symmetric is rights of a contributor compared to 
+1. Equitability: how symmetric are the rights of a contributor compared to 
 the project owner?
 2. Bureaucracy: how much work is it for a contributor to be on-boarded
 and continue to contribute?
@@ -159,7 +176,7 @@ a court of law.
 
 # The Transfer and Storage Problem
 With any sort of explicit agreement or contract, the acceptance must be somehow documented.
-There are two things to consider here: how is the information transfered, and once transfered, 
+There are two things to consider here: how is the information transferred, and once transferred, 
 how is it stored?
 
 Older procedures required paper copies to be signed and mailed in. Clearly in this case,
@@ -170,7 +187,7 @@ on a web page. Most of these methods still store the document separately from th
 
 If we consider the agreement and its acceptance to be just data, we recognize that such data
 is not different in form from a code contribution (although it is very different in content).
-Since code also has to be transfered and stored, we therefore have 4 choices (not considering
+Since code also has to be transferred and stored, we therefore have 4 choices (not considering
 cases where there are multiple ways of achieving each):
 
 1. Different transfer, different storage compared to code.
@@ -194,27 +211,27 @@ In choosing our model, we wanted to have high equitability, which immediately su
 an In == Out model. But the low legal protection of pure In == Out was a concern, so 
 we opted for In == Out with DCO. 
 
-From a pure legal perspective, the entirety of open source licensing regime is predicated
+From a legal perspective, the entirety of open source licensing regime is predicated
 on copyright law. As such, establishing copyright provenance (who owns the copyright to 
 a particular piece of code) is in line with how the law handles this. As noted earlier, 
-that is not the same as who authored the code. Taking this into account, led us to 
-bifurcate our DCO along the lines of the contributor-is-copyright-holder vs. 
-contributor-represents-copyright-holder. Instead of a ```Signed-off-by:```
+that is not the same as who authored the code. Taking this into account, we
+bifurcated our DCO along the lines of the contributor-is-copyright-holder vs. 
+contributor-represents-copyright-holder paradigm. Instead of a ```Signed-off-by:```
 commit message, we chose a ```Covered-by:``` commit message, referencing a particular
 document.
 
 The above consideration and the concern that some jurisdictions may require explicit 
 agreement led us to require an explicit agreement. Furthermore, the document
 referenced by the ```Covered-by:``` commit message fit well in the repository itself.
-We already have lots of meta data (LICENSE, CONTRIBUTING, NOTICE, etc.) and the 
+We already have lots of metadata (LICENSE, CONTRIBUTING, NOTICE, etc.) and the 
 DCO's are no different. The mechanism to get anything into our repository is a pull
-request, which now completes the picture: to contribute to our projects, do a one time
+request, which now completes the picture: to contribute to our projects, do a one-time
 pull request with an appropriate DCO and reference that DCO in subsequent (code) commits.
-This a "same transfer, same storage" model as described above.
+This is a "same transfer, same storage" model as described above.
 
 # The Chain of Custody Problem
 A lot of development in open source is highly collaborative. A particular piece of code
-might be edited my multiple people (which sometimes, but not always, means different
+might be edited by multiple people (which sometimes, but not always, means different
 copyright holders). It's also possible to start from an existing piece of OSS code
 and modify it for use in another project. 
 
@@ -228,6 +245,26 @@ notable differences:
 
 1. We care about copyright-owner, as declared in the ```Covered-by:``` DCO, not the
 contributor.
-2. We don't allow squashed commits with multiple ```Covered-by:``` lines.
+2. We don't allow squashed commits that would result in multiple ```Covered-by:``` lines.
 
+# References
+I read the following in preparing this document. These aren't references in an academic sense;
+they have not necessarily been vetted by experts in the subject matter and may contain errors, 
+inaccuraries, omissions, etc.
+
+[Copyright assignment at FSF](https://www.fsf.org/bulletin/2014/spring/copyright-assignment-at-the-fsf)
+[FSF copyright assignment reasons](https://www.gnu.org/licenses/why-assign.en.html)
+[Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0)
+[Apache corporate CLA](https://www.apache.org/licenses/cla-corporate.txt)
+[Apache individual CLA](https://www.apache.org/licenses/icla.txt)
+[Rick Clark on OpenStack licensing](https://lists.launchpad.net/openstack/msg06467.html)
+[Why you don't need a CLA](https://sfconservancy.org/blog/2014/jun/09/do-not-need-cla/)
+[DCO vs CLA](https://julien.ponge.org/blog/developer-certificate-of-origin-versus-contributor-license-agreements/)
+[Apache License Yes, Apache CLA No](https://meshedinsights.com/2016/01/07/apache-license-yes-apache-cla-no/)
+[OpenStack proposal to switch to DCO](https://wiki.openstack.org/wiki/OpenStackAndItsCLA#The_Proposal)
+[Linux DCO](http://elinux.org/Developer_Certificate_Of_Origin)
+[Linus proposes DCO](http://lkml.iu.edu/hypermail/linux/kernel/0405.2/1301.html)
+[Contribution policies for Open Source](https://ref.fedorapeople.org/fontana-linuxcon.html)
+[Governance for Github Generation](http://www.infoworld.com/article/2608195/open-source-software/governance-for-the-github-generation.html)
+[Samba Copyright Policy](https://www.samba.org/samba/devel/copyright-policy.html)
 
