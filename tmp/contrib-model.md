@@ -250,21 +250,21 @@ contributor.
 # References
 I read the following in preparing this document. These aren't references in an academic sense;
 they have not necessarily been vetted by experts in the subject matter and may contain errors, 
-inaccuraries, omissions, etc.
+inaccuracies, omissions, etc.
 
-[Copyright assignment at FSF](https://www.fsf.org/bulletin/2014/spring/copyright-assignment-at-the-fsf)
-[FSF copyright assignment reasons](https://www.gnu.org/licenses/why-assign.en.html)
-[Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0)
-[Apache corporate CLA](https://www.apache.org/licenses/cla-corporate.txt)
-[Apache individual CLA](https://www.apache.org/licenses/icla.txt)
-[Rick Clark on OpenStack licensing](https://lists.launchpad.net/openstack/msg06467.html)
-[Why you don't need a CLA](https://sfconservancy.org/blog/2014/jun/09/do-not-need-cla/)
-[DCO vs CLA](https://julien.ponge.org/blog/developer-certificate-of-origin-versus-contributor-license-agreements/)
-[Apache License Yes, Apache CLA No](https://meshedinsights.com/2016/01/07/apache-license-yes-apache-cla-no/)
-[OpenStack proposal to switch to DCO](https://wiki.openstack.org/wiki/OpenStackAndItsCLA#The_Proposal)
-[Linux DCO](http://elinux.org/Developer_Certificate_Of_Origin)
-[Linus proposes DCO](http://lkml.iu.edu/hypermail/linux/kernel/0405.2/1301.html)
-[Contribution policies for Open Source](https://ref.fedorapeople.org/fontana-linuxcon.html)
-[Governance for Github Generation](http://www.infoworld.com/article/2608195/open-source-software/governance-for-the-github-generation.html)
-[Samba Copyright Policy](https://www.samba.org/samba/devel/copyright-policy.html)
+* [Copyright assignment at FSF](https://www.fsf.org/bulletin/2014/spring/copyright-assignment-at-the-fsf)
+* [FSF copyright assignment reasons](https://www.gnu.org/licenses/why-assign.en.html)
+* [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0)
+* [Apache corporate CLA](https://www.apache.org/licenses/cla-corporate.txt)
+* [Apache individual CLA](https://www.apache.org/licenses/icla.txt)
+* [Rick Clark on OpenStack licensing](https://lists.launchpad.net/openstack/msg06467.html)
+* [Why you don't need a CLA](https://sfconservancy.org/blog/2014/jun/09/do-not-need-cla/)
+* [DCO vs CLA](https://julien.ponge.org/blog/developer-certificate-of-origin-versus-contributor-license-agreements/)
+* [Apache License Yes, Apache CLA No](https://meshedinsights.com/2016/01/07/apache-license-yes-apache-cla-no/)
+* [OpenStack proposal to switch to DCO](https://wiki.openstack.org/wiki/OpenStackAndItsCLA#The_Proposal)
+* [Linux DCO](http://elinux.org/Developer_Certificate_Of_Origin)
+* [Linus proposes DCO](http://lkml.iu.edu/hypermail/linux/kernel/0405.2/1301.html)
+* [Contribution policies for Open Source](https://ref.fedorapeople.org/fontana-linuxcon.html)
+* [Governance for Github Generation](http://www.infoworld.com/article/2608195/open-source-software/governance-for-the-github-generation.html)
+* [Samba Copyright Policy](https://www.samba.org/samba/devel/copyright-policy.html)
 
