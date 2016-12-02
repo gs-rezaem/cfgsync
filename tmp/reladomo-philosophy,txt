@@ -1,49 +1,151 @@
-- not right or wrong, but more like good or bad.
-	- even better to think in terms of good-fit, bad-fit
-
+- not right or wrong, but more like good-fit, bad-fit
+- a framework, not a library
+	- code generation
+	- opinionated
+	- perscriptive
+- vision/philosophy
+	- allows user to understand the sweet spot, and do a good-fit/bad-fit analysis
+	- allows Reladomo developers to guide future roadmap.
 
 Reladomo core values/philosophy:
-	- it's critical to know what you don't want
-		- stored procedures are an anti-pattern
+- core criteria:
+	1) DRY [DRY]
+	2) long lived code [LLC]
+	3) agile [AGL]
+	4) Persistent Domain based OO (really, this is a consistent choice for the first 3, and is a good match for entity models in the db) [OO]
+	
+- operating environment
+	1) long lived processes (not ls)
+	2) java.lang works
+		- Java's write once, run anywhere pormise has been a great boon for code sharing
+			- anything that threatens that is an anti-pattern
+			- everything in java.lang must be usable by any code.
+				- this includes java.lang.Thread, java.lang.ThreadLocal and all methods on java.lang.Class
+					- environments that do no provide a correct implementation of java, and java.lang specifically, are not supported.
+	3) static means one per jvm
+	4) private means private. final means final.
+	
+	
+- it's critical to know what you don't want -- spell out the bad-fit cases.
+	- stored procedures are an anti-pattern, see below
+	- application implemented DAO is an anti-pattern http://www.oracle.com/technetwork/java/dataaccessobject-138824.html
+		- creates a large amount of duplicative code
+			- adding a simple attribute can cause a change across a dozen files -- obviously not DRY
+		- does not properly address object identity
+		- breaks down with relationships
+	- Repository/Manager is an anti-pattern
+		- C library not DomainOO
+		- queries naturally belong to a specific code site, not 
+			- code sharing/abstraction for queries should follow normal OO practice, not C library practice
+		- 1 method per query doesn't scale; leads to re-using unfit queries
+			- leads to a code smell: method that's used from only one site 
+				- such a method is better represented as a private scoped method near the call site, not globally public
+			- Reladomo finder is not a repository
+	- Anemic domain is an anti-pattern
+		- Business logic must reside in the domain
+	- Services that act as remote procedures are an anti-pattern
+		- Services that don't delegate to the domain are an anti-pattern
+	- ETL between the physical schema and the domain is an anti-pattern
+		- makes writing a near impossibility
+		- makes caching a near impossibility
+		- makes uniquing a near impossibility
+	- string based query language is an anti-pattern
+		- makes refactoring nearly impossible
+		- makes find-usages nearly impossible
+		- makes abstraction nearly impossible
+	- pluggable cache is an anti-pattern -- a cache is not a map
+	- result sets are not domain objects. Reladomo does not faciliate result-set based programming.
+	- schemaless leads to unreadable data in the long run
+- an ORM must solve the set/object impedance mismatch
+	- deepFetch and the List objects in Reladomo do that to a great extent
+- testability is key [LLC, AGL] -- see Testing Philosophy
+	- tests should allow reasoning about IO
+- object identity must have a sensible contract
+- ACID is king
+- IO latency reduction is important; bandwidth is not critical on a per-row basis
+- vendor neutrality
+- temporal persistence must be handled at the framework level, not by the application
+	- temporal persistence implementation needs new code and data structures
+	- it cannot be composed on top of non-temporal persistence code and data structures
+- the "surface area" provided by the Reladomo object/finder api is large
+	- attempts at wrapping these will lead to eventual failure
+	- Reladomo objects are the application/domain objects
+		- hiding these objects (via wrappers, copies, dto's, etc is an anti-pattern)
+	- Reladomo finder API are the correct way to find objects.
+- code must be generated properly
+	- bad code generation is worse than bad
+- A database is private storage
+	- it's not a public API or a communication channel [AGL]
+	- it's not a compute engine (breaks OO/DRY)
+	- all access must be from a singular code base
+	- Database magic is an anti-pattern
+		- identity generation
+		- triggers (especially when they modify)
+		- db2 bitemporal
+- views are a temporay last resort.
+	- can't write
+	- can't cache
+	- can't reason about identity
+	- implementations are typically problematic
+- We will not comprimise on primary keys.
+
+- stored procs:
 			- not testable
 			- not vendor neutral; not even a semi-standard
 			- does not fit well with a domain based OO paradigm: business logic leaks into the SP
 			- cannot accept batch data from the application: causes bad IO patterns (ping pong) for non-trivial use cases.
-		- DAO is an anti-pattern
-			- queries naturally belong to a specific code site, not 
-				- code sharing/abstraction for queries should follow normal OO practice, not C library practice
-			- 1 method per query doesn't scale; leads to re-using unfit queries
-			- does not properly address object identity
-		- Repository/Manager is an anti-pattern
-			- C library not DomainOO
-		- Anemic domain is an anti-pattern
-			- Business logic must reside in the domain
-		- Services that act as remote procedures are an anti-pattern
-			- Services that don't delegate to the domain are an anti-pattern
-		- ETL between the physical schema and the domain is an anti-pattern
-			- makes writing a near impossibility
-			- makes caching a near impossibility
-			- makes uniquing a near impossibility
-		- string based query language is an anti-pattern
-			- makes refactoring nearly impossible
-			- makes find-usages nearly impossible
-			- makes abstraction nearly impossible
-		- pluggable cache is an anti-pattern -- a cache is not a map
-		- result sets are not domain objects. Reladomo does not faciliate result-set based programming.
-	- an ORM must solve the set/object impedance mismatch
-		- deepFetch and the List objects in Reladomo do that to a great extent
-	- testability is key -- see Testing Philosophy
-		- tests should allow reasoning about IO
-	- object identity must have a sensible contract
-	- ACID is king
-	- IO latency reduction is important; bandwidth is not critical on a per-row basis
-	- vendor neutrality
-	- schemaless leads to unreadable data in the long run
-	- temporal persistence must be handled at the framework level, not by the application
-		- temporal persistence implementation needs new code and data structures
-		- it cannot be composed on top of non-temporal persistence code and data structures
-	- the "surface area" provided by the Reladomo object/finder api is large
-		- attempts at wrapping these will lead to eventual failure
-		- Reladomo objects are the application/domain objects
-			- hiding these objects (via wrappers, copies, dto's, etc is an anti-pattern)
-		- Reladomo finder API are the correct way to find objects.
+	- understanding how an existing piece of code works requires intimate knowledge of both java and sql
+	- in a mixed sp/app environment, it's virtually impossible to come up with guidelines regarding where a particular
+		piece of business logic should be implemented.
+	- After converting hundreds of stored procs, we've concluded that the equivalent Java code is faster for 2 reasons:
+		- In java, it's much easier to use better algorithms. Better collections (maps, trees, sets, bags, etc) and better
+			language constructs (e.g. polymorphism) help tremendously with this.
+		- A stored proc has a very limited number of params. This makes it impossible to reduce IO by batching. Batched,
+			multi-threaded java code can be an order of magnitude faster.
+	- A well written piece of code in Java communicates its intent. A well written piece of SQL typically doesn't.
+	- SQL is a poor programming environment:
+		- procedural
+		- violates DRY, especially when it comes to relationship navigation
+		- it promotes a "data stirfry" mentality. this further breaks domain based encapsulation.
+		- it's very far from modern programming environments:
+			- requires a live db to develop.
+			- changes to sp's make it hard to share the db.
+			- no debuggers in the modern sense: breakpoints, watches, etc.
+			- not easily testable
+			- it's difficult to perform routine tasks: loops, conditionals, etc
+			- it's not easily modularizable. This is provable by simply looking at the total number of third party
+				libraries avaialble for Java and comparing that to SQL. This further violates DRY.
+			- Modern OO facilities (refactoring, usage analysis, code coverage, dependency analysis, etc) are missing.
+			- lack of basic exception handling (try/catch/finally)
+		- no notion of compiling/strong typing. Schema modifications often result in failed sp's at runtime.
+		- how do you make a REST call from an sp?
+		- Writing sql is difficult and error prone. Writing java to interface with the sp doubly so.
+		- compared to a declared mapping layer (ORM), code that invokes sp's is very tightly bound to the database. 
+			this makes modern agile approaches much harder with sp's.
+		- not even a semi-standard. vendor lock-in is guaranteed.
+		- applications that require highly dynamic, user driven queries are nearly impossible to code with stored procs.
+
+- "In truth, this basic approach to slave one model into the terms and approach of the other 
+has been the traditional answer to the impedance mismatch, effectively solving the problem by ignoring one half of it."
+
+- implementation inheritance doesn't map well.
+	- implementation polymorphism is a niche feature in OO. While not an outright anti-pattern, most
+		practitioners warn against using it extensively/deeply.
+	- light polymorphism (interfaces) are fine.
+
+- The Schema-Ownership Conflict
+	- the database schema itself is not under the direct control of developers, but instead is owned by another group 
+
+- The Dual-Schema Problem
+	- refactoring has to happen simultaneously
+- Entity Identity Issues
+	- if two separate user sessions interact with the same relation in storage, the relational database systems concurrency systems kick in and ensure some form of concurrent access, typically via the transactional metaphor (ACID). If an O/R system retrieves a relation out of storage (essentially forming a view over the data), we now have a second source of data identity, one in the database (protected by the aforementioned transactional scheme), and one in the in-memory object representation of that data, which has no consistent transactional support aside from that built into the language
+
+	- what does this say about transactional integrity if the application code believes the write to have occurred when in fact it hasnt?
+	
+- The Data Retrieval Mechansim Concern
+	- query language not expressive
+
+- The Partial-Object Problem and the Load-Time Paradox
+	- For most O/R layers, this means that objects and/or fields of objects must be retrieved in a lazy-loaded manner, obtaining the field data on demand, because retrieving all of the fields of all of the Person objects/relations would clearly be a huge waste of bandwidth for this particular scenario. 
+
