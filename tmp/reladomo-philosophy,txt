@@ -1,3 +1,4 @@
+- disclaimer
 - not right or wrong, but more like good-fit, bad-fit
 - a framework, not a library
 	- code generation
@@ -5,6 +6,7 @@
 	- perscriptive
 - vision/philosophy
 	- allows user to understand the sweet spot, and do a good-fit/bad-fit analysis
+	- point out things that the user should and shouldn't do
 	- allows Reladomo developers to guide future roadmap.
 
 Reladomo core values/philosophy:
@@ -12,7 +14,7 @@ Reladomo core values/philosophy:
 	1) DRY [DRY]
 	2) long lived code [LLC]
 	3) agile [AGL]
-	4) Persistent Domain based OO (really, this is a consistent choice for the first 3, and is a good match for entity models in the db) [OO]
+	4) Persistent Domain based OO (really, this is a consistent choice for the first 3, and is a good match for entity models in the db) [DOO]
 	
 - operating environment
 	1) long lived processes (not ls)
@@ -25,9 +27,47 @@ Reladomo core values/philosophy:
 	3) static means one per jvm
 	4) private means private. final means final.
 	
+- an ORM must solve the set/object impedance mismatch
+	- deepFetch and the List objects in Reladomo do that to a great extent
+- testability is key [LLC, AGL] -- see Testing Philosophy
+	- tests should allow reasoning about IO
+- object identity must have a sensible contract
+- ACID is king
+- IO latency reduction is important; bandwidth is not critical on a per-row basis
+- vendor neutrality [LLC]
+- temporal persistence must be handled at the framework level, not by the application
+	- temporal persistence implementation needs new code and data structures
+		- it touches everything, from the contract of the application domian objects to the query language to caching structures to persistence
+	- it cannot be composed on top of non-temporal persistence code and data structures
+- temporal patterns: only two columns per temporal dimension make sense.
+	- must be able to produce an object graph that's consistent.
+	- must be able to join
+	- audit table is an anti-pattern
+	- version column in table is an anti-pattern
+- the "surface area" provided by the Reladomo object/finder api is large
+	- attempts at wrapping these will lead to eventual failure
+	- Reladomo objects are the application/domain objects
+		- hiding these objects (via wrappers, copies, dto's, etc is an anti-pattern)
+	- Reladomo finder API are the correct way to find objects.
+- code must be generated properly
+	- bad code generation is worse than bad
+- A database is private storage
+	- it's not a public API or a communication channel [AGL]
+	- it's not a compute engine (breaks DOO/DRY)
+	- all access must be from a singular code base
+	- Database magic is an anti-pattern
+		- identity generation
+		- triggers (especially when they modify)
+		- db2 bitemporal
+- views are a temporay last resort.
+	- can't write
+	- can't cache
+	- can't reason about identity
+	- implementations are typically problematic
+- We will not comprimise on primary keys.
 	
 - it's critical to know what you don't want -- spell out the bad-fit cases.
-	- stored procedures are an anti-pattern, see below
+	- stored procedures are an anti-pattern, see below [DRY, AGL, LLC]
 	- application implemented DAO is an anti-pattern http://www.oracle.com/technetwork/java/dataaccessobject-138824.html
 		- creates a large amount of duplicative code
 			- adding a simple attribute can cause a change across a dozen files -- obviously not DRY
@@ -56,38 +96,6 @@ Reladomo core values/philosophy:
 	- pluggable cache is an anti-pattern -- a cache is not a map
 	- result sets are not domain objects. Reladomo does not faciliate result-set based programming.
 	- schemaless leads to unreadable data in the long run
-- an ORM must solve the set/object impedance mismatch
-	- deepFetch and the List objects in Reladomo do that to a great extent
-- testability is key [LLC, AGL] -- see Testing Philosophy
-	- tests should allow reasoning about IO
-- object identity must have a sensible contract
-- ACID is king
-- IO latency reduction is important; bandwidth is not critical on a per-row basis
-- vendor neutrality
-- temporal persistence must be handled at the framework level, not by the application
-	- temporal persistence implementation needs new code and data structures
-	- it cannot be composed on top of non-temporal persistence code and data structures
-- the "surface area" provided by the Reladomo object/finder api is large
-	- attempts at wrapping these will lead to eventual failure
-	- Reladomo objects are the application/domain objects
-		- hiding these objects (via wrappers, copies, dto's, etc is an anti-pattern)
-	- Reladomo finder API are the correct way to find objects.
-- code must be generated properly
-	- bad code generation is worse than bad
-- A database is private storage
-	- it's not a public API or a communication channel [AGL]
-	- it's not a compute engine (breaks OO/DRY)
-	- all access must be from a singular code base
-	- Database magic is an anti-pattern
-		- identity generation
-		- triggers (especially when they modify)
-		- db2 bitemporal
-- views are a temporay last resort.
-	- can't write
-	- can't cache
-	- can't reason about identity
-	- implementations are typically problematic
-- We will not comprimise on primary keys.
 
 - stored procs:
 			- not testable

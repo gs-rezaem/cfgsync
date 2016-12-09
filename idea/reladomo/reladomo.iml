@@ -22,7 +22,7 @@
       <sourceFolder url="file://$MODULE_DIR$/../../../reladomo/reladomo/target/test-generated-onheap-src" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../reladomo/reladomo/target/generated-src" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="1.6.0_45" jdkType="JavaSDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="build-lib" level="project" />
     <orderEntry type="library" name="compile" level="project" />

@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+
+
+
+<!--
+  Copyright 2016 Goldman Sachs.
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied.  See the License for the
+  specific language governing permissions and limitations
+  under the License.
+  -->
+
+<article xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="../xsd/docbook.xsd">
+
+    <articleinfo>
+        <title>Reladomo Philosophy &amp; Vision</title>
+    </articleinfo>
+
+
+    <section>
+        <title>Reladomo Philosophy &amp; Vision</title>
+        <section>
+            <title>Disclaimer</title>
+            <para>
+            </para>
+        </section>
+        <section>
+            <title>Preface -- or why you should read this</title>
+            <para>
+            </para>
+        </section>
+        <section>
+            <title>Reladomo Core Values</title>
+            <para>
+            </para>
+            <section>
+                <title>Expected Operating Environment</title>
+                <para>
+                </para>
+            </section>
+        </section>
+        <section>
+            <title>How to use Reladomo effectively (good-fit patterns)</title>
+            <para>
+            </para>
+        </section>
+        <section>
+            <title>Things to avoid (bad-fit patterns)</title>
+            <para>
+            </para>
+        </section>
+        <section>
+            <title>Appendix: Stored Procedures</title>
+            <para>
+            </para>
+        </section>
+        <section>
+            <title>Appendix: Vietnam of Computer Science</title>
+            <para>
+            </para>
+        </section>
+        
+        
+    </section>
+
+</article>
+<!--
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Security (fat client applications):</para>
+                        <itemizedlist>
+                            <listitem><para>User ID must not be able to access database directly (especially write)</para></listitem>
+                            <listitem><para>Batch/App ID must not be used from unauthorized IP’s</para></listitem>
+                            <listitem><para>For a large, semi-mobile user community, maintaining IP lists is undesirable and allows random sql client connections</para></listitem>
+                        </itemizedlist>
+                    </listitem>
+                    <listitem>
+                        <para>Connection sharing: database connections can be expensive. Many users can share same connection.</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+-->
