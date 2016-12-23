@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list id="d15962bd-ffb1-4cfc-be25-f070fb194cc4" name="Default" comment="" />
-    <list default="true" id="9f410a4c-432d-482e-8f6b-52b5e90848fc" name="multi-update without or" comment="fix tests with cache load exceptions" />
+    <list default="true" id="9f410a4c-432d-482e-8f6b-52b5e90848fc" name="multi-update without or" comment="fix tests with cache load exceptions">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../reladomo/reladomo/src/doc/docbook/middletier/ReladomoMiddleTier.xml" afterPath="$PROJECT_DIR$/../../../reladomo/reladomo/src/doc/docbook/middletier/ReladomoMiddleTier.xml" />
+    </list>
     <list id="a1533562-3bc2-4015-9d76-54348e23eb24" name="don't commit" comment="" />
     <ignored path="reladomo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,45 +29,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="MithraTestResource.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test-util/java/com/gs/fw/common/mithra/test/MithraTestResource.java">
+      <file leaf-file-name="MithraConfigurationManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/MithraConfigurationManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1965">
-              <caret line="191" column="19" selection-start-line="191" selection-start-column="19" selection-end-line="191" selection-end-column="19" />
+            <state relative-caret-position="202">
+              <caret line="1794" column="0" selection-start-line="1794" selection-start-column="0" selection-end-line="1794" selection-end-column="0" />
               <folding>
-                <element signature="e#0#65015#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#4788#4789#0" expanded="false" />
-                <element signature="e#4825#4826#0" expanded="false" />
-                <element signature="e#5005#5006#0" expanded="false" />
-                <element signature="e#5071#5072#0" expanded="false" />
-                <element signature="e#7578#7579#0" expanded="false" />
-                <element signature="e#7607#7608#0" expanded="false" />
-                <element signature="e#7769#7770#0" expanded="false" />
-                <element signature="e#7811#7812#0" expanded="false" />
-                <element signature="e#7895#7896#0" expanded="false" />
-                <element signature="e#7944#7945#0" expanded="false" />
-                <element signature="e#7998#7999#0" expanded="false" />
-                <element signature="e#8039#8040#0" expanded="false" />
-                <element signature="e#8281#8282#0" expanded="false" />
-                <element signature="e#8329#8330#0" expanded="false" />
-                <element signature="e#8815#8816#0" expanded="false" />
-                <element signature="e#8850#8851#0" expanded="false" />
-                <element signature="e#19720#19721#0" expanded="false" />
-                <element signature="e#19772#19773#0" expanded="false" />
+                <element signature="e#79265#79266#0" expanded="true" />
+                <element signature="e#79307#79308#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MithraConfigurationManager.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/MithraConfigurationManager.java">
+      <file leaf-file-name="SingleQueueExecutor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/SingleQueueExecutor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="1795" column="23" selection-start-line="1795" selection-start-column="23" selection-end-line="1795" selection-end-column="23" />
+            <state relative-caret-position="388">
+              <caret line="720" column="0" selection-start-line="720" selection-start-column="0" selection-end-line="720" selection-end-column="0" />
               <folding>
-                <element signature="e#79265#79266#0" expanded="true" />
-                <element signature="e#79307#79308#0" expanded="true" />
+                <element signature="e#26060#26061#0" expanded="true" />
+                <element signature="e#26112#26113#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mithraobject.xsd" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomogen/src/main/xsd/mithraobject.xsd">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="62" column="55" selection-start-line="62" selection-start-column="51" selection-end-line="62" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReladomoMiddleTier.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/doc/docbook/middletier/ReladomoMiddleTier.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1046">
+              <caret line="208" column="11" selection-start-line="208" selection-start-column="11" selection-end-line="208" selection-end-column="11" />
+              <folding>
+                <element signature="e#790#795#0" expanded="true" />
+                <element signature="e#881#886#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -508,37 +515,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestEmbeddedValueObjects.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/evo/TestEmbeddedValueObjects.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#97217#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MithraMultiVmTestSuite.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/MithraMultiVmTestSuite.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="47" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#2312#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="build.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../reladomo/build/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="380" column="20" selection-start-line="380" selection-start-column="20" selection-end-line="380" selection-end-column="20" />
+            <state relative-caret-position="543">
+              <caret line="976" column="98" selection-start-line="976" selection-start-column="73" selection-end-line="976" selection-end-column="98" />
               <folding />
             </state>
           </provider>
@@ -570,7 +551,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/transaction/UpdateOperation.java" />
         <option value="$PROJECT_DIR$/reladomo/src/test/resources/log4jWarn.config" />
         <option value="$PROJECT_DIR$/reladomo/src/main/java/com/gs/fw/common/mithra/transaction/MultiUpdateOperation.java" />
         <option value="$PROJECT_DIR$/reladomo.iml" />
@@ -621,6 +601,7 @@
         <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/TestSerializationAcrossTimezones.java" />
         <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/RemoteTestSuite.java" />
         <option value="$PROJECT_DIR$/../../../reladomo/build/build.xml" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/doc/docbook/middletier/ReladomoMiddleTier.xml" />
       </list>
     </option>
   </component>
@@ -1510,15 +1491,15 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-3" y="0" width="1926" height="1050" extended-state="6" />
-    <editor active="false" />
+    <frame x="-3" y="0" width="1926" height="1050" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47597766" sideWeight="0.50853485" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47567567" sideWeight="0.49146515" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47567567" sideWeight="0.49146515" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.65405405" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1656,28 +1637,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/TestTransactionalClientPortal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test/resources/testdata/mithraTestDataStringSourceB.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/TestApplicationNotification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="1077" column="0" selection-start-line="1077" selection-start-column="0" selection-end-line="1077" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/finder/ChainedMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="926">
@@ -2469,21 +2428,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/build/build.xml">
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/MithraConfigurationManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="380" column="20" selection-start-line="380" selection-start-column="20" selection-end-line="380" selection-end-column="20" />
+        <state relative-caret-position="202">
+          <caret line="1794" column="0" selection-start-line="1794" selection-start-column="0" selection-end-line="1794" selection-end-column="0" />
+          <folding>
+            <element signature="e#79265#79266#0" expanded="true" />
+            <element signature="e#79307#79308#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/SingleQueueExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="720" column="0" selection-start-line="720" selection-start-column="0" selection-end-line="720" selection-end-column="0" />
+          <folding>
+            <element signature="e#26060#26061#0" expanded="true" />
+            <element signature="e#26112#26113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomogen/src/main/xsd/mithraobject.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="62" column="55" selection-start-line="62" selection-start-column="51" selection-end-line="62" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/MithraConfigurationManager.java">
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/build/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="1795" column="23" selection-start-line="1795" selection-start-column="23" selection-end-line="1795" selection-end-column="23" />
+        <state relative-caret-position="543">
+          <caret line="976" column="98" selection-start-line="976" selection-start-column="73" selection-end-line="976" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/doc/docbook/middletier/ReladomoMiddleTier.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1046">
+          <caret line="208" column="11" selection-start-line="208" selection-start-column="11" selection-end-line="208" selection-end-column="11" />
           <folding>
-            <element signature="e#79265#79266#0" expanded="true" />
-            <element signature="e#79307#79308#0" expanded="true" />
+            <element signature="e#790#795#0" expanded="true" />
+            <element signature="e#881#886#0" expanded="true" />
           </folding>
         </state>
       </provider>

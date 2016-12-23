@@ -30,23 +30,193 @@
         <title>Reladomo Philosophy &amp; Vision</title>
         <section>
             <title>Disclaimer</title>
-            <para>
+            <para>This document is prepared as a companion document for Reladomo. The opinions expressed in 
+                this document pertain expressly to the Reladomo product; as such, they are not meant to be taken 
+                as general opinions, evaluations, or considerations regarding other frameworks, libararies, languages, or coding
+                patterns. 
             </para>
         </section>
         <section>
             <title>Preface -- or why you should read this</title>
             <para>
+                Reladomo is positioned as a framework, not a library. A framework goes beyond what a library
+                provides by being perscriptive and opinionated about what coding patterns fit well, and don't fit well
+                in conjunction with the framework. Reladomo also generates code (see the section below) and the generated
+                API are expected to be used liberally throughout the rest of your code. It is therefore imperative that
+                the framework code and the application code have a unified outlook on what works well and what doesn't.
+            </para>
+            <para>
+                Reladomo is desinged with a set of core values and assumptions about the operating environment. Given those
+                values and assumptions, we consider certain coding patterns to be a good-fit and others a bad-fit. When
+                we mark something as a bad-fit pattern for Reladomo, we are not judging or condemning that practice outright; we
+                simply believe that using a bad-fit pattern with Reladomo will cause long term problems for the code base
+                and should be avoided. Even then, we don't consider it necessary to avoid bad-fit patterns in the short-term, 
+                so long as there is a longer term plan to eliminate those.
+            </para>
+            <para>
+                As a user of the framework, this document is meant to allow you to understand the sweet spot for Reladomo.
+                You can evaluate the values, operating environment and coding patterns you like to use against those outlined 
+                here and decide whether Reladomo would be good fit for your use case. Should you decide to use the framework,
+                this document can act as guide to creating a code base that works harmoniously with Reladomo.
+            </para>
+            <para>
+                This document also acts as a guide to the Reladomo developers for adding new features and changing the existing code.
+                We will heavily bias our evaluation of new features toward being compatible with the existing values of the framework.
+                We will likely avoid code that would encourage the bad-fit patterns.
             </para>
         </section>
         <section>
             <title>Reladomo Core Values</title>
             <para>
+                Reladomo is predicated on four core values. These values are not compatible with every possible use
+                for code; they simply represent the set that underlie the design decisions that embody the code in Reladomo.
+                We will reference these values throughout this document using their short form (in square braces) with either
+                a plus, meaning compatible, or minus, meaning less compatible.
+                <itemizedlist>
+                    <listitem>
+                        <para>
+                            Long lived code [LLC]: we target code that is meant to run in production for a long time, meaning
+                            many years or decades. This can often lead to prioritizing practices that may have higher initial
+                            cost, but lower runtime cost. We assume that such code will see many collaborators over its lifetime,
+                            of varying skill levels and familiarity with the code.
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Don't repeat yourself [DRY]. The benefits of DRY are well explained 
+                            <ulink url="https://en.wikipedia.org/wiki/Don't_repeat_yourself"><citetitle>elsewhere</citetitle></ulink>.
+                            This value is complimentary to LLC, as it reduces the cost of code ownership
+                            in the long run with multiple authors by avoiding transcription errors that 
+                            occur when information has to be repeated.
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Agile, in the simple interpretation of being able to respond to change [AGL]. For a long lived system,
+                            the ability to respond to change is important because change is inevitable and systems that can't 
+                            respond to change won't last long in production.
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Application logic is represented by a set of persistent domain objects [DOO]. We believe this to be
+                            consistent with the other values and allow for a harmonious interaction with database systems.
+                        </para>
+                    </listitem>
+                </itemizedlist>
             </para>
-            <section>
-                <title>Expected Operating Environment</title>
-                <para>
-                </para>
-            </section>
+        </section>
+        <section>
+            <title>Expected Operating Environment</title>
+            <para>
+                In developing Reladomo, we've made certain assumptions about what the runtime environment has to be. 
+                Some of these assumptions are necessary for ensuring compatibility, others are necessary because of
+                constraints of the JVM, etc.
+                <itemizedlist>
+                    <listitem>
+                        <para>
+                            Long lived processes: we assume the application code is executed in a moderately long
+                            running process. Using Reladomo with a process that has the lifetime of "ls" or "cgi-bin" 
+                            is a bad-fit. The JVM requires time for class loading and JIT optimizations which limit
+                            applicability in those realms. Additionally, creating secure connections to databases,
+                            running queries and modifying data, etc. are accomplished better when one-time costs
+                            are amortized.                            
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            java.lang classes work as documented. While this is really all of the Java SE specification,
+                            we've found that some environments cannot even provide the functionality in java.lang. 
+                            This includes java.lang.Thread, java.lang.ThreadLocal and all methods on java.lang.Class. 
+                            Enviornments that don't support Java SE are considered a bad-fit. There are two reasons behind. First,
+                            pragmatically, it would be much harder to write code that works without a specification to rely on.
+                            Second, Java's "write once, run anywhere" mantra is highly compatible with our core value of long-lived code
+                            [+LLC]. Environments that don't respect that reduce the reusability of code and we prefer not
+                            to encourage their use.
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Java's static keyword for variables and constants means one per process. While this is not per
+                            the Java spec, testing code in environments that violate this assumption is practically impossible.
+                            We would have no way of knowing all possible combinations of "static means one or more per process",
+                            let alone test them. Therefore, environments that have complex class loaders and significantly 
+                            break this assumption are a bad-fit. We recommend Reladomo classes to be loaded from the System
+                            classpath loader.
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            private means private and final means final. Environments that randomly or purposefully mutate 
+                            private or final values are a bad-fit. We can neither reason about, nor test environments that
+                            behave as such.
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Thread lifecycle is per the Java specification. Specifically, there is nothing running around in
+                            the JVM trying to kill or otherwise disrupt thread execution. Environments that don't support
+                            thread execution per the Java specifications are a bad-fit.
+                        </para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Development Philosophy</title>
+            <para>
+                Reladomo's development philosophy is predicated on the core values, operating environment and the
+                needs of an ORM. As a user of the framework, it's good to be familiar with these, because they
+                can inform your coding decisions beyond the good-fit/bad-fit patterns described later. As a 
+                developer or committer for Reladomo, you must ensure that any additions or changes are
+                consistent with this philosophy.
+                <itemizedlist>
+                    <listitem>
+                        <para>
+                            Object identity must have a sensible contract. In Reladomo, this contract is to represent
+                            a persisted object as singlar Java reference. The modified state of that object in a transaction
+                            must not be visible outside the transaction. This allows the user to write code properly with ACID
+                            semantics. It also reduces memory footprint and allows for better caching and reasoning about 
+                            required memory. As part of this contact, we require every row in the database to be uniquely
+                            addressable; that is, all tables must have a primary key.
+                            Combined, these consequences are well aligned with the long-lived code [+LLC] core value.
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Reladomo must solve the set/object impedence mismatch. Relational databases are constructed 
+                            with sets as their fundamental unit; operations are implicit over sets. 
+                            Objects are more network/graph like in nature and operations are procedural/imperative. 
+                            The domain lists in Reladomo are the core feature that bridge this gap. They allow 
+                            for set-like operations (e.g. insertAll, updating all, etc), as well set-like IO patterns
+                            with deepFetch.
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Testablity is a key requirement for Reladomo itself as well as application code using
+                            Reladomo. This is a direct consequence of long-lived code that can remain agile [+LLC][+AGL].
+                            The test resource provided by Reladomo is integral to this capability. It's important
+                            that application code using Reladomo be testable using this resource for the majority, if not all
+                            of the available features. In particular, user written tests must enable them to perform
+                            read-write operations, reason about IO and assert the conditions necessary for a successful execution.
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                        </para>
+                    </listitem>
+                </itemizedlist>
+            </para>
         </section>
         <section>
             <title>How to use Reladomo effectively (good-fit patterns)</title>

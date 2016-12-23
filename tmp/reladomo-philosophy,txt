@@ -10,7 +10,7 @@
 	- allows Reladomo developers to guide future roadmap.
 
 Reladomo core values/philosophy:
-- core criteria:
+- core values:
 	1) DRY [DRY]
 	2) long lived code [LLC]
 	3) agile [AGL]
@@ -20,60 +20,62 @@ Reladomo core values/philosophy:
 	1) long lived processes (not ls)
 	2) java.lang works
 		- Java's write once, run anywhere pormise has been a great boon for code sharing
-			- anything that threatens that is an anti-pattern
+			- anything that threatens that is an bad-fit
 			- everything in java.lang must be usable by any code.
 				- this includes java.lang.Thread, java.lang.ThreadLocal and all methods on java.lang.Class
 					- environments that do no provide a correct implementation of java, and java.lang specifically, are not supported.
 	3) static means one per jvm
 	4) private means private. final means final.
-	
-- an ORM must solve the set/object impedance mismatch
-	- deepFetch and the List objects in Reladomo do that to a great extent
-- testability is key [LLC, AGL] -- see Testing Philosophy
-	- tests should allow reasoning about IO
-- object identity must have a sensible contract
-- ACID is king
-- IO latency reduction is important; bandwidth is not critical on a per-row basis
-- vendor neutrality [LLC]
-- temporal persistence must be handled at the framework level, not by the application
-	- temporal persistence implementation needs new code and data structures
-		- it touches everything, from the contract of the application domian objects to the query language to caching structures to persistence
-	- it cannot be composed on top of non-temporal persistence code and data structures
-- temporal patterns: only two columns per temporal dimension make sense.
-	- must be able to produce an object graph that's consistent.
-	- must be able to join
-	- audit table is an anti-pattern
-	- version column in table is an anti-pattern
-- the "surface area" provided by the Reladomo object/finder api is large
-	- attempts at wrapping these will lead to eventual failure
-	- Reladomo objects are the application/domain objects
-		- hiding these objects (via wrappers, copies, dto's, etc is an anti-pattern)
-	- Reladomo finder API are the correct way to find objects.
-- code must be generated properly
-	- bad code generation is worse than bad
-- A database is private storage
-	- it's not a public API or a communication channel [AGL]
-	- it's not a compute engine (breaks DOO/DRY)
-	- all access must be from a singular code base
-	- Database magic is an anti-pattern
-		- identity generation
-		- triggers (especially when they modify)
-		- db2 bitemporal
-- views are a temporay last resort.
-	- can't write
-	- can't cache
-	- can't reason about identity
-	- implementations are typically problematic
-- We will not comprimise on primary keys.
-	
-- it's critical to know what you don't want -- spell out the bad-fit cases.
-	- stored procedures are an anti-pattern, see below [DRY, AGL, LLC]
-	- application implemented DAO is an anti-pattern http://www.oracle.com/technetwork/java/dataaccessobject-138824.html
-		- creates a large amount of duplicative code
-			- adding a simple attribute can cause a change across a dozen files -- obviously not DRY
-		- does not properly address object identity
-		- breaks down with relationships
-	- Repository/Manager is an anti-pattern
+
+
+- Development philosophy:
+    - object identity must have a sensible contract
+        - We will not comprimise on primary keys.
+    - an ORM must solve the set/object impedance mismatch
+        - deepFetch and the List objects in Reladomo do that to a great extent
+    - testability [TST] is key [LLC, AGL] -- see Testing Philosophy
+        - tests should allow reasoning about IO
+    - backward compatibility [LLC], with overlapping support for api to be removed.
+    - ACID is king
+    - IO latency reduction is important; bandwidth is not critical on a per-row basis
+    - vendor neutrality [LLC]
+    - Reladomo objects are the application/domain objects
+        - hiding these objects (via wrappers, copies, dto's, etc is an bad-fit)
+    - temporal persistence must be handled at the framework level, not by the application
+        - temporal persistence implementation needs new code and data structures
+            - it touches everything, from the contract of the application domian objects to the query language to caching structures to persistence
+        - it cannot be composed on top of non-temporal persistence code and data structures
+    - temporal patterns: only two columns per temporal dimension make sense.
+        - must be able to produce an object graph that's consistent.
+        - must be able to join
+        - audit table is an bad-fit
+        - version column in table is an bad-fit
+    - code must be generated properly
+        - bad code generation is worse than bad
+        - metadata driven.
+        - encapsulate the knowledge of an expert and make it available to other people.
+        - DRY
+        - improvements and bug fixes are inherited at no cost
+    - A database is private storage
+        - it's not a public API or a communication channel [AGL]
+        - it's not a compute engine (breaks DOO/DRY)
+        - all access must be from a singular code base [AGL, TST]
+        - Database magic is an bad-fit
+            - identity generation
+            - triggers (especially when they modify)
+            - db2 bitemporal
+	- stored procedures are a bad-fit, see below [-DRY, -AGL, -LLC, -TST]
+	- ETL between the physical schema and the domain is an bad-fit
+		- makes writing a near impossibility
+		- makes caching a near impossibility
+		- makes uniquing a near impossibility
+	- string based query language is an bad-fit
+		- makes refactoring nearly impossible
+		- makes find-usages nearly impossible
+		- makes abstraction nearly impossible
+	- pluggable cache is an bad-fit -- a cache is not a map
+	- result sets are not domain objects. Reladomo does not faciliate result-set based programming.
+	- Repository/Manager is an bad-fit
 		- C library not DomainOO
 		- queries naturally belong to a specific code site, not 
 			- code sharing/abstraction for queries should follow normal OO practice, not C library practice
@@ -81,20 +83,52 @@ Reladomo core values/philosophy:
 			- leads to a code smell: method that's used from only one site 
 				- such a method is better represented as a private scoped method near the call site, not globally public
 			- Reladomo finder is not a repository
-	- Anemic domain is an anti-pattern
+	
+- Do's/Don't:
+    - Don't assume Reladomo works like any other ORM.
+    - understand how Reladomo solves the set/object impedance mismatch
+        - deepFetch and the List objects in Reladomo do that to a great extent
+    - write tests using the MithraTestResource
+        - testability is key [LLC, AGL] -- see Testing Philosophy
+            - tests should allow reasoning about IO
+        - Don't use hand-rolled mocks
+    - understand Reladomo's object identity contract
+    - update your version of Reladomo regularly
+        - backward compatibility [LLC], with overlapping support for api to be removed.
+    - write your code using ACID semantics
+        - deliniate your transactions properly.
+        - put your unit of work in a transaction.
+            - avoid reading outside a transaction, just to start a transaction right after on that data.
+    - optimize your code for IO latency.
+        - Don't worry about bandwidth. It's not critical on a per-row basis.
+        - leverage Reladomo's support for in-clauses with regular attributes and tuples for good batching.
+        - leverage Reladomo's adhoc list deep fetch for good batching.
+    - Don't write vendor specific code.
+    - Don't invent a history mechanism. Leverage the temporal patterns supported by Reladomo instead.
+    - the "surface area" provided by the Reladomo object/finder api is large
+        - attempts at wrapping these will lead to eventual failure
+        - Reladomo objects are the application/domain objects
+            - hiding these objects (via wrappers, copies, dto's, etc is an bad-fit)
+        - Reladomo finder API are the correct way to find objects.
+        - don't invent your own query api.
+    - views are a temporay last resort.
+        - can't write
+        - can't cache
+        - can't reason about identity
+        - implementations are typically problematic
+    - Don't implement the DAO pattern at the application level (http://www.oracle.com/technetwork/java/dataaccessobject-138824.html)
+		- creates a large amount of duplicative code
+			- adding a simple attribute can cause a change across a dozen files -- obviously not DRY
+		- does not properly address object identity
+		- breaks down with relationships
+	- Anemic domain is an bad-fit
 		- Business logic must reside in the domain
-	- Services that act as remote procedures are an anti-pattern
-		- Services that don't delegate to the domain are an anti-pattern
-	- ETL between the physical schema and the domain is an anti-pattern
+	- Services that act as remote procedures are an bad-fit
+		- Services that don't delegate to the domain are an bad-fit
+	- ETL between the physical schema and the domain is an bad-fit
 		- makes writing a near impossibility
 		- makes caching a near impossibility
 		- makes uniquing a near impossibility
-	- string based query language is an anti-pattern
-		- makes refactoring nearly impossible
-		- makes find-usages nearly impossible
-		- makes abstraction nearly impossible
-	- pluggable cache is an anti-pattern -- a cache is not a map
-	- result sets are not domain objects. Reladomo does not faciliate result-set based programming.
 	- schemaless leads to unreadable data in the long run
 
 - stored procs:
@@ -137,7 +171,7 @@ Reladomo core values/philosophy:
 has been the traditional answer to the impedance mismatch, effectively solving the problem by ignoring one half of it."
 
 - implementation inheritance doesn't map well.
-	- implementation polymorphism is a niche feature in OO. While not an outright anti-pattern, most
+	- implementation polymorphism is a niche feature in OO. While not an outright bad-fit, most
 		practitioners warn against using it extensively/deeply.
 	- light polymorphism (interfaces) are fine.
 
