@@ -26,6 +26,14 @@ Reladomo core values/philosophy:
 					- environments that do no provide a correct implementation of java, and java.lang specifically, are not supported.
 	3) static means one per jvm
 	4) private means private. final means final.
+    - A database is private storage
+        - it's not a public API or a communication channel [AGL]
+        - it's not a compute engine (breaks DOO/DRY)
+        - all access must be from a singular code base [AGL, TST]
+        - Database magic is an bad-fit
+            - identity generation
+            - triggers (especially when they modify)
+            - db2 bitemporal
 
 
 - Development philosophy:
@@ -56,14 +64,6 @@ Reladomo core values/philosophy:
         - encapsulate the knowledge of an expert and make it available to other people.
         - DRY
         - improvements and bug fixes are inherited at no cost
-    - A database is private storage
-        - it's not a public API or a communication channel [AGL]
-        - it's not a compute engine (breaks DOO/DRY)
-        - all access must be from a singular code base [AGL, TST]
-        - Database magic is an bad-fit
-            - identity generation
-            - triggers (especially when they modify)
-            - db2 bitemporal
 	- stored procedures are a bad-fit, see below [-DRY, -AGL, -LLC, -TST]
 	- ETL between the physical schema and the domain is an bad-fit
 		- makes writing a near impossibility
@@ -75,24 +75,16 @@ Reladomo core values/philosophy:
 		- makes abstraction nearly impossible
 	- pluggable cache is an bad-fit -- a cache is not a map
 	- result sets are not domain objects. Reladomo does not faciliate result-set based programming.
-	- Repository/Manager is an bad-fit
-		- C library not DomainOO
-		- queries naturally belong to a specific code site, not 
-			- code sharing/abstraction for queries should follow normal OO practice, not C library practice
-		- 1 method per query doesn't scale; leads to re-using unfit queries
-			- leads to a code smell: method that's used from only one site 
-				- such a method is better represented as a private scoped method near the call site, not globally public
-			- Reladomo finder is not a repository
 	
 - Do's/Don't:
     - Don't assume Reladomo works like any other ORM.
+    - understand Reladomo's object identity contract
     - understand how Reladomo solves the set/object impedance mismatch
         - deepFetch and the List objects in Reladomo do that to a great extent
     - write tests using the MithraTestResource
         - testability is key [LLC, AGL] -- see Testing Philosophy
             - tests should allow reasoning about IO
         - Don't use hand-rolled mocks
-    - understand Reladomo's object identity contract
     - update your version of Reladomo regularly
         - backward compatibility [LLC], with overlapping support for api to be removed.
     - write your code using ACID semantics
@@ -104,13 +96,14 @@ Reladomo core values/philosophy:
         - leverage Reladomo's support for in-clauses with regular attributes and tuples for good batching.
         - leverage Reladomo's adhoc list deep fetch for good batching.
     - Don't write vendor specific code.
-    - Don't invent a history mechanism. Leverage the temporal patterns supported by Reladomo instead.
+        - Don't write stored procs.
     - the "surface area" provided by the Reladomo object/finder api is large
         - attempts at wrapping these will lead to eventual failure
         - Reladomo objects are the application/domain objects
             - hiding these objects (via wrappers, copies, dto's, etc is an bad-fit)
         - Reladomo finder API are the correct way to find objects.
         - don't invent your own query api.
+    - Don't invent a history mechanism. Leverage the temporal patterns supported by Reladomo instead.
     - views are a temporay last resort.
         - can't write
         - can't cache
@@ -122,7 +115,10 @@ Reladomo core values/philosophy:
 		- does not properly address object identity
 		- breaks down with relationships
 	- Anemic domain is an bad-fit
+        - Do add methods to the concrete domain classes.
 		- Business logic must reside in the domain
+    - design your model with both the objects and the persisted schema in mind. Overemphasizing one over the other 
+        will be had negative consequences.
 	- Services that act as remote procedures are an bad-fit
 		- Services that don't delegate to the domain are an bad-fit
 	- ETL between the physical schema and the domain is an bad-fit
@@ -130,6 +126,15 @@ Reladomo core values/philosophy:
 		- makes caching a near impossibility
 		- makes uniquing a near impossibility
 	- schemaless leads to unreadable data in the long run
+    - understand the contract of the cache. leverage notification and don't clear the cache.
+	- Repository/Manager is an bad-fit
+		- C library not DomainOO
+		- queries naturally belong to a specific code site, not 
+			- code sharing/abstraction for queries should follow normal OO practice, not C library practice
+		- 1 method per query doesn't scale; leads to re-using unfit queries
+			- leads to a code smell: method that's used from only one site 
+				- such a method is better represented as a private scoped method near the call site, not globally public
+			- Reladomo finder is not a repository
 
 - stored procs:
 			- not testable

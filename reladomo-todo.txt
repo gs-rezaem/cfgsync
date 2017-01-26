@@ -1,0 +1,2 @@
+- bug: when calling setFoo or setFooUntil on bitemporal objects, if the value of foo is the same, no change is made, even if the end date of the operation
+    (via copyDetachedValueUntil, or setFooUntil) would change the timeline.

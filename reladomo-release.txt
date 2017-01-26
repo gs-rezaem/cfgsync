@@ -1,4 +1,6 @@
-tag on github
+update the release notes
+update the version
+tag on github using "create a release"
 fetch the tag locally
 	- git fetch --all
 	- git checkout tags/16.1.1
@@ -9,4 +11,4 @@ upload 4 bundle files from target to https://oss.sonatype.org/
 	- click on Staging upload on the left
 	- choose upload mode: artifact bundle
 make sure the 4 repositories are "closed", which means it went well
-then release the 4 repos
+then release the 4 repos (and auto-drop)
