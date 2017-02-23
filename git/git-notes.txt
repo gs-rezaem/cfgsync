@@ -41,7 +41,7 @@ git push
 (if there are unmerged commits on gs-rezaem/repo, use git push --force)
 
 
-- sqaushing local commits: https://git-scm.com/docs/git-rebase#_interactive_mode
+- squashing local commits: https://git-scm.com/docs/git-rebase#_interactive_mode
 	git rebase -i HEAD~3
 	- opens an editor with top 3 commits. with the word "pick" in front of them
 	- replace "pick" with squash on bottom two rows. close editor.
@@ -68,14 +68,24 @@ git show <tag name>
 --------------
 
 less usual stuff:
+- reverting uncommitted work:
+git checkout -- .
 
 - nuking a commit:
 
-git reset -hard HEAD~1
+git reset --hard HEAD~1
 
  (~1 means one commit. ~3 would be 3, etc)
- 
+------------------------
+branching:
+create new branch with all the existing code:
+git checkout -b <branchName>
+push the new branch:
+git push -u origin
 
+create a blank new branch:
+git checkout --orphan <branchName>
+git rm -rf .
 
 -------------
 proxy settings:
