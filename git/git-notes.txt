@@ -81,7 +81,7 @@ branching:
 create new branch with all the existing code:
 git checkout -b <branchName>
 push the new branch:
-git push -u origin
+git push -u origin <branchName>
 
 create a blank new branch:
 git checkout --orphan <branchName>
