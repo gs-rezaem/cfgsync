@@ -1,2 +1,9 @@
 - bug: when calling setFoo or setFooUntil on bitemporal objects, if the value of foo is the same, no change is made, even if the end date of the operation
     (via copyDetachedValueUntil, or setFooUntil) would change the timeline.
+- philosphy doc: 
+    - stored procs: transaction management becomes very hard when stored procs are doing begin/commit/rollback
+    - maybe talk about leaky abstractions more. no native queries. no "if your database supports..."
+- query subsetting
+    - a small shape hash table that's checked linearly.
+- support for object xml for more vendors
+- list relationship navigation and deep fetching should work better
