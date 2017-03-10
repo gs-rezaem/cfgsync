@@ -9,7 +9,7 @@
 - two choices for navigation following:
 	- navigation based, rooted at one point. just like reladomo deep fetches
 		- a little harder to reuse/abstract out, but quite possible if the code is just like deep fetch.
-	- class based. with max depth.
+	- No: class based. with max depth.
 		- for each config, each class specifies what to navigate.
 		- while this is interesting, it's not consistent with the existing deepFetch semantics
 			- supporting this could mean supporting a different kind of deepFetch
@@ -18,9 +18,7 @@
 - annotations:
 	- used for methods declared on the concrete classes
 	- only support parameterless methods
-	- @ReladomoSerializable
-	- @ReladomoSerializable("contextName")
-	- can be excluded (like attributes) from a particular path in a config
+	- @ReladomoSerialize(Class[]) where Class[] is a set of view classes (really, marker classes, used for type safe naming)
 
 - generic serializer:
 	- usually a framework, like gson, will call something like:
@@ -28,7 +26,7 @@
 		on a registered implementation of the serializer
 	- to delegate, let's wrap serializationContext into a ReladomoSerializationContext
 	- must register serializers for both reladomo objects and lists
-	- exception handling?
+	- exception handling: writer throws IOException
 	
 	ReladomoSerializationContext:
 		- serialize(reladomoObject)
@@ -38,7 +36,7 @@
 		- can exclude attributes
 		- can use a named configuration
 		- outputs links for the rest of the navigations
-		- abstract methods:
+		- delegates to a writer:
 			- always passes in the original object
 			- writeStart(reladomoObject)
 			- writeInt(reladomoObject, name, value), writeLong, ...
@@ -50,19 +48,28 @@
 			- names starting with _rdo are reladomo internal
 				- _rdoState: 1 (in-memory), 4 (detached), 100 (read-only)
 				- _rdoClass: java class name
-		
-gson example:
-	serialize(reladomoObject, type, context)
+- done: Serialized<T Extends MithraObject> and SerialziedList<T extends MithraList>
+	- universal wrappers that can be registered with serialization framworks (gson/jackson/etc)
+- deal with parameterized relationships
+	- no good way to do this in json. The best is probably a nested structure:
+	
 	{
-		j = new JsonObject()
-		new GsonReladomoSerializationContext(j, context).serialize(reladomoObject);
-		return j;
+		"productId": 7,
+		synonymByType: {
+			"cusip": {
+				"type": "cusip",
+				"value": "XYZ"
+			},
+			"isn": {
+				"type": "isn",
+				"value": "XYZ"
+			}
+		}
 	}
-
-jackson example: org.codehaus.jackson.map.JsonSerializer
-	serialize(reladomoObject, JsonGenerator jgen, SerializerProvider provider) 
-	{
-		new JacksonReladomoSerializationContext(jgen, provider).serialize(reladomoObject);
-	}
-
-xml example:
+	- requires navigating all of parameters together
+	- further nesting will result if the method has multiple params
+		- for json, serialization must be sorted in parameter repetition. e.g. method.p1a.p2a, then method.p1a.p2b, then method.p1c.p2a, etc.
+	- if the parameter value is complex (e.g. a set), it all falls apart
+- circular references: json can't really handle it without a custom de/serializer.
+	- beyond the scope of the main serializer. There is enough info passed around to be implementable by a context/writer impl
+- xml example:

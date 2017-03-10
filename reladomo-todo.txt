@@ -7,3 +7,4 @@
     - a small shape hash table that's checked linearly.
 - support for object xml for more vendors
 - list relationship navigation and deep fetching should work better
+- build doesn't seem to work in git-bash on windows

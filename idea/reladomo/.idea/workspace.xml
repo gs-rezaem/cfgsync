@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/finder/NonPrimitiveInOperation.java" line="46" mnemonic="1" />
+    <bookmark url="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/finder/SingleLinkDeepFetchStrategy.java" line="61" mnemonic="2" />
+    <bookmark url="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/portal/MithraAbstractObjectPortal.java" line="649" mnemonic="1" />
+    <bookmark url="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/finder/MappedOperation.java" line="112" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
     <list id="d15962bd-ffb1-4cfc-be25-f070fb194cc4" name="Default" comment="" />
-    <list default="true" id="9f410a4c-432d-482e-8f6b-52b5e90848fc" name="multi-update without or" comment="wip" />
+    <list default="true" id="9f410a4c-432d-482e-8f6b-52b5e90848fc" name="multi-update without or" comment="wip - serializer mostly complete" />
     <list id="a1533562-3bc2-4015-9d76-54348e23eb24" name="don't commit" comment="" />
     <ignored path="reladomo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,11 +33,66 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="AnnotatedMethodCache.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/AnnotatedMethodCache.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+              <folding>
+                <element signature="e#1028#1208#0" expanded="true" />
+                <element signature="e#1207#1208#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Order.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/domain/Order.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="55" column="61" selection-start-line="55" selection-start-column="61" selection-end-line="55" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BigDecimalAttribute.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/BigDecimalAttribute.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="687" column="18" selection-start-line="687" selection-start-column="18" selection-end-line="687" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#26064#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Attribute.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/Attribute.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="355">
+              <caret line="697" column="28" selection-start-line="697" selection-start-column="28" selection-end-line="697" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BooleanAttribute.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/BooleanAttribute.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="465" column="19" selection-start-line="465" selection-start-column="19" selection-end-line="465" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="SerialWriter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/SerialWriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="755">
-              <caret line="85" column="11" selection-start-line="85" selection-start-column="11" selection-end-line="85" selection-end-column="11" />
+            <state relative-caret-position="135">
+              <caret line="31" column="116" selection-start-line="31" selection-start-column="116" selection-end-line="31" selection-end-column="116" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,113 +100,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SerializationConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/SerializationConfig.java">
+      <file leaf-file-name="TrivialJsonSerialWriter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/util/serializer/TrivialJsonSerialWriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+            <state relative-caret-position="4229">
+              <caret line="334" column="116" selection-start-line="334" selection-start-column="116" selection-end-line="334" selection-end-column="116" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppendableSerialContext.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/util/serializer/AppendableSerialContext.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="40" column="47" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#961#990#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractDatabaseType.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/databasetype/AbstractDatabaseType.java">
+      <file leaf-file-name="JacksonReladomoSerialWriter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomoserial/src/main/java/com/gs/reladomo/serial/jackson/JacksonReladomoSerialWriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="785" column="18" selection-start-line="785" selection-start-column="18" selection-end-line="785" selection-end-column="18" />
+            <state relative-caret-position="90">
+              <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderFinder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/target/test-generated-onheap-src/com/gs/fw/common/mithra/test/domain/OrderFinder.java">
+      <file leaf-file-name="GsonReladomoSerialWriter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomoserial/src/main/java/com/gs/reladomo/serial/gson/GsonReladomoSerialWriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="346" column="27" selection-start-line="346" selection-start-column="27" selection-end-line="346" selection-end-column="27" />
+            <state relative-caret-position="15">
+              <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
               <folding>
-                <element signature="e#12172#12173#0" expanded="true" />
-                <element signature="e#12237#12238#0" expanded="true" />
+                <element signature="e#9742#9743#0" expanded="true" />
+                <element signature="e#9771#9772#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SerializationNode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/SerializationNode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding>
-                <element signature="e#2469#2470#0" expanded="true" />
-                <element signature="e#2502#2503#0" expanded="true" />
-                <element signature="e#2558#2559#0" expanded="true" />
-                <element signature="e#2589#2590#0" expanded="true" />
-                <element signature="e#2648#2649#0" expanded="true" />
-                <element signature="e#2684#2685#0" expanded="true" />
-                <element signature="e#2732#2733#0" expanded="true" />
-                <element signature="e#2761#2762#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReladomoSerializationContext.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/ReladomoSerializationContext.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MithraTransactionalObjectImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/superclassimpl/MithraTransactionalObjectImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MithraDatedTransactionalObjectImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/superclassimpl/MithraDatedTransactionalObjectImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="188" column="43" selection-start-line="188" selection-start-column="43" selection-end-line="188" selection-end-column="43" />
-              <folding>
-                <element signature="e#13122#13123#0" expanded="true" />
-                <element signature="e#13172#13173#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatedTransactionalBehavior.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/behavior/DatedTransactionalBehavior.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="156" column="25" selection-start-line="156" selection-start-column="25" selection-end-line="156" selection-end-column="25" />
-              <folding>
-                <element signature="e#5412#5413#0" expanded="true" />
-                <element signature="e#5445#5446#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MithraTransactionalObject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/MithraTransactionalObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="206" column="19" selection-start-line="206" selection-start-column="19" selection-end-line="206" selection-end-column="19" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -159,8 +150,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Singleton" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -173,6 +165,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../reladomo" />
     <option name="WARN_ABOUT_CRLF" value="false" />
   </component>
+  <component name="GotoFileConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="JAVA" />
+    </file-type-list>
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -181,57 +178,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test/resources/MithraConfigPartialCache.xml" />
-        <option value="$PROJECT_DIR$/../../../reladomo/build/lib/junit-4.12.jar!/junit/framework/TestCase.class" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/multivm/SlaveVm.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/MithraManager.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/TestClientPortal.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test/resources/log4jWarn.config" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/TestMultiClientNotificationTestCase.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/TestMithraReplicationNotificationMessages.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/TestClientPortalUsingDerby.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/TestTransactionalClientPortal.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/evo/TestEmbeddedValueObjectsRemote.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/TestApplicationNotification.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/finder/NotExistsOperation.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/behavior/state/PersistedState.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/databasetype/Udb82DatabaseType.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/connectionmanager/ObjectPoolWithThreadAffinity.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/TestBasicRetrievalFromZippedFile.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/mithraTestResource/TestMithraTestResource.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/mithraruntime/MithraRuntimeType.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test-util/java/com/gs/fw/common/mithra/test/MithraTestResource.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/MithraConfigurationManager.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/TestSerializationAcrossTimezones.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/RemoteTestSuite.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/doc/docbook/middletier/ReladomoMiddleTier.xml" />
-        <option value="$PROJECT_DIR$/../../../reladomo/build/build.xml" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/MithraTransactionalObject.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/MithraObject.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomogen/src/main/templates/readonly/Abstract.jsp" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/target/test-generated-onheap-src/com/gs/fw/common/mithra/test/domain/OrderItemFinder.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomoserial/src/main/java/com/gs/reladomo/serial/gson/ExampleGsonSerializer.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/build/reladomolib.spec" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/list/AbstractOperationBasedList.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/list/MithraDelegatedList.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/target/test-generated-onheap-src/com/gs/fw/common/mithra/test/domain/UserFinder.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/finder/ChainedMapper.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/list/AbstractNonOperationBasedList.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/list/DelegatingList.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/MithraCompositeList.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/TestAttributeValueSelector.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test/reladomo-xml/User.xml" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/TestRelationships.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/finder/MappedOperation.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/CHANGELOG.md" />
+        <option value="$PROJECT_DIR$/../../../reladomo/build/sign-release.sh" />
         <option value="$PROJECT_DIR$/../../../reladomo/build/reladomo-config.xml" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/Attribute.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/IntegerAttribute.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/LongAttribute.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/ByteAttribute.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/CharAttribute.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/DoubleAttribute.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/FloatAttribute.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/ShortAttribute.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/BooleanAttribute.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/StringAttribute.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/DateAttribute.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/ByteArrayAttribute.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/EnumAttribute.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/BigDecimalAttribute.java" />
         <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/TimestampAttribute.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/TimeAttribute.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/SerialWriter.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomoserial/src/test/java/com/gs/reladomo/serial/gson/ExampleReladomoGsonSerializerTest.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomoserial/src/main/java/com/gs/reladomo/serial/jackson/JacksonReladomoSerialContext.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomoserial/src/test/java/com/gs/reladomo/serial/gson/ExampleJacksonReladomoSerializerTest.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomoserial/src/main/java/com/gs/reladomo/serial/jackson/JacksonReladomoSerializer.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomoserial/src/main/java/com/gs/reladomo/serial/jackson/JacksonReladomoSerialWriter.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/finder/AbstractRelatedFinder.java" />
         <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/SerializationNode.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/database/SyslogChecker.java" />
-        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/SerializationConfig.java" />
         <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/ReladomoSerializationContext.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/SerializedList.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomoserial/src/main/java/com/gs/reladomo/serial/jackson/ExampleJacksonReladomoSerializer.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/lib/compile/gs-collections-api-5.1.0.jar!/com/gs/collections/api/bag/Bag.class" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomoserial/src/main/java/com/gs/reladomo/serial/jackson/JacksonWrappedSerializer.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomoserial/src/main/java/com/gs/reladomo/serial/jackson/JacksonWrappedListSerializer.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/util/serializer/TrivialJsonSerializer.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/Serialized.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomoserial/src/main/java/com/gs/reladomo/serial/jackson/JacksonReldomoModule.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/ReladomoSerialize.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/domain/Order.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/SerializationConfig.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/domain/SerialView.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/build/build.xml" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomoserial/src/main/java/com/gs/reladomo/serial/jackson/JacksonReladomoModule.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomoserial/src/main/java/com/gs/reladomo/serial/gson/ExampleReladomoGsonSerializer.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomoserial/src/main/java/com/gs/reladomo/serial/gson/GsonWrappedSerializer.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/util/serializer/TestTrivialJson.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomoserial/src/test/java/com/gs/reladomo/serial/jackson/ExampleJacksonReladomoSerializerTest.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomoserial/src/main/java/com/gs/reladomo/serial/gson/GsonRelodomoSerialContext.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomoserial/src/test/java/com/gs/reladomo/serial/gson/ExampleGsonReladomoSerializerTest.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/AnnotatedMethodCache.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/SerialWriter.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomoserial/src/main/java/com/gs/reladomo/serial/gson/GsonReladomoSerialWriter.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/util/serializer/AppendableSerialContext.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/util/serializer/TrivialJsonSerialWriter.java" />
+        <option value="$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/Attribute.java" />
       </list>
     </option>
   </component>
@@ -244,8 +241,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-3" />
-    <option name="width" value="1926" />
-    <option name="height" value="1050" />
+    <option name="width" value="1922" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -302,7 +299,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="reladomogen" />
+              <option name="myItemId" value="reladomoserial" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -316,151 +313,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="reladomogen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reladomo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reladomo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reladomogen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reladomo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reladomo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reladomogen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="transactional" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reladomo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reladomo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reladomogen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="readonly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reladomo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reladomo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reladomo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reladomo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reladomo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reladomo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reladomo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reladomo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reladomo" />
+              <option name="myItemId" value="reladomoserial" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -471,26 +324,16 @@
               <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="reladomo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reladomo" />
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="reladomo" />
+              <option name="myItemId" value="serial" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
+              <option name="myItemId" value="jackson" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -504,7 +347,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="reladomo" />
+              <option name="myItemId" value="reladomoserial" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -512,7 +355,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -520,7 +363,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fw" />
+              <option name="myItemId" value="serial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gson" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -534,107 +381,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="reladomo" />
+              <option name="myItemId" value="reladomoserial" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mithra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reladomo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reladomo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reladomo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mithra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reladomo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reladomo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reladomo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mithra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="serializer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -644,18 +395,40 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../reladomo/reladomo/src/test/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../reladomo/reladomoserial/target/test-classes" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="settings.editor.selected.configurable" value="copyright.filetypes.JAVA" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="extract.method.default.visibility" value="private" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="460" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="460" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="460" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="460" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="237" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="244" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="317" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1042" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.gs.reladomo.serial.jackson" />
       <recent name="com.gs.fw" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.gs.reladomo.serial.jackson" />
+      <recent name="com.gs.fw.common.mithra.util.serializer" />
+      <recent name="com.gs.reladomo.serial.gson" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/../../../reladomo/build" />
@@ -663,71 +436,19 @@
       <recent name="C:\projects\reladomo\build\pom-templates" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Partial Cache Suite">
-    <configuration default="false" name="RemoteTestSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ExampleGsonReladomoSerializerTest">
+    <configuration default="false" name="ExampleJacksonReladomoSerializerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.gs.fw.common.mithra.test.*" />
+          <option name="PATTERN" value="com.gs.reladomo.serial.jackson.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="reladomo" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.gs.fw.common.mithra.test" />
-      <option name="MAIN_CLASS_NAME" value="com.gs.fw.common.mithra.test.RemoteTestSuite" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-XX:MaxPermSize=256m -Dlog4j.configuration=log4jWarn.config -Dmithra.xml.config=MithraConfigFullCache.xml" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$/../../../reladomo" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="TestBasicRetrievalFromZippedFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.gs.fw.common.mithra.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="reladomo" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.gs.fw.common.mithra.test" />
-      <option name="MAIN_CLASS_NAME" value="com.gs.fw.common.mithra.test.TestBasicRetrievalFromZippedFile" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-XX:MaxPermSize=256m -Dlog4j.configuration=log4jWarn.config -Dmithra.xml.config=MithraConfigFullCache.xml" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$/../../../reladomo" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="TestMithraTestResource" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.gs.fw.common.mithra.test.mithraTestResource.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="reladomo" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.gs.fw.common.mithra.test.mithraTestResource" />
-      <option name="MAIN_CLASS_NAME" value="com.gs.fw.common.mithra.test.mithraTestResource.TestMithraTestResource" />
+      <option name="PACKAGE_NAME" value="com.gs.reladomo.serial.jackson" />
+      <option name="MAIN_CLASS_NAME" value="com.gs.reladomo.serial.jackson.ExampleJacksonReladomoSerializerTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-XX:MaxPermSize=256m -Dlog4j.configuration=log4jWarn.config -Dmithra.xml.config=MithraConfigPartialCache.xml" />
@@ -742,19 +463,19 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="TestMithraTestResource.testTwoResources" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ExampleJacksonReladomoSerializerTest.testOrderWithItems" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.gs.fw.common.mithra.test.mithraTestResource.*" />
+          <option name="PATTERN" value="com.gs.reladomo.serial.jackson.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="reladomo" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.gs.fw.common.mithra.test.mithraTestResource" />
-      <option name="MAIN_CLASS_NAME" value="com.gs.fw.common.mithra.test.mithraTestResource.TestMithraTestResource" />
-      <option name="METHOD_NAME" value="testTwoResources" />
+      <option name="PACKAGE_NAME" value="com.gs.reladomo.serial.jackson" />
+      <option name="MAIN_CLASS_NAME" value="com.gs.reladomo.serial.jackson.ExampleJacksonReladomoSerializerTest" />
+      <option name="METHOD_NAME" value="testOrderWithItems" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-XX:MaxPermSize=256m -Dlog4j.configuration=log4jWarn.config -Dmithra.xml.config=MithraConfigPartialCache.xml" />
       <option name="PARAMETERS" value="" />
@@ -768,18 +489,70 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="TestMithraTestResourceBackwardCompatibility" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ExampleJacksonReladomoSerializerTest.testOrderWithDependents" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.gs.fw.common.mithra.test.mithraTestResource.*" />
+          <option name="PATTERN" value="com.gs.reladomo.serial.jackson.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="reladomo" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.gs.fw.common.mithra.test.mithraTestResource" />
-      <option name="MAIN_CLASS_NAME" value="com.gs.fw.common.mithra.test.mithraTestResource.TestMithraTestResourceBackwardCompatibility" />
+      <option name="PACKAGE_NAME" value="com.gs.reladomo.serial.jackson" />
+      <option name="MAIN_CLASS_NAME" value="com.gs.reladomo.serial.jackson.ExampleJacksonReladomoSerializerTest" />
+      <option name="METHOD_NAME" value="testOrderWithDependents" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-XX:MaxPermSize=256m -Dlog4j.configuration=log4jWarn.config -Dmithra.xml.config=MithraConfigPartialCache.xml" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$/../../../reladomo" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestTrivialJson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.gs.fw.common.mithra.test.util.serializer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="reladomo" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.gs.fw.common.mithra.test.util.serializer" />
+      <option name="MAIN_CLASS_NAME" value="com.gs.fw.common.mithra.test.util.serializer.TestTrivialJson" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-XX:MaxPermSize=256m -Dlog4j.configuration=log4jWarn.config -Dmithra.xml.config=MithraConfigPartialCache.xml" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$/../../../reladomo" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ExampleGsonReladomoSerializerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.gs.reladomo.serial.gson.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="reladomo" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.gs.reladomo.serial.gson" />
+      <option name="MAIN_CLASS_NAME" value="com.gs.reladomo.serial.gson.ExampleGsonReladomoSerializerTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-XX:MaxPermSize=256m -Dlog4j.configuration=log4jWarn.config -Dmithra.xml.config=MithraConfigPartialCache.xml" />
@@ -995,19 +768,19 @@
       <item index="0" class="java.lang.String" itemvalue="JUnit.Partial Cache Suite" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.Full Cache Suite" />
       <item index="2" class="java.lang.String" itemvalue="Remote.SalveVm" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.RemoteTestSuite" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TestBasicRetrievalFromZippedFile" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.TestMithraTestResource" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.TestMithraTestResource.testTwoResources" />
-      <item index="7" class="java.lang.String" itemvalue="JUnit.TestMithraTestResourceBackwardCompatibility" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ExampleJacksonReladomoSerializerTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ExampleJacksonReladomoSerializerTest.testOrderWithItems" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.ExampleJacksonReladomoSerializerTest.testOrderWithDependents" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.TestTrivialJson" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.ExampleGsonReladomoSerializerTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.RemoteTestSuite" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TestMithraTestResourceBackwardCompatibility" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.TestMithraTestResource" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.TestMithraTestResource.testTwoResources" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.TestBasicRetrievalFromZippedFile" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ExampleGsonReladomoSerializerTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TestTrivialJson" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ExampleJacksonReladomoSerializerTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ExampleJacksonReladomoSerializerTest.testOrderWithDependents" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ExampleJacksonReladomoSerializerTest.testOrderWithItems" />
       </list>
     </recent_temporary>
   </component>
@@ -1271,44 +1044,72 @@
       <option name="project" value="LOCAL" />
       <updated>1484343541196</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="serializer compiles">
+      <created>1485984773178</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1485984773178</updated>
+    </task>
+    <task id="LOCAL-00037" summary="fix MithraCompositeList.contains">
+      <created>1488321383033</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1488321383033</updated>
+    </task>
+    <task id="LOCAL-00038" summary="reduce db hit with filtered relationship list navigation with deep fetch">
+      <created>1488820833301</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1488820833301</updated>
+    </task>
+    <task id="LOCAL-00039" summary="wip - serializer mostly complete">
+      <created>1489178244268</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1489178244268</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RemoteTestSuite - 2016.12.08 at 15h 32m 44s.xml">
-      <configuration name="RemoteTestSuite" configurationId="JUnit" />
+    <history-entry file="ExampleGsonReladomoSerializerTest - 2017.03.10 at 14h 11m 22s.xml">
+      <configuration name="ExampleGsonReladomoSerializerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RemoteTestSuite - 2016.12.08 at 15h 36m 49s.xml">
-      <configuration name="RemoteTestSuite" configurationId="JUnit" />
+    <history-entry file="ExampleGsonReladomoSerializerTest - 2017.03.10 at 14h 14m 58s.xml">
+      <configuration name="ExampleGsonReladomoSerializerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RemoteTestSuite - 2016.12.08 at 15h 42m 56s.xml">
-      <configuration name="RemoteTestSuite" configurationId="JUnit" />
+    <history-entry file="ExampleGsonReladomoSerializerTest - 2017.03.10 at 14h 16m 49s.xml">
+      <configuration name="ExampleGsonReladomoSerializerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RemoteTestSuite - 2016.12.08 at 15h 45m 25s.xml">
-      <configuration name="RemoteTestSuite" configurationId="JUnit" />
+    <history-entry file="ExampleGsonReladomoSerializerTest - 2017.03.10 at 14h 37m 52s.xml">
+      <configuration name="ExampleGsonReladomoSerializerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RemoteTestSuite - 2016.12.08 at 15h 51m 19s.xml">
-      <configuration name="RemoteTestSuite" configurationId="JUnit" />
+    <history-entry file="ExampleGsonReladomoSerializerTest - 2017.03.10 at 14h 40m 11s.xml">
+      <configuration name="ExampleGsonReladomoSerializerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestMithraTestResource - 2016.12.08 at 14h 04m 03s.xml">
-      <configuration name="TestMithraTestResource" configurationId="JUnit" />
+    <history-entry file="ExampleGsonReladomoSerializerTest - 2017.03.10 at 14h 42m 32s.xml">
+      <configuration name="ExampleGsonReladomoSerializerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestMithraTestResourceBackwardCompatibility - 2016.12.08 at 14h 04m 29s.xml">
-      <configuration name="TestMithraTestResourceBackwardCompatibility" configurationId="JUnit" />
+    <history-entry file="ExampleGsonReladomoSerializerTest - 2017.03.10 at 14h 44m 57s.xml">
+      <configuration name="ExampleGsonReladomoSerializerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestMithraTestResource_testTwoResources - 2016.12.08 at 11h 47m 09s.xml">
-      <configuration name="TestMithraTestResource.testTwoResources" configurationId="JUnit" />
+    <history-entry file="TestTrivialJson - 2017.03.09 at 17h 11m 17s.xml">
+      <configuration name="TestTrivialJson" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestMithraTestResource_testTwoResources - 2016.12.08 at 11h 47m 23s.xml">
-      <configuration name="TestMithraTestResource.testTwoResources" configurationId="JUnit" />
+    <history-entry file="TestTrivialJson - 2017.03.10 at 11h 53m 42s.xml">
+      <configuration name="TestTrivialJson" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestMithraTestResource_testTwoResources - 2016.12.08 at 14h 03m 41s.xml">
-      <configuration name="TestMithraTestResource.testTwoResources" configurationId="JUnit" />
+    <history-entry file="TestTrivialJson - 2017.03.10 at 11h 54m 58s.xml">
+      <configuration name="TestTrivialJson" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-3" y="0" width="1926" height="1050" extended-state="6" />
-    <editor active="true" />
+    <frame x="-3" y="0" width="1922" height="1047" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1316,18 +1117,18 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47597766" sideWeight="0.50853485" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29621622" sideWeight="0.49146515" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.65405405" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4154013" sideWeight="0.49146515" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45986986" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26307365" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24919957" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44972974" sideWeight="0.49784714" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25347593" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24919786" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44902387" sideWeight="0.49784714" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4010811" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4002169" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1345,27 +1146,45 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24972914" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24919786" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4010811" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4002169" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47567567" sideWeight="0.49146515" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45837837" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4154013" sideWeight="0.49146515" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45986986" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299025" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26307365" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5935135" sideWeight="0.49784714" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25347593" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44902387" sideWeight="0.49784714" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.bat" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1384,7 +1203,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/../.." />
     </ignored-roots>
-    <MESSAGE value="prepare ossrh release" />
     <MESSAGE value="kata build" />
     <MESSAGE value="fix findBy and none-cache" />
     <MESSAGE value="multi-update without or" />
@@ -1406,45 +1224,73 @@
     <MESSAGE value="make sure cache load exceptions are reported at startup" />
     <MESSAGE value="fix tests with cache load exceptions" />
     <MESSAGE value="wip" />
-    <option name="LAST_COMMIT_MESSAGE" value="wip" />
+    <MESSAGE value="serializer compiles" />
+    <MESSAGE value="fix MithraCompositeList.contains" />
+    <MESSAGE value="reduce db hit with filtered relationship list navigation with deep fetch" />
+    <MESSAGE value="wip - serializer mostly complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="wip - serializer mostly complete" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/RemoteMithraServerTestCase.java</url>
           <line>121</line>
           <properties />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/TestApplicationNotification.java</url>
           <line>1084</line>
           <properties />
           <option name="timeStamp" value="27" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/ReladomoSerializationContext.java</url>
           <properties />
           <option name="timeStamp" value="28" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../../../reladomo/reladomo/target/test-generated-onheap-src/com/gs/fw/common/mithra/test/domain/OrderFinder.java</url>
           <line>2822</line>
           <properties />
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/portal/MithraAbstractObjectPortal.java</url>
-          <line>336</line>
+          <url>file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/list/DelegatingList.java</url>
+          <line>1132</line>
           <properties />
-          <option name="timeStamp" value="31" />
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/TestRelationships.java</url>
+          <line>1419</line>
+          <properties />
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/ReladomoSerializationContext.java</url>
+          <line>313</line>
+          <properties />
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/ReladomoSerializationContext.java</url>
+          <line>223</line>
+          <properties />
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/SerializationNode.java</url>
+          <line>396</line>
+          <properties />
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="32" />
+      <option name="time" value="44" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1453,445 +1299,445 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/target/test-generated-onheap-src/com/gs/fw/common/mithra/test/domain/testmithraimport/ReadOnlyOrderAbstract.java">
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/finder/RelatedFinder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+        <state relative-caret-position="728">
+          <caret line="84" column="16" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/MithraObject.java">
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/SingleColumnBooleanAttribute.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state relative-caret-position="609">
+          <caret line="191" column="30" selection-start-line="191" selection-start-column="30" selection-end-line="191" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomogen/src/main/templates/transactional/Abstract.jsp">
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/MithraRuntimeCacheController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="1325" column="0" selection-start-line="1312" selection-start-column="0" selection-end-line="1325" selection-end-column="0" />
+        <state relative-caret-position="405">
+          <caret line="80" column="34" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomogen/src/main/templates/readonly/Abstract.jsp">
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/SerializedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="163" column="0" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
+        <state relative-caret-position="75">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/DeepFetchTree.java">
+    <entry file="jar://$PROJECT_DIR$/../../../reladomo/lib/compile/gs-collections-api-5.1.0.jar!/com/gs/collections/api/bag/Bag.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        <state relative-caret-position="75">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/VerboseSerializer.java">
+    <entry file="jar:///opt/jdk1.8.0_101/src.zip!/java/lang/StringBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="698">
-          <caret line="161" column="37" selection-start-line="161" selection-start-column="37" selection-end-line="161" selection-end-column="37" />
+        <state relative-caret-position="305">
+          <caret line="76" column="26" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/finder/DomainList.java">
+    <entry file="jar:///opt/jdk1.8.0_101/src.zip!/java/lang/Appendable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="66" column="30" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+        <state relative-caret-position="405">
+          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/finder/Navigation.java">
+    <entry file="jar:///opt/jdk1.8.0_101/src.zip!/java/lang/AbstractStringBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+        <state relative-caret-position="290">
+          <caret line="46" column="54" selection-start-line="46" selection-start-column="54" selection-end-line="46" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/finder/DeepRelationshipAttribute.java">
+    <entry file="jar://$PROJECT_DIR$/../../../reladomo/lib/serial/jackson-core-2.8.6.jar!/com/fasterxml/jackson/core/JsonGenerator.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+        <state relative-caret-position="-2749">
+          <caret line="6" column="116" selection-start-line="6" selection-start-column="116" selection-end-line="6" selection-end-column="116" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/MithraList.java">
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/databasetype/SybaseDatabaseType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/domain/AccountDescendingKeyList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/target/test-generated-onheap-src/com/gs/fw/common/mithra/test/domain/AccountDescendingKeyListAbstract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="28" column="63" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/list/DelegatingList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="320" column="57" selection-start-line="320" selection-start-column="57" selection-end-line="320" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/finder/DeepFetchNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="158" column="17" selection-start-line="158" selection-start-column="17" selection-end-line="158" selection-end-column="17" />
-          <folding>
-            <element signature="e#5186#5187#0" expanded="false" />
-            <element signature="e#5241#5242#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/MappedAttribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/finder/AbstractRelatedFinder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/MappedTimeAttribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/target/test-generated-onheap-src/com/gs/fw/common/mithra/test/domain/OrderItemFinder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-          <folding>
-            <element signature="e#35621#35622#0" expanded="false" />
-            <element signature="e#35651#35652#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/build/reladomo-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/Attribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
-          <caret line="697" column="129" selection-start-line="697" selection-start-column="129" selection-end-line="697" selection-end-column="129" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/IntegerAttribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="732">
-          <caret line="785" column="122" selection-start-line="785" selection-start-column="122" selection-end-line="785" selection-end-column="122" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/LongAttribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
-          <caret line="616" column="124" selection-start-line="616" selection-start-column="124" selection-end-line="616" selection-end-column="124" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/ByteAttribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
-          <caret line="609" column="124" selection-start-line="609" selection-start-column="124" selection-end-line="609" selection-end-column="124" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/CharAttribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="431" column="124" selection-start-line="431" selection-start-column="124" selection-end-line="431" selection-end-column="124" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/DoubleAttribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="679" column="0" selection-start-line="679" selection-start-column="0" selection-end-line="679" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/FloatAttribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="732">
-          <caret line="585" column="102" selection-start-line="582" selection-start-column="0" selection-end-line="587" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/ShortAttribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="732">
-          <caret line="619" column="102" selection-start-line="616" selection-start-column="0" selection-end-line="621" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/BooleanAttribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="732">
-          <caret line="467" column="105" selection-start-line="464" selection-start-column="0" selection-end-line="469" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/StringAttribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="481" column="13" selection-start-line="481" selection-start-column="13" selection-end-line="481" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/DateAttribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="747">
-          <caret line="258" column="5" selection-start-line="258" selection-start-column="5" selection-end-line="258" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/ByteArrayAttribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="761">
-          <caret line="403" column="103" selection-start-line="403" selection-start-column="103" selection-end-line="403" selection-end-column="103" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/EnumAttribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="761">
-          <caret line="162" column="103" selection-start-line="162" selection-start-column="103" selection-end-line="162" selection-end-column="103" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/BigDecimalAttribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="732">
-          <caret line="687" column="29" selection-start-line="687" selection-start-column="29" selection-end-line="687" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/TimeAttribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="761">
-          <caret line="284" column="103" selection-start-line="284" selection-start-column="103" selection-end-line="284" selection-end-column="103" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/finder/AbstractMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="55" column="18" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
-          <folding>
-            <element signature="e#1514#1515#0" expanded="false" />
-            <element signature="e#1541#1542#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/finder/LinkedMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="149" column="18" selection-start-line="149" selection-start-column="18" selection-end-line="149" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomogen/src/main/java/com/gs/fw/common/mithra/generator/metamodel/TimezoneConversionType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/TimestampAttributeAsOfAttributeToInfiniteNull.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="227" column="34" selection-start-line="227" selection-start-column="34" selection-end-line="227" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/TimestampAttribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="255" column="0" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
-          <folding>
-            <element signature="e#9065#9066#0" expanded="false" />
-            <element signature="e#9123#9124#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/target/test-generated-onheap-src/com/gs/fw/common/mithra/test/FundingBalanceFinder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="443" column="230" selection-start-line="443" selection-start-column="230" selection-end-line="443" selection-end-column="230" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/SerialWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="755">
-          <caret line="85" column="11" selection-start-line="85" selection-start-column="11" selection-end-line="85" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/target/test-generated-onheap-src/com/gs/fw/common/mithra/test/domain/OrderFinder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="346" column="27" selection-start-line="346" selection-start-column="27" selection-end-line="346" selection-end-column="27" />
-          <folding>
-            <element signature="e#12172#12173#0" expanded="true" />
-            <element signature="e#12237#12238#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/databasetype/AbstractDatabaseType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="785" column="18" selection-start-line="785" selection-start-column="18" selection-end-line="785" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/database/SyslogChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="161" column="62" selection-start-line="161" selection-start-column="62" selection-end-line="161" selection-end-column="62" />
+        <state relative-caret-position="825">
+          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/SerializationNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="e#2469#2470#0" expanded="true" />
-            <element signature="e#2502#2503#0" expanded="true" />
-            <element signature="e#2558#2559#0" expanded="true" />
-            <element signature="e#2589#2590#0" expanded="true" />
-            <element signature="e#2648#2649#0" expanded="true" />
-            <element signature="e#2684#2685#0" expanded="true" />
-            <element signature="e#2732#2733#0" expanded="true" />
-            <element signature="e#2761#2762#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/superclassimpl/MithraTransactionalObjectImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
+        <state relative-caret-position="752">
+          <caret line="447" column="5" selection-start-line="447" selection-start-column="5" selection-end-line="447" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/behavior/DatedTransactionalBehavior.java">
+    <entry file="jar://$PROJECT_DIR$/../../../reladomo/lib/serial/jackson-databind-2.8.6.jar!/com/fasterxml/jackson/databind/module/SimpleModule.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="156" column="25" selection-start-line="156" selection-start-column="25" selection-end-line="156" selection-end-column="25" />
+        <state relative-caret-position="1125">
+          <caret line="76" column="28" selection-start-line="76" selection-start-column="28" selection-end-line="76" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomoserial/src/main/java/com/gs/reladomo/serial/jackson/ExampleJacksonReladomoSerializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
           <folding>
-            <element signature="e#5412#5413#0" expanded="true" />
-            <element signature="e#5445#5446#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1183#1184#0" expanded="true" />
+            <element signature="e#1207#1208#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/DefaultInfinityTimestamp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="698">
+          <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomoserial/src/main/java/com/gs/reladomo/serial/jackson/JacksonReladomoSerialContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1412#1413#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomoserial/src/main/java/com/gs/reladomo/serial/jackson/JacksonWrappedSerializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="e#1189#1190#0" expanded="false" />
+            <element signature="e#1213#1214#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomoserial/src/main/java/com/gs/reladomo/serial/jackson/JacksonWrappedListSerializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test/resources/testdata/mithraTestDataDefaultSource.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-131">
+          <caret line="164" column="47" selection-start-line="164" selection-start-column="41" selection-end-line="164" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/MithraObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/ReladomoSerialize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///opt/jdk1.8.0_101/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/SerializationConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        <state relative-caret-position="525">
+          <caret line="108" column="63" selection-start-line="108" selection-start-column="63" selection-end-line="108" selection-end-column="63" />
+          <folding>
+            <element signature="e#3593#3600#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/domain/SerialView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/finder/AbstractRelatedFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="369" column="0" selection-start-line="369" selection-start-column="0" selection-end-line="369" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/target/test-generated-onheap-src/com/gs/fw/common/mithra/test/domain/OrderFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="2633" column="21" selection-start-line="2633" selection-start-column="21" selection-end-line="2633" selection-end-column="21" />
+          <folding>
+            <element signature="e#88567#88568#0" expanded="false" />
+            <element signature="e#88587#88588#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/build/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="1708" column="9" selection-start-line="1708" selection-start-column="9" selection-end-line="1708" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../reladomo/lib/serial/gson-2.8.0.jar!/com/google/gson/JsonObject.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomoserial/src/main/java/com/gs/reladomo/serial/jackson/JacksonReladomoModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#961#990#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/superclassimpl/MithraDatedTransactionalObjectImpl.java">
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomoserial/src/main/java/com/gs/reladomo/serial/gson/ExampleReladomoGsonSerializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="188" column="43" selection-start-line="188" selection-start-column="43" selection-end-line="188" selection-end-column="43" />
-          <folding>
-            <element signature="e#13122#13123#0" expanded="true" />
-            <element signature="e#13172#13173#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="41" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/MithraTransactionalObject.java">
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomoserial/src/main/java/com/gs/reladomo/serial/gson/GsonWrappedSerializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="206" column="19" selection-start-line="206" selection-start-column="19" selection-end-line="206" selection-end-column="19" />
+        <state relative-caret-position="72">
+          <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/Serialized.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomoserial/src/test/java/com/gs/reladomo/serial/jackson/ExampleJacksonReladomoSerializerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../reladomo/lib/serial/gson-2.8.0.jar!/com/google/gson/JsonArray.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/ReladomoSerializationContext.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="231" column="0" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomoserial/src/main/java/com/gs/reladomo/serial/gson/GsonRelodomoSerialContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
+          <folding>
+            <element signature="e#1565#1566#0" expanded="true" />
+            <element signature="e#1628#1629#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/util/serializer/TestTrivialJson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomoserial/src/test/java/com/gs/reladomo/serial/gson/ExampleGsonReladomoSerializerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///opt/jdk1.8.0_101/src.zip!/java/lang/reflect/AnnotatedElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="237" column="17" selection-start-line="237" selection-start-column="17" selection-end-line="237" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///opt/jdk1.8.0_101/src.zip!/java/lang/reflect/AccessibleObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="56" column="43" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///opt/jdk1.8.0_101/src.zip!/java/lang/reflect/Executable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="42" column="47" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///opt/jdk1.8.0_101/src.zip!/java/lang/reflect/Method.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/AnnotatedMethodCache.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+          <folding>
+            <element signature="e#1028#1208#0" expanded="true" />
+            <element signature="e#1207#1208#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/domain/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="55" column="61" selection-start-line="55" selection-start-column="61" selection-end-line="55" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomoserial/src/main/java/com/gs/reladomo/serial/gson/GsonReladomoSerialWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+          <folding>
+            <element signature="e#9742#9743#0" expanded="true" />
+            <element signature="e#9771#9772#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomoserial/src/main/java/com/gs/reladomo/serial/jackson/JacksonReladomoSerialWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/util/serializer/SerialWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="31" column="116" selection-start-line="31" selection-start-column="116" selection-end-line="31" selection-end-column="116" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/util/serializer/AppendableSerialContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="40" column="47" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/test/java/com/gs/fw/common/mithra/test/util/serializer/TrivialJsonSerialWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4229">
+          <caret line="334" column="116" selection-start-line="334" selection-start-column="116" selection-end-line="334" selection-end-column="116" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/BigDecimalAttribute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="687" column="18" selection-start-line="687" selection-start-column="18" selection-end-line="687" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#26064#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/Attribute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="697" column="28" selection-start-line="697" selection-start-column="28" selection-end-line="697" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../reladomo/reladomo/src/main/java/com/gs/fw/common/mithra/attribute/BooleanAttribute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="465" column="19" selection-start-line="465" selection-start-column="19" selection-end-line="465" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -1984,7 +1830,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>test</last-edited>
+          <last-edited>serial</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

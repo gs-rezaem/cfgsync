@@ -21,21 +21,14 @@
       <sourceFolder url="file://$MODULE_DIR$/../../../reladomo/libboot/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../reladomo/reladomo/target/test-generated-onheap-src" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../reladomo/reladomo/target/generated-src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../reladomo/reladomoserial/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../reladomo/reladomoserial/src/test/java" isTestSource="true" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="build-lib" level="project" />
     <orderEntry type="library" name="compile" level="project" />
     <orderEntry type="library" scope="TEST" name="test" level="project" />
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/../../../reladomo/reladomo/target/test-classes-onheap" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
     <orderEntry type="module-library">
       <library>
         <CLASSES>
@@ -58,6 +51,34 @@
       <library>
         <CLASSES>
           <root url="file://$MODULE_DIR$/../../../reladomo/reladomo/src/test/resources" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="serial" level="project" />
+    <orderEntry type="module-library" scope="TEST">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../../reladomo/reladomo/target/test-classes-offheap" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../../reladomo/reladomoserial/target/classes" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" scope="TEST">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../../reladomo/reladomoserial/target/test-classes" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
