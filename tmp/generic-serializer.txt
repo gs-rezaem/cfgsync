@@ -14,7 +14,10 @@
 		- while this is interesting, it's not consistent with the existing deepFetch semantics
 			- supporting this could mean supporting a different kind of deepFetch
 				- only seems interesting for navigations that have loops
-
+- inheritance
+	- type 1
+	- type 2
+	- type 3
 - annotations:
 	- used for methods declared on the concrete classes
 	- only support parameterless methods
@@ -73,3 +76,85 @@
 - circular references: json can't really handle it without a custom de/serializer.
 	- beyond the scope of the main serializer. There is enough info passed around to be implementable by a context/writer impl
 - xml example:
+
+
+- deserialization 
+	- ReladomoDeserializationContext
+		- startObject/endObject
+		- startList/endList (only for top level?)
+		- <Enum: Field, ToOneRelationship, ToManyRelationship, Unknown> startFieldOrRelationhip(name)
+		- Attribute startField(name)
+		- boolean startRelationship(name) (returns isToMany)
+		- parseFieldFromString?
+		- setField(<type> value) ?
+		- setFieldNull
+		- getAttributes
+		- start/end listElements
+		
+		
+- jackson:
+	- extend JsonDeserializer (or StdDeserializer for more common functions)
+		-  	deserialize(JsonParser p, DeserializationContext ctxt)
+		    JsonToken jsonToken = parser.nextToken();
+		Is passed JsonParser that is positioned over first token it is to handle, which is:
+
+			the (only) token it is to handle, for scalar types
+			opening START_ARRAY for JSON Array
+			either START_ELEMENT or FIELD_NAME for JSON Object -- latter may occur when embedded type information for polymorphic type handling has been processed. 
+
+			START_OBJECT
+			END_OBJECT
+			START_ARRAY
+			END_ARRAY
+			FIELD_NAME
+			VALUE_EMBEDDED_OBJECT
+			VALUE_FALSE
+			VALUE_TRUE
+			VALUE_NULL
+			VALUE_STRING
+			VALUE_NUMBER_INT
+			VALUE_NUMBER_FLOAT
+
+		JsonToken jsonToken = parser.nextToken();
+		if(JsonToken.FIELD_NAME.equals(jsonToken)){
+			String fieldName = parser.getCurrentName();
+			System.out.println(fieldName);
+
+			jsonToken = parser.nextToken();
+
+			if("foo".equals(fieldName)){
+				fooValue = parser.getValueAsString();
+			} else if ("bar".equals(fieldName)){
+				barValue = parser.getValueAsInt();
+			}
+		}
+	- register via module
+
+- gson:
+	- two ways: stream or parsed tree
+	- parsed tree:
+		- implements JsonDeserializer
+			deserialize(JsonElement json, Type type,
+        		JsonDeserializationContext context) throws JsonParseException
+		- register: GsonBuilder.registerTypeAdapter(Type, Object).
+		
+	- stream
+		- extends TypeAdapter
+		- read(JsonReader reader) throws IOException
+			 reader.beginObject();
+			 while (reader.hasNext()) {
+			   String name = reader.nextName();
+			   if (name.equals("id")) {
+				 id = reader.nextLong();
+			   } else if (name.equals("text")) {
+				 text = reader.nextString();
+			   } else if (name.equals("geo") && reader.peek() != JsonToken.NULL) {
+				 geo = readDoublesArray(reader);
+			   } else if (name.equals("user")) {
+				 user = readUser(reader);
+			   } else {
+				 reader.skipValue();
+			   }
+			 }
+			 reader.endObject();
+		

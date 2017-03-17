@@ -49,7 +49,7 @@ git push
 	- squash local, then 
 	git push --force origin master
 
-- tagging. Needs a special push. can't push to upstream. use github ui, or a direct clone
+- tagging. Needs a special push. can't do a pull request. use github ui, or a direct clone
 
 git tag -a xsd2bean-1.5.0 -m "Release 1.5.0"
 git push origin xsd2bean-1.5.0
@@ -64,6 +64,9 @@ git log
 git log --graph --decorate
 git show <commit sha>
 git show <tag name>
+
+with committer and author:
+git log --pretty=fuller
 
 --------------
 
@@ -80,7 +83,7 @@ git reset --hard HEAD~1
 branching:
 create new branch with all the existing code:
 git checkout -b <branchName>
-push the new branch:
+push the new branch to the remote for the first time:
 git push -u origin <branchName>
 
 create a blank new branch:
