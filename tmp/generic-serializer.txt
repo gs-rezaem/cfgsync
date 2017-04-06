@@ -1,4 +1,12 @@
 - must handle persistent, detached, read-only and in-memory cases
+- later:
+    - inheritance
+        - annotated methods get complicated
+        - for deserialization, enforce setting the class for polymorphic objects.
+        - also opens the opportunity for the user to want to serialize less (e.g. just base class)
+    - back references
+    - links
+    
 - The act of serializing a persistent object is equivalent to detach, then serialize
 	- the effect of this is make the objects coming back to be in a detached state
 - detached objects should come back as detached
@@ -14,6 +22,11 @@
 		- while this is interesting, it's not consistent with the existing deepFetch semantics
 			- supporting this could mean supporting a different kind of deepFetch
 				- only seems interesting for navigations that have loops
+- dated objects
+    - deserializaton stream must contain business date
+        - if it doesn't, no persistence can take place!
+    - if deserialization stream does not contain processing date, we'll assume infinity?
+        
 - inheritance
 	- type 1
 	- type 2
@@ -90,7 +103,8 @@
 		- setFieldNull
 		- getAttributes
 		- start/end listElements
-		
+	- start/end meta data: we expect this early in the deserialization (before fields and such)
+    - startList/endList is problematic for json. it all looks like startObject/endObject
 		
 - jackson:
 	- extend JsonDeserializer (or StdDeserializer for more common functions)

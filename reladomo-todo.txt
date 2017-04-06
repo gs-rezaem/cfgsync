@@ -5,6 +5,12 @@
     - maybe talk about leaky abstractions more. no native queries. no "if your database supports..."
 - query subsetting
     - a small shape hash table that's checked linearly.
+        - add a shapeHashCode, shapeEquals methods to Operation
+        - add a isSubsetOperation, getSuperSetOperationFromShape(shapeOp), getLeftOverOperation(shapeOp) (or maybe Pair the last two) methods to Operation
+        - the hash will contain up to N (10?) shapes that are currently cached.
+            - shape prevents deep fetch queries from overwhelming the table, because they all have the same shape
 - support for object xml for more vendors
-- list relationship navigation and deep fetching should work better
+- done: list relationship navigation and deep fetching should work better
 - build doesn't seem to work in git-bash on windows
+- pool flushing when several connections fails
+- meta util. There are several places where we're using the meta data to do things. Should consolidate.
