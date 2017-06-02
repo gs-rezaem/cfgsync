@@ -1,4 +1,6 @@
 update the release notes
+    git log <last release tag>..HEAD --oneline
+    <last release tag> is just a version like 16.1.4
 update the version
 tag on github using "create a release"
 fetch the tag locally
@@ -7,8 +9,8 @@ fetch the tag locally
 build clean prep-release
 sign-release
 build bundle-release
-upload 4 bundle files from target to https://oss.sonatype.org/ 
+upload 5 bundle files from target to https://oss.sonatype.org/ 
 	- click on Staging upload on the left
 	- choose upload mode: artifact bundle
-make sure the 4 repositories are "closed", which means it went well
-then release the 4 repos (and auto-drop)
+make sure the 5 repositories are "closed", which means it went well
+then release the 5 repos (and auto-drop)

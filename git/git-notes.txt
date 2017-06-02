@@ -86,6 +86,13 @@ git checkout -b <branchName>
 push the new branch to the remote for the first time:
 git push -u origin <branchName>
 
+To delete a local branch
+git branch -d the_local_branch
+
+To remove a remote branch (if you know what you are doing!)
+git push origin :the_remote_branch
+
+
 create a blank new branch:
 git checkout --orphan <branchName>
 git rm -rf .

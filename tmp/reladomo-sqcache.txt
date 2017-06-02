@@ -1,0 +1,82 @@
+- ? means anything.
+- * is the value in the new query matching a ? in the existing query.
+
+- When a query is computed via subsetting, it should not be put into the subset query cache
+- op.zShapeMatches(op2):
+    - EXACT_MATCH
+    - SUPER_MATCH
+    - NO_MATCH
+    - NO_MATCH_REQUIRES_EXACT
+- op.zShapeMatchWithFilter(op2):
+    - EXACT_MATCH + search op
+    - SUPER_MATCH + search op + filter op
+    - NO_MATCH
+    - NO_MATCH_REQUIRES_EXACT
+- when NO_MATCH, the filter is just op2.
+- NO_MATCH_REQUIRES_EXACT: give up.
+- top level or-clauses are not shape cached.
+- inner or-clauses must match exactly
+- anything that must match exactly is not shape cached
+
+- and (including multi-eq, relationship-eq):
+    - shape: op1-shape & op2-shape & ...
+    - isSubQuery:
+        - existing is:
+            - and-op
+                - existing has fewer operands
+                - new query has all shape-matched operands of existing, or each exiting op is a super-op of an op in the new query
+                - new query has more operands or strict super-set in matching ones, all of which can be resolved in memory (no join for now)
+                - for operands that shape match, construct the query to be looked up by getting the existing operand to produce the new one.
+                - comparison:
+                    - n^2 comparison for small # of operands (<= 6)
+                    - for large # of operands (> 6), index the operands by something, e.g. attribute or mapper
+            - anything else:
+                - existing must shape match one of the and-operands and the rest must be resolvable in mem.
+    - is super set: 
+        - new query has all shape-matched operands of existing, or each exiting op is a super-op of an op in the new query
+        - new query has more operands or strict super-set in matching ones, all of which can be resolved in memory (no join for now)
+        - 
+    - unmatched filter:
+    - matched filter:
+- or (not including in)
+    - shape op1-shape | op2-shape | ...
+    - is super set:
+        - new query is or-op:
+            - new query has as many or fewer operands that are subsets of the existing ops.
+        - new query is not an or-op:
+            - existing query has an operand that is the super-op new query
+- in-clause
+    - shape: x in ?
+    - shape match: x = * if * is in ?
+                   x in * if * is a subset of ?
+    - exact matching: no
+    - lookup op: x = ?
+        - this means we can't shape cache multiple in-clauses!!!! and any subsetting is likely to ruin the shape cache (last one wins)
+    - unmatched filter:
+    - matched filter:
+- not-in clause:
+    
+- equality:
+    - shape: x = 4 should be x = ?
+    - shape match: x = *
+    - exact matching: no
+    - lookup op: x = *
+    - unmatched filter: x = *
+    - matched filter: none
+
+- range operations:
+    - shape: x > 17 should be x > 17, because if it was x > ?, replacing the ? with the incoming value won't find the query.
+        - alternatively, we could use x > ? and remember a small # of actual values for ?
+    - if there are lots of these with different values, the sqcache will get spammed.
+        - storing as x > ? prevents the slot spamming, but can't hold onto all the values anyway.
+    - if there is range query in existing and new query, then the new query is a subset if range is a subset
+        - the constructed query must use the existing value to find the super query.
+    - shape match: x > (17 or more)
+    - lookup op: x = 17 (not x = *)
+    - unmatched filter: x = *
+    - matched filter: x = * if ? != *, none otherwise
+- mapped operations:
+    - shape: exact
+- in-equality:
+    - shape: x != 5 
+    
