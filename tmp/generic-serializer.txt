@@ -6,7 +6,10 @@
         - also opens the opportunity for the user to want to serialize less (e.g. just base class)
     - back references
     - links
-    
+- need both Serialize<?> and ? serialization because ? could be deep inside another object.
+    - even in an annotated method in another reladomo object
+        - maybe need a way to attach a config at an arbitrary point?
+- test a complex object serialization returned from an annotated method
 - The act of serializing a persistent object is equivalent to detach, then serialize
 	- the effect of this is make the objects coming back to be in a detached state
 - detached objects should come back as detached
@@ -105,6 +108,10 @@
 		- start/end listElements
 	- start/end meta data: we expect this early in the deserialization (before fields and such)
     - startList/endList is problematic for json. it all looks like startObject/endObject
+    - starting a dependent field should provide the meta data (without relying on in-line metadata)
+    - must work for a generic Serialized<?> or a specific one like Serialized<Order>
+        - if generic, must get meta data in the stream
+        - if non-generic, should get meta data some other way?
 		
 - jackson:
 	- extend JsonDeserializer (or StdDeserializer for more common functions)
@@ -172,3 +179,40 @@
 			 }
 			 reader.endObject();
 		
+- docs:
+    - don't use this to expose your domain outside your codebase
+    - make your API specific (not generic) so that you can reason about the SLA
+        - e.g. Don't expose the equivalent of a (remote) arbitrary query
+    - Method signatures: use Serialized<Order>, SerializedList<Order, OrderList> instead of Order, OrderList
+        - this is important because
+            - on serialization, it allows a proper, local configuration for the tree being serialized
+            - on deserialization, it delays database lookups so they can be done in the method (in a transaction if writing) to
+                avoid double lookup.
+    - 
+    - serialization: SerializationConfig is an immutable class that represents what you want to serialize.
+        - typicalliy start with:
+            SerializationConfig config = SerializtionConfig.shallowWithDefaultAttributes(OrderFinder.getFinderInstance());
+        and then use with/without methods to do add more configuration, e.g.:
+                config = config.withDeepFetches(OrderFinder.orderStatus(), OrderFinder.items());
+                config = config.withAnnotatedMethods(SerialView.Shorter.class);
+
+    - deserialization:
+        - missing attributes are considered to be unchanged if updating, and default if new. That is, you can "patch" an object
+        - can be configured to be lenient with unknown attributes
+        - metadata (the class name, specifically) is required if the method signature is generic or the endpoint doesn't pass the generic parameter to the deserializer
+        
+    - Use the provided Jackson/Gson implementations if possible.
+        - You can modify it for your own use.
+    - To implement your own:
+        - Serialization:
+            - every serialization requires a 
+                - ReladomoSerializationContext: has to be instantiated for the tree being serialized
+                    - subclass and add the context from the destination
+                    - context typically contains some sort of destination output, e.g. an OutputStream or writer
+                - SerialWriter: try to make this implementation stateless so it can be reused for all serialization
+                - decide if you want to serialize links
+        - Deserialization:
+            - need to translate the incoming stream into method calls on an instance of ReladomoDeserializer
+            - instantiate the ReladomoDeserializer with the correct class, or call storeReladomoClassName before deserializing anything else
+            - 
+                

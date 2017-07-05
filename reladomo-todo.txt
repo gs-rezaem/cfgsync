@@ -13,4 +13,5 @@
 - done: list relationship navigation and deep fetching should work better
 - build doesn't seem to work in git-bash on windows
 - pool flushing when several connections fails
-- meta util. There are several places where we're using the meta data to do things. Should consolidate.
+- done: meta util. There are several places where we're using the meta data to do things. Should consolidate.
+- merge api
