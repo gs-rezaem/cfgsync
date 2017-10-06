@@ -1,17 +1,155 @@
+- Computed Attributes
+    - has to have a getter.
+    - setter is provided if reversible
+    - a calculated attribute can be defined in terms of other calculated attributes, but no circular dependency
+    - has to work in plain operations
+    - has to work in operations on a related object
+    - has to work in a relationship
+    - has to work in aggregation
+    - has to work in tuples
+    - has to work in orderBy
+    - has to work in relationship orderBy
+    - has to work with different vendors the same
+    - (eventually) will have to work in projections
+    - all the above have to work correctly with sql, full cache and 3-tier
+    - memoization. flag?
+    - minimum viable product (release 1):
+        - string substring
+        - string to integer
+        - string substring to integer (chaining)
+        - substring of another substring (computed on a computed)
+        - super/sub class tests
+        - enum mapping
+        - adding new functions must be "routine"
+            - a vendor test per function
+    - release 2:
+        - case statement
+    - index based on attribute
+        - probably only useful for full cache
+    - BigDecimal? precision/scale?
+    - design the computation mini-language
+        - mostly java like
+        - extensible functions (not user, but core reladomo)
+            - needs string functions (concat, substring, ...)
+            - needs arithmethic functions(+,-,*,/,abs, ...)
+            - needs date functions (year, month, day, hour, ..., dateWithoutTime, timeWithoutDate, ...)
+            - timezone conversion
+            - conversion from types (*->string, string->int, string->date, ...)
+                - type conversion to enum is a special case
+        - case statement:
+            case 'Y','y','T','t': true
+            case 'N','n','F','f': false
+            default: false
+        - enum mapping
+            - needs an enum attribute. Generics and enums are weird. they look like this:
+                    interface EnumAttribute<T extends Enum<T>>
+                    {
+                      Operation eq(T value);
+                    }
+            - only eq, notEq and in ops
+            - same analysis as the reversible function to simplify the operation/sql.
+        - type inference gets pretty hairy.
+            - force the user to specify all types?
+            - int: no special designation, as well as "1234".asInteger()
+            - boolean: no special designation, as well as "true".asBoolean()
+            - string: in double quotes, "fred"
+            - date: "2012-07-07".asDate() ?
+            - timestamp: "2012-07-07 12:33:45.000".asTimestamp() ?
+            - double "-1.4567".asDouble() ?
+            - float "-1.4567".asFloat() ?
+            - long "-1323423423".asLong() ?
+        - parsing "." as a part of a number (double) or as method delimiter gets hairy.
+            - put doubles inside [] or use above?
+        - language:
+            - Expression with a Type
+            - Limited to a single expression
+            - Type := Integer | String | Date | Boolean
+            - Expression := AnyExpression (or informally: Attribute | Constant | Expression.Function(Expression...))
+            - Function := {source expression type, function name, List<parameter types>, return type}
+
+
+            - AnyExpression := StringExpression | IntegerExpression | DateExpression | BooleanExpression | JavaConstant
+            - StringExpression := "null" | StringAttribute | StringConstant | StringExpression.StringStringFunction | AnyExpression.asString() | IntegerExpression.IntegerStringFunction | DateExpression.DateStringFunction
+            - IntegerExpression := IntegerAttribute | IntegerConstant | IntegerExpression.IntegerIntegerFunction() | StringExpression.StringIntegerFunction() | DateExpression.DateIntegerFunction()
+            - DateExpression := "null" | DateAttribute | DateConstant | StringExpression.StringDateFunction() | DateExpression.DateDateFunction()
+            - DoubleExpression? EnumExpression? BigDecimalExpression?
+            - StringStringFunction := concat(StringExpression) | substring(IntegerConstant) | substring(IntegerConstant, IntegerConstant)
+            - StringIntegerFunction := asInteger() | asInteger(default) | length()
+            - IntegerStringFunction := asString()
+            - DateStringFunction := asString() | asString(StringConstant format)
+            - DateIntegerFunction := year() | month() | day() | hour() | minute() | second() | dateDiffAsDays(otherDate)
+            - JavaConstant := {arbitrary constant java code}
+            - parser limitations:
+                - can't use very long longs (StreamTokenizer parses to double): use a java constant for long longs.
+                - overloading is limited because the type of Java constants cannot be determined.
+                    - limit overloading to the method name + number of parameters, but not types
+        - test cases:
+            - FooStrAttribute.substring(2, 7) // lenient: means str.substring(Math.min(begin, str.length()), Math.min(end, str.length())) => returns empty is str is smaller than begin
+            - FooStrAttribute.concat("00")
+            - FooStrAttribute.concat(BarStrAttribute)
+            - FooStrAttribute.concat(BarStrAttribute).substring(8)
+            - FooStrAttribute.asInteger() // lenient: any non-integer value becomes Integer.MIN_VALUE
+            - FooIntAttribute.asString()
+            - FooStrAttribute.asInteger(-1) // any non-integer value becomes -1; is this easy in SQL?
+            - FooStrAttribute.concat(FooIntAttribute.asString())
+            - FooStrAttribute.case("Y","y","T","t" : true ; "N","n","F", "f" : false ; default : false)
+            - FooStrAttribute.case("TAMS" : BarStringAttribute.subString(8) ; default : null )
+            - possibly later: FooStrAttribute.case(BarStringAttribute.subString(8): "TAMS" ; default : null )
+            - FooDateAttribute.dateDiffAsDays(BarDateAttribute)
+            - fooIntAttribute.min(fooIntBarAttribute)
+            - "header".concat(fooStrAttribute)
+            - 1234.min(fooIntAttribute)
+            - "bar".concat(FooStAttribute)
+        - define the xml syntax. simple expressions should be like above.
+    - use the attribute in relationships
+        - e.g. Account8Digit.concat(AccountSubType) to a 10 digit account
+    - indexing and caching of the computed result will be interesting.
+        - should the xml allow the developer to choose between cached/noncached?
+    - implement the mini-language in both java and sql
+    - mini-language parser has to be able to decide if an expression is reversible.
+    - for reversible expressions:
+        - generate setter
+        - generate better sql by applying the reverse function, so that the database can use its index
+            - e.g. x is defined as y*2 (which is reversible)
+                FooFinder.x().eq(12) should be translated to FOO.Y = 6, instead of FOO.Y * 2 = 12
+            - certain date functions (year, dateWithoutTime) can be translated to range queries
+        - Calculator needs new methods: boolean isReversible; Calculator getReverseCalculator
+    - generator:
+        - add the attribute to the abstract class, finder, list
+    - sql: with the exception of reversals, it would follow the calculator framework.
+        - need a bunch of new calculators
+    - once calculators are defined, add them to the normal attributes as well.
+
 - bug: when calling setFoo or setFooUntil on bitemporal objects, if the value of foo is the same, no change is made, even if the end date of the operation
     (via copyDetachedValueUntil, or setFooUntil) would change the timeline.
 - philosphy doc: 
     - stored procs: transaction management becomes very hard when stored procs are doing begin/commit/rollback
     - maybe talk about leaky abstractions more. no native queries. no "if your database supports..."
-- query subsetting
+- pool flushing when several connections fails
+- no: build doesn't seem to work in git-bash on windows
+    - use ./build.bat
+- done: support for object xml for more vendors
+- done: merge api
+    - shallow vs deep.
+    - shallow
+        - implemented on list, not single object to emphasize proper batching
+        - transactional (all at once) or eventual (batched)?
+        - choice of attributes to compare?
+        - hook methods for 
+            - matched, the same
+            - matched, different
+            - need update
+            - need insert
+            - need delete/terminate
+        - merge as upsert (no delete/terminate)
+    - if list is detached, all actions will be taken as detached, so the list will be attachable after call returns
+    
+- done: reduce the use of perma-temp tables
+- done: meta util. There are several places where we're using the meta data to do things. Should consolidate.
+- done: list relationship navigation and deep fetching should work better
+- done: query subsetting
     - a small shape hash table that's checked linearly.
         - add a shapeHashCode, shapeEquals methods to Operation
         - add a isSubsetOperation, getSuperSetOperationFromShape(shapeOp), getLeftOverOperation(shapeOp) (or maybe Pair the last two) methods to Operation
         - the hash will contain up to N (10?) shapes that are currently cached.
             - shape prevents deep fetch queries from overwhelming the table, because they all have the same shape
-- support for object xml for more vendors
-- done: list relationship navigation and deep fetching should work better
-- build doesn't seem to work in git-bash on windows
-- pool flushing when several connections fails
-- done: meta util. There are several places where we're using the meta data to do things. Should consolidate.
-- merge api

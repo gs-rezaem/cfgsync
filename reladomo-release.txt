@@ -1,10 +1,13 @@
 update the release notes
     git log <last release tag>..HEAD --oneline
     <last release tag> is just a version like 16.1.4
+update sign-release.sh
 update the version
+commit/pull request/merge
 tag on github using "create a release"
 fetch the tag locally
 	- git fetch --all
+    - git push origin --tags
 	- git checkout tags/16.1.1
 build clean prep-release
 sign-release
