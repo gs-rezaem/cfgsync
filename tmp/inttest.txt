@@ -1,0 +1,17 @@
+distance: 0.039732772199999954 bicDistance 0.0439820291 worst collisionality 6864 worst 6 collisions 7 total collisions above 4 16371 collisionality above 6700 24 for 2032784563 1753159371 14 15 12
+distance: 0.04824016929999996 bicDistance 0.0436356679 worst collisionality 6984 worst 6 collisions 7 total collisions above 4 16566 collisionality above 6700 24 for 1631179421 -984510107 17 14 11
+distance: 0.043128217400000037 bicDistance 0.0476714873 worst collisionality 6938 worst 6 collisions 7 total collisions above 4 16412 collisionality above 6700 26 for -571151701 -203719889 15 14 12
+distance: 0.04337819250000004 bicDistance 0.046770789300000004 worst collisionality 6934 worst 6 collisions 7 total collisions above 4 16802 collisionality above 6700 26 for -1172517581 -1688037685 14 13 12
+distance: 0.047055667299999986 bicDistance 0.0416389633 worst collisionality 6966 worst 6 collisions 7 total collisions above 4 16334 collisionality above 6700 26 for -1909183637 2072912203 16 14 11
+distance: 0.047893865400000006 bicDistance 0.04917696560000001 worst collisionality 6934 worst 6 collisions 7 total collisions above 4 16955 collisionality above 6700 26 for 1188648173 1975080373 15 15 12
+intresults.txt:distance: 0.04337819250000004 bicDistance 0.046770789300000004 worst collisionality 6934 worst 6 collisions 7 total collisions above 4 16802 collisionality above 6700 26 for -1172517581 -1688037685 14 13 12
+intresults.txt:distance: 0.047055667299999986 bicDistance 0.0416389633 worst collisionality 6966 worst 6 collisions 7 total collisions above 4 16334 collisionality above 6700 26 for -1909183637 2072912203 16 14 11
+distance: 0.040739069600000004 bicDistance 0.043110247200000014 worst collisionality 6984 worst 6 collisions 7 total collisions above 4 16934 collisionality above 6700 27 for -685184605 602657197 17 14 12
+distance: 0.04213620320000002 bicDistance 0.04849960520000001 worst collisionality 6914 worst 6 collisions 7 total collisions above 4 16775 collisionality above 6700 27 for -1364175653 1514575597 17 13 12
+distance: 0.04303407419999994 bicDistance 0.0468841645 worst collisionality 6976 worst 6 collisions 7 total collisions above 4 16670 collisionality above 6700 27 for 569777043 1446931891 19 14 11
+distance: 0.04530486550000007 bicDistance 0.0423566269 worst collisionality 6922 worst 6 collisions 7 total collisions above 4 16879 collisionality above 6700 27 for -772712755 1890833691 17 12 11
+distance: 0.04607945299999997 bicDistance 0.0420529427 worst collisionality 6888 worst 6 collisions 7 total collisions above 4 16993 collisionality above 6700 27 for 1756337513 -380378777 14 14 11
+distance: 0.04632590809999996 bicDistance 0.048727404499999995 worst collisionality 6940 worst 6 collisions 7 total collisions above 4 16739 collisionality above 6700 27 for -868164837 -787854935 15 14 12
+distance: 0.04674948890000001 bicDistance 0.0456480033 worst collisionality 6880 worst 6 collisions 7 total collisions above 4 16789 collisionality above 6700 27 for -391566059 934847833 17 15 11
+distance: 0.04846030390000006 bicDistance 0.0438896125 worst collisionality 6904 worst 6 collisions 7 total collisions above 4 16597 collisionality above 6700 27 for -1432513333 -1703956851 18 14 11
+distance: 0.048551110599999975 bicDistance 0.049566696 worst collisionality 6932 worst 6 collisions 7 total collisions above 4 16714 collisionality above 6700 27 for -928319853 1199879019 16 15 12
