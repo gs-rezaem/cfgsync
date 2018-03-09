@@ -1,0 +1,709 @@
+package test.unified;
+
+import com.gs.collections.api.block.procedure.primitive.IntLongProcedure;
+import com.gs.collections.api.block.procedure.primitive.IntProcedure;
+import com.gs.collections.impl.map.mutable.primitive.IntIntHashMap;
+import com.gs.collections.impl.map.mutable.primitive.IntLongHashMap;
+
+import java.security.SecureRandom;
+import java.util.Random;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class LongAvalanche3
+{
+//    private static int multA = 1781253595, multB = -1225741189, shiftA1 = 18, shiftA2 = 15, shiftA3 = 21;
+//    private static int multA = -440617573, multB = 1688686267, shiftA1 = 14, shiftA2 = 15, shiftA3 = 17;
+//    private static int multA = 1138357611, multB = 1510946149, shiftA1 = 15, shiftA2 = 15, shiftA3 = 12;
+//    private int multA = 1854960195, multB = -75769267, shiftA1 = 15, shiftA2 = 13, shiftA3 = 11; // gscollections
+//    private int multA = 87955609, multB = -39717811, shiftA1 = 15, shiftA2 = 13, shiftA3 = 13;
+//    private int multA = -1580643597, multB = -1511113269, shiftA1 = 20, shiftA2 = 13, shiftA3 = 11;
+//    private int multA = -438113649, multB = -895664459, shiftA1 = 17, shiftA2 = 16, shiftA3 = 12;  // good
+//    private int multA = -2028625517, multB = -88141139, shiftA1 = 14, shiftA2 = 16, shiftA3 = 12; // good
+//    private int multA = 901182645, multB = -1394667991, shiftA1 = 19, shiftA2 = 14, shiftA3 = 11; //good (36)
+//    private int multA = -1971317549, multB = -777438761, shiftA1 = 16, shiftA2 = 11, shiftA3 = 12; //good (37), no collisionality below 1000, slight weakness at 8300 and 24000
+//    private int multA = -1994509913, multB = 806919763, shiftA1 = 14, shiftA2 = 13, shiftA3 = 11; // good (38)
+//    private int multA = -579677387, multB = -1373036083, shiftA1 = 17, shiftA2 = 14, shiftA3 = 12; // excellent (39). perfect avalanche
+//    private int multA = 952457513, multB = 759933581, shiftA1 = 17, shiftA2 = 14, shiftA3 = 12; // good (34)
+//    private int multA = -1243722341, multB = 1156498869, shiftA1 = 14, shiftA2 = 15, shiftA3 = 11; // excellent (35)
+//    private int multA = -204445261, multB = -1166268715, shiftA1 = 16, shiftA2 = 15, shiftA3 = 12; // excellent (31) slight collisionality weakness at 387, 8001, distance: 0.046043996300000015 bicDistance 0.04994474020000001 worst collisionality 6924 worst 6 collisions 7 total collisions above 4 16438 collisionality above 6700 31 for -204445261 -1166268715 16 15 12
+//    private int multA = 1331827943, multB = -978975349, shiftA1 = 15, shiftA2 = 14, shiftA3 = 11; // excellent (34)
+//    private int multA = 1333097831, multB = 1219204941, shiftA1 = 13, shiftA2 = 14, shiftA3 = 12; // excellent (33) no interesting collisionality weakness distance: 0.049330129899999964 bicDistance 0.04705767999999999 worst collisionality 6984 worst 6 collisions 7 total collisions above 4 16535 collisionality above 6700 33 for 1333097831 1219204941 13 14 12
+//    private int multA = 0xE4324A59, multB = 0x45F0EE53, shiftA1 = 16, shiftA2 = 14, shiftA3 = 12; // *3* excellent (31) slight collisionality weakness at 114000. distance: 0.04483936450000001 bicDistance 0.0446740714 worst collisionality 6910 worst 6 collisions 7 total collisions above 4 16612 collisionality above 6700 31 for -466466215 1173417555 16 14 12
+//    private int multA = -2007764277, multB = 270999219, shiftA1 = 18, shiftA2 = 14, shiftA3 = 12; // good (32) slight collisionality weakness at 255, 312000. distance: 0.046554673700000083 bicDistance 0.0440937348 worst collisionality 6978 worst 6 collisions 7 total collisions above 4 16723 collisionality above 6700 32 for -2007764277 270999219 18 14 12
+//    private int multA = 0x4F6214E7, multB = 0xC5A6058B, shiftA1 = 15, shiftA2 = 14, shiftA3 = 11; // *3* excellent (34) slight collisionality weakness at 272000.  distance: 0.04624370439999998 bicDistance 0.0439498233 worst collisionality 6958 worst 6 collisions 7 total collisions above 4 16561 collisionality above 6700 34 for 1331827943 -978975349 15 14 11
+//    private int multA = 0xA0B83263, multB = 0xC98BDB3B, shiftA1 = 16, shiftA2 = 12, shiftA3 = 11; // *4* excellent (30) distance: 0.048044583300000096 bicDistance 0.0444304411 worst collisionality 6986 worst 6 collisions 7 total collisions above 4 16618 collisionality above 6700 30 for -1598541213 -913581253 16 12 11
+//    private int multA = 0x8C2BFD67, multB = 0xB67CE4D3, shiftA1 = 14, shiftA2 = 12, shiftA3 = 12; // *4* excellent (31) distance: 0.04925487069999998 bicDistance 0.0482723325 worst collisionality 6848 worst 6 collisions 7 total collisions above 4 16576 collisionality above 6700 31 for -1943274137 -1233328941 14 12 12
+//    private int multA = 0xACAB2A4D, multB = 0x5CC7DF53, shiftA1 = 15, shiftA2 = 15, shiftA3 = 12; // *5* excellent (30) distance: 0.04497084349999998 bicDistance 0.04369246940000001 worst collisionality 6974 worst 6 collisions 7 total collisions above 4 16483 collisionality above 6700 30 for -1398068659 1556602707 15 15 12
+//    private int multA = 0xBA1CCD33, multB = 0x9B6296CB, shiftA1 = 14, shiftA2 = 13, shiftA3 = 12; // *5* excellent (26) max bic at 0.0052 distance: 0.04337819250000004 bicDistance 0.046770789300000004 worst collisionality 6934 worst 6 collisions 7 total collisions above 4 16802 collisionality above 6700 26 for -1172517581 -1688037685 14 13 12
+//    private int multA = 1364571533, multB = 963485147, shiftA1 = 16, shiftA2 = 16, shiftA3 = 11; // excellent (28) slight collisionality weakness at 3200. distance: 0.043228006100000084 bicDistance 0.047536288299999986 worst collisionality 6982 worst 6 collisions 7 total collisions above 4 16831 collisionality above 6700 28 for 1364571533 963485147 16 16 11
+    private long multA = -6261870919139520145L, multB = 2747051607443084853L, shiftA1 = 23, shiftA2 = 39, shiftA3 = 37; // excellent (30) distance: 0.04711124179999999 bicDistance 0.04839732690000001 worst collisionality 6914 worst 6 collisions 7 total collisions above 4 16591 collisionality above 6700 30 for -643327259 -163351191 14 15 12
+
+
+    private SecureRandom random = new SecureRandom();
+
+    private static double[] randomCollisionProbability = {0.69409, 0.25293666666666664, 0.0465975, 0.0058200000000000005, 5.0E-4 };
+
+    private int sequenceMultiplier = 114000;
+    private int powerTwoShift = 0;
+
+    private static long[] randoms = new long[100000];
+
+    static
+    {
+        Random r = new Random(0x123456789ABCDL);
+        for(int i=0;i<randoms.length;i++) randoms[i] = r.nextLong();
+    }
+
+    public static void main(String[] args)
+    {
+//        System.out.println("random collisionality "+collisionalityWithCount());
+//        double[] collisionProbability = collisionProbability(1);
+//        for(int i=0;i<collisionProbability.length;i++)
+//        {
+//            System.out.println("Probability for "+i+" collisions "+collisionProbability[i]);
+//        }
+//        LongAvalanche3 longAvalanche = new LongAvalanche3();
+//        System.out.println("sequence collisionality " + longAvalanche.collisionalityWithCount());
+//        longAvalanche.printMultiplicativeCollisionality();
+//        longAvalanche.singleAvalanche();
+//        longAvalanche.singleBic();
+//        Collisionality collisionality = longAvalanche.computeFullCollisionality();
+//        System.out.println("collisionality " + collisionality);
+        if (args.length != 1)
+        {
+            usage();
+            System.exit(-1);
+        }
+        int threads = Integer.parseInt(args[0]);
+        multiThreadedSearch(threads);
+        new LongAvalanche3().searchAvalanche();
+
+    }
+
+    private static void usage()
+    {
+        System.err.println("Usage: LongAvalance3 <threads>");
+    }
+
+    public void singleBic()
+    {
+        int[][][] doubles = bicMatrix(100000);
+        double normalizer = 1/100000.0/100000.0;
+        System.out.print("distances: ");
+        double totalDistance = 0;
+        double maxBic = 0;
+        for (int i = 0; i < doubles.length; i++)
+        {
+            double lineDistance = 0;
+            for (int j = 0; j < doubles[i].length; j++)
+            {
+                for(int k= j + 1; k < doubles[i][j].length; k++)
+                {
+                    double bic = (doubles[i][j][k] - 50000.0) * (doubles[i][j][k] - 50000.0);
+                    if (bic > maxBic) maxBic = bic;
+                    lineDistance += bic;
+                }
+            }
+            lineDistance = lineDistance* normalizer;
+            totalDistance += lineDistance;
+            System.out.format("%.4f, ", lineDistance);
+        }
+        System.out.format("\n BIC Total %.4f Max %.4f\n", totalDistance, maxBic*normalizer);
+    }
+
+    public void printMultiplicativeCollisionality()
+    {
+        powerTwoShift = 0;
+        for (int i = 1; i < 5000; i++)
+        {
+            sequenceMultiplier = i;
+            long collisionality = collisionality();
+            if (collisionality > 6700)
+            {
+                System.out.println("large collisionalty " + collisionality + " for multiples of " + (i << powerTwoShift));
+            }
+        }
+        for(int k=0;k<6;k++)
+        {
+            powerTwoShift = k;
+            for (int i = 5000; i < 10000; i++)
+            {
+                sequenceMultiplier = i;
+                long collisionality = collisionality();
+                if (collisionality > 6700)
+                {
+                    System.out.println("large collisionalty " + collisionality + " for multiples of " + (i << powerTwoShift));
+                }
+            }
+        }
+    }
+
+    public Collisionality computeFullCollisionality()
+    {
+        Collisionality collisionality = new Collisionality();
+        IntIntHashMap map = new IntIntHashMap(24000);
+        final IntLongHashMap countPerCollision = new IntLongHashMap();
+        powerTwoShift = 0;
+        for (int i = 1; i < 5000; i++)
+        {
+            sequenceMultiplier = i;
+            updateCollisionality(collisionality, map, countPerCollision);
+        }
+        for(int k=0;k<6;k++)
+        {
+            powerTwoShift = k;
+            for (int i = 5000; i < 10000; i++)
+            {
+                sequenceMultiplier = i;
+                updateCollisionality(collisionality, map, countPerCollision);
+            }
+        }
+        return collisionality;
+    }
+
+    private void updateCollisionality(Collisionality result, IntIntHashMap map, IntLongHashMap countPerCollision)
+    {
+        map.clear();
+        countPerCollision.clear();
+        fillCollisionCount(map, countPerCollision);
+        long collsionality = computeCollsionality(countPerCollision);
+        if (collsionality > result.worstCollisionality)
+        {
+            result.worstCollisionality = collsionality;
+        }
+        if (collsionality > 6700)
+        {
+            result.collisionalityCountAboveThreshold++;
+        }
+        if (countPerCollision.get(6) > result.worstSixCollisions)
+        {
+            result.worstSixCollisions = (int) countPerCollision.get(6);
+        }
+        result.totalCollisionsAboveFour += (int) countPerCollision.get(5);
+        result.totalCollisionsAboveFour += (int) countPerCollision.get(6);
+        result.totalCollisionsAboveFour += (int) countPerCollision.get(7);
+        result.totalCollisionsAboveFour += (int) countPerCollision.get(8);
+        result.totalCollisionsAboveFour += (int) countPerCollision.get(9);
+    }
+
+    private long collisionality()
+    {
+        IntIntHashMap map = new IntIntHashMap();
+        final IntLongHashMap countPerCollision = new IntLongHashMap();
+        fillCollisionCount(map, countPerCollision);
+        return computeCollsionality(countPerCollision);
+    }
+
+    private long collisionalityWithCount()
+    {
+        IntIntHashMap map = new IntIntHashMap();
+        final IntLongHashMap countPerCollision = new IntLongHashMap();
+        fillCollisionCount(map, countPerCollision);
+        double[] bucketCount = computeBucketCount(1, countPerCollision);
+        for(int i=0;i<bucketCount.length;i++)
+        {
+            System.out.println("Count for "+i+" collisions "+bucketCount[i] + " buckets with "+(i+1)+" length chain "+bucketCount[i]/(i+1)+" as percent of total population "+bucketCount[i]/12000);
+        }
+
+        return computeCollsionality(countPerCollision);
+    }
+
+    private static long computeCollsionality(IntLongHashMap countPerCollision)
+    {
+        final long[] result = new long[1];
+        countPerCollision.forEachKeyValue(new IntLongProcedure()
+        {
+            @Override
+            public void value(int collision, long count)
+            {
+                if (collision > 0)
+                {
+                    result[0] += count * collision * collision;
+                }
+            }
+        });
+        return result[0];
+    }
+
+    /*
+    this code produces this result for a random sequence:
+Probability for 0 collisions 0.69409
+Probability for 1 collisions 0.25293666666666664
+Probability for 2 collisions 0.0465975
+Probability for 3 collisions 0.0058200000000000005
+Probability for 4 collisions 5.0E-4
+Probability for 5 collisions 4.9999999999999996E-5
+Probability for 6 collisions 5.833333333333334E-6
+     */
+    private double[] collisionProbability(final int retryCount)
+    {
+        IntIntHashMap map = new IntIntHashMap();
+        final IntLongHashMap countPerCollision = new IntLongHashMap();
+        for(int i=0;i<retryCount;i++)
+        {
+            fillCollisionCount(map, countPerCollision);
+        }
+        return computeBucketCount(retryCount, countPerCollision);
+    }
+
+    private double[] computeBucketCount(final int retryCount, IntLongHashMap countPerCollision)
+    {
+        final double[] result = new double[10];
+        countPerCollision.forEachKeyValue(new IntLongProcedure()
+        {
+            @Override
+            public void value(int collision, long count)
+            {
+                collision = Math.min(collision, 9);
+//                result[collision] = ((double)count) / retryCount/12000.0;
+                result[collision] = ((double)count) / retryCount;
+            }
+        });
+        return result;
+    }
+
+    private void fillCollisionCount(IntIntHashMap map, final IntLongHashMap countPerCollision)
+    {
+        map.clear();
+        for(int j=0;j<12000;j++)
+        {
+            long rand = smallSequence(j);
+            map.addToValue((int)(rand & ((1 << 15) - 1)), 1);
+        }
+        map.forEachValue(new IntProcedure()
+        {
+            @Override
+            public void value(int each)
+            {
+                countPerCollision.addToValue(each - 1, each);
+            }
+        });
+    }
+
+    private long smallSequence(int sequenceCounter)
+    {
+//        return random.nextInt();
+        return spread((sequenceCounter * sequenceMultiplier) << powerTwoShift);
+//        return spread((HashUtil.hash(100.0 + sequenceCounter * (sequenceMultiplier << powerTwoShift))));
+    }
+
+    private void searchAvalanche()
+    {
+        long avalancheReject = 0;
+        long avalanche2Reject = 0;
+        long bicReject = 0;
+        long collisionReject = 0;
+        long time = System.currentTimeMillis();
+        long start = time;
+        long count = 0;
+        MersenneTwister random = new MersenneTwister(getRandomSeed());
+        outer:
+        while(true)
+        {
+            count++;
+            long now = System.currentTimeMillis();
+            if (now > time + 60000)
+            {
+                time = now;
+                System.out.println("Thread "+Thread.currentThread().currentThread()+" sampled "+count+" in "+(now - start)/60000+" minutes; rejection rates "+avalancheReject+"/"+avalanche2Reject+"/"+bicReject+"/"+collisionReject);
+                random = new MersenneTwister(getRandomSeed());
+            }
+            avalancheReject++;
+            multA = random.nextLong() | 0x1;
+            multB = random.nextLong() | 0x1;
+            shiftA1 = random.nextInt(24) + 20;
+            shiftA2 = random.nextInt(24) + 20;
+            shiftA3 = random.nextInt(24) + 20;
+//            shiftA1 = random.nextInt(15) + 7;
+//            shiftA2 = random.nextInt(15) + 7;
+//            shiftA3 = random.nextInt(15) + 7;
+
+            double[][] doubles = avalancheMatrix(10000);
+
+            for (int i = 0; i < doubles.length; i++)
+            {
+                for (int j = 0; j < doubles[i].length; j++)
+                {
+                    if (doubles[i][j] < 0.01) continue outer;
+                }
+            }
+            double distance = distance(doubles);
+            if (distance > 1) continue outer;
+            avalancheReject--;
+            avalanche2Reject++;
+            doubles = avalancheMatrix(100000);
+            distance = distance(doubles);
+            if (distance < 0.09)
+            {
+                avalanche2Reject--;
+                bicReject++;
+                int[][][] bicMatrix = bicMatrix(100000);
+
+                double normalizer = 1 / 100000.0 / 100000.0;
+                double bicDistance = 0;
+                for (int i = 0; i < bicMatrix.length; i++)
+                {
+                    double lineDistance = 0;
+                    for (int j = 0; j < bicMatrix[i].length; j++)
+                    {
+                        for (int k = j + 1; k < bicMatrix[i][j].length; k++)
+                        {
+                            lineDistance += (bicMatrix[i][j][k] - 50000.0) * (bicMatrix[i][j][k] - 50000.0);
+                        }
+                    }
+                    bicDistance += lineDistance * normalizer;
+                }
+                if (bicDistance < 0.09)
+                {
+                    bicReject--;
+                    collisionReject++;
+                    Collisionality collisionality = computeFullCollisionality();
+                    if (collisionality.worstSixCollisions < 10 && collisionality.totalCollisionsAboveFour < 17000 && collisionality.worstCollisionality < 7000 && collisionality.collisionalityCountAboveThreshold < 45)
+                    {
+                        collisionReject--;
+                        System.out.println("distance: " + distance + " bicDistance " + bicDistance + collisionality + " for " + multA + " " + multB + " " + shiftA1 + " " + shiftA2 + " " + shiftA3);
+                    }
+                }
+            }
+        }
+
+    }
+
+    private long getRandomSeed()
+    {
+        long seed = System.currentTimeMillis();
+
+        seed ^= seed >>> 38;
+        seed *= -773893107679480649L;
+        seed ^= seed >>> 37;
+        seed *= -772586623568396355L;
+        seed ^= seed >>> 37;
+
+        long thread = Thread.currentThread().getId();
+
+        thread ^= thread >>> 22;
+        thread *= -1979714423172026283L;
+        thread ^= thread >>> 30;
+        thread *= 2922149704718120337L;
+        thread ^= thread >>> 27;
+
+        return seed ^ thread;
+    }
+
+    public void singleAvalanche()
+    {
+        double[][] doubles = avalancheMatrix(100000);
+        for (int i = 0; i < doubles.length; i++)
+        {
+            for (int j = 0; j < doubles[i].length; j++)
+            {
+                System.out.format("[%.2f]", doubles[i][j]);
+            }
+            System.out.println("\n");
+        }
+
+        System.out.print("distances: ");
+        double totalDistance = 0;
+        double maxAva = 0;
+        for (int i = 0; i < doubles.length; i++)
+        {
+            double lineDistance = 0;
+            for (int j = 0; j < doubles[i].length; j++)
+            {
+                double ava = (doubles[i][j] - 0.5) * (doubles[i][j] - 0.5);
+                if (ava > maxAva) maxAva = ava;
+                lineDistance += ava * (32 - j);
+            }
+            totalDistance += lineDistance;
+            System.out.format("%.3f, ", lineDistance);
+        }
+        System.out.format("\n Total %.4f Max %.4f\n", totalDistance, maxAva);
+    }
+
+    private double distance()
+    {
+        double[][] doubles = avalancheMatrix(100000);
+
+        return distance(doubles);
+    }
+
+    private static double distance(double[][] doubles)
+    {
+        double totalDistance = 0;
+        for (int i = 0; i < doubles.length; i++)
+        {
+            double lineDistance = 0;
+            for (int j = 0; j < doubles[i].length; j++)
+            {
+                lineDistance += (doubles[i][j] - 0.5) * (doubles[i][j] - 0.5) * (32-j);
+            }
+            totalDistance += lineDistance;
+        }
+        return totalDistance;
+    }
+
+    public double[][] avalancheMatrix(int trials)
+    {
+        long state = 0;
+
+        int hashSize = 32;
+        int keySize = 64;
+
+        if (hashSize != 32)
+        {
+            throw new RuntimeException(
+                    "Hash must be 32 bits.");
+        }
+
+        if (trials <= 0)
+        {
+            throw new IndexOutOfBoundsException();
+        }
+
+        double dTrials = trials;
+        ThreadLocalRandom rng = new ThreadLocalRandom();
+        int[][] t = new int[keySize][hashSize];
+
+        while (trials-- > 0)
+        {
+            long save = state = rng.nextLong();
+
+            long inb = spread(state);
+
+            for (int i = 0; i < keySize; i++)
+            {
+                state = sequence(save, i);
+
+                long mix = spread(state);
+                long outb = mix ^ inb;
+                for (int j = 0; j < hashSize; j++)
+                {
+                    if ((outb & 1) != 0)
+                    {
+                        t[i][j]++;
+                    }
+                    outb >>>= 1;
+                }
+            }
+        }
+
+        double[][] result = new double[keySize][hashSize];
+        for (int i = 0; i < keySize; i++)
+        {
+            for (int j = 0; j < hashSize; j++)
+            {
+                result[i][j] = t[i][j] / dTrials;
+            }
+        }
+        return result;
+    }
+
+    public int[][][] bicMatrix(int trials)
+    {
+        int hashSize = 32;
+        int keySize = 64;
+
+        if (hashSize != 32)
+        {
+            throw new RuntimeException(
+                    "Hash must be 32 bits.");
+        }
+
+        if (trials <= 0)
+        {
+            throw new IndexOutOfBoundsException();
+        }
+
+        ThreadLocalRandom rng = new ThreadLocalRandom();
+        int[][][] t = new int[keySize][hashSize][hashSize];
+
+        while (trials-- > 0)
+        {
+            long initial = rng.nextLong();
+
+            long inb = spread(initial);
+
+            for (int i = 0; i < keySize; i++)
+            {
+                long state = sequence(initial, i);
+
+                long mix = spread(state);
+                long outb = mix ^ inb;
+                for (int j = 0; j < hashSize; j++)
+                {
+                    for(int k=j + 1; k < hashSize; k++)
+                    {
+                        long probe = (1L << j ) | (1L << k);
+                        long flipped = outb & probe;
+                        if (flipped == 0 || flipped == probe)
+                        {
+                            t[i][j][k]++;
+                        }
+                    }
+                }
+            }
+        }
+        return t;
+//        double[][][] result = new double[keySize][hashSize][hashSize];
+//        for (int i = 0; i < keySize; i++)
+//        {
+//            for (int j = 0; j < hashSize; j++)
+//            {
+//                for(int k=j + 1; k < hashSize; k++)
+//                {
+//                    result[i][j][k] = t[i][j][k] / dTrials;
+//                }
+//            }
+//        }
+//        return result;
+    }
+
+    private static final long A = 1024;
+    private static final long B = 1;
+
+
+    public static long sequence(long initial, int sequenceStep)
+    {
+        return initial ^ (1 << sequenceStep);
+    }
+
+    public static class ThreadLocalRandom
+    {
+        private int location;
+
+        public ThreadLocalRandom()
+        {
+        }
+
+        public long nextLong()
+        {
+            return randoms[location++];
+        }
+    }
+
+    private static class Collisionality
+    {
+        private long worstCollisionality;
+        private int collisionalityCountAboveThreshold;
+        private int worstSixCollisions;
+        private int totalCollisionsAboveFour;
+
+        @Override
+        public String toString()
+        {
+            return " worst collisionality "+worstCollisionality+" worst 6 collisions "+worstSixCollisions+" total collisions above 4 "+totalCollisionsAboveFour+" collisionality above 6700 "+collisionalityCountAboveThreshold;
+        }
+    }
+
+    private static void multiThreadedSearch(int threads)
+    {
+//        int threads = Runtime.getRuntime().availableProcessors() - 1;
+        ExecutorService service = Executors.newFixedThreadPool(threads);
+        for(int i=0;i<threads;i++)
+        {
+            service.submit(new SearchRunnable());
+        }
+    }
+
+    private static class SearchRunnable implements Runnable
+    {
+        @Override
+        public void run()
+        {
+            new LongAvalanche3().searchAvalanche();
+        }
+    }
+
+    public long spread(long state)
+    {
+//        int h = state;
+//        h ^= (h >>> 20) ^ (h >>> 12);
+//        h = h ^ (h >>> 7) ^ (h >>> 4);
+//        return h;
+
+        long hash1 = state;
+        hash1 ^= hash1 >>> shiftA1;
+        hash1 *= multA;
+        hash1 ^= hash1 >>> shiftA2;
+        hash1 *= multB;
+        hash1 ^= hash1 >>> shiftA3;
+
+        return hash1;
+
+//        int hash1 = state;
+//        hash1 ^= hash1 >>> shiftA1;
+//        hash1 *= multA;
+//        hash1 ^= hash1 >>> shiftA2;
+//
+//        return hash1;
+//
+//        hash1 ^= hash1 >>> 16;
+//        hash1 *= 0x85ebca6b;
+//        hash1 ^= hash1 >>> 13;
+//        hash1 *= 0xc2b2ae35;
+//        hash1 ^= hash1 >>> 16;
+//
+//        return hash1;
+    }
+}
+/*
+distance: 32.330690755199996 zeros: 0 for 1512941995 17 16
+distance: 32.3507267174 zeros: 0 for 1807313581 16 17
+distance: 33.42519253059999 zeros: 0 for 212683575 15 16
+distance: 34.0368114286 zeros: 0 for 376354093 16 15
+distance: 34.6174594088 zeros: 0 for 1934992565 16 17
+distance: 34.724393728399995 zeros: 0 for -279620135 16 15
+distance: 35.3786215954 zeros: 0 for -481514819 17 16
+distance: 37.35238570880001 zeros: 0 for 1781388123 16 16
+distance: 37.236378585 zeros: 0 for 1471010123 16 17
+distance: 36.91296365819999 zeros: 0 for 860140755 16 16
+
+ */
+/* gs collections:
+code ^= code >>> 15;
+code *= 1854960195;
+code ^= code >>> 13;
+code *= -75769267 ;
+code ^= code >>> 11;
+
+ */
+/*
+distance:	0.045997665	bicDistance	0.048030944	for	1138357611	1510946149	15	15	12
+distance:	0.05009786	bicDistance	0.057228688	for	364860101	1624875307	16	17	11
+
+distance: 0.04922711640000005 bicDistance 0.0580327642 worst collisionality 6944 worst 6 collisions 14 total collisions above 4 16842 collisionality above 6700 45 for 1655154803 1424623835 16 16 12
+distance: 0.04894288650000003 bicDistance 0.0791406894 worst collisionality 6968 worst 6 collisions 7 total collisions above 4 16857 collisionality above 6700 33 for 279230683 -1514248837 15 18 12
+
+avalanche < 0.06, bic < 0.06, worst coll < 7000, total coll < 17000, coll count < 50
+distance: 0.05334161849999998 bicDistance 0.05101672390000002 worst collisionality 6934 worst 6 collisions 7 total collisions above 4 16857 collisionality above 6700 49 for -1769450725 649113821 16 16 11
+distance: 0.05204444640000001 bicDistance 0.0548828823 worst collisionality 6980 worst 6 collisions 7 total collisions above 4 16634 collisionality above 6700 49 for -1441569229 1940462219 18 16 11
+distance: 0.05289014199999999 bicDistance 0.04175115489999999 worst collisionality 6910 worst 6 collisions 7 total collisions above 4 16644 collisionality above 6700 49 for -1824156327 -627494757 15 14 11
+distance: 0.05135256719999997 bicDistance 0.04236092700000001 worst collisionality 6924 worst 6 collisions 7 total collisions above 4 16820 collisionality above 6700 49 for -1705577259 -1769117909 14 15 10
+distance: 0.05075994789999994 bicDistance 0.05675795500000001 worst collisionality 6994 worst 6 collisions 7 total collisions above 4 16569 collisionality above 6700 46 for -1427657575 -384871003 19 13 11
+distance: 0.04866534439999998 bicDistance 0.044761418999999976 worst collisionality 6970 worst 6 collisions 7 total collisions above 4 16683 collisionality above 6700 49 for -594041561 -1436087731 15 13 12
+distance: 0.04976715220000005 bicDistance 0.059886968600000014 worst collisionality 6982 worst 6 collisions 7 total collisions above 4 16995 collisionality above 6700 47 for 1718830381 -1956216281 17 15 12
+distance: 0.05441973270000003 bicDistance 0.04379218520000001 worst collisionality 6964 worst 6 collisions 7 total collisions above 4 16955 collisionality above 6700 49 for -638536855 -157469521 15 14 11
+distance: 0.05734429059999995 bicDistance 0.0438369431 worst collisionality 6918 worst 6 collisions 7 total collisions above 4 16388 collisionality above 6700 43 for -947171997 1333585129 16 13 11
+distance: 0.04819421239999988 bicDistance 0.04322540810000001 worst collisionality 6930 worst 6 collisions 7 total collisions above 4 16824 collisionality above 6700 41 for -359835481 72989979 16 15 11
+distance: 0.04175230410000001 bicDistance 0.05455944079999999 worst collisionality 6972 worst 6 collisions 7 total collisions above 4 16806 collisionality above 6700 48 for -1340900629 254494163 16 13 12
+distance: 0.05768417519999997 bicDistance 0.04485016569999999 worst collisionality 6918 worst 6 collisions 7 total collisions above 4 16863 collisionality above 6700 49 for 1907176613 1212605003 17 12 11
+distance: 0.05205467580000004 bicDistance 0.05417953410000002 worst collisionality 6998 worst 6 collisions 7 total collisions above 4 16770 collisionality above 6700 40 for -3331811 1584409707 18 14 12
+distance: 0.059852741100000016 bicDistance 0.046981622299999984 worst collisionality 6922 worst 6 collisions 7 total collisions above 4 16606 collisionality above 6700 48 for -631183205 -855699107 16 12 11
+distance: 0.05471900059999992 bicDistance 0.04787302380000002 worst collisionality 6848 worst 6 collisions 7 total collisions above 4 16632 collisionality above 6700 37 for -1971317549 -777438761 16 11 12
+distance: 0.05452340570000003 bicDistance 0.04502669709999999 worst collisionality 6974 worst 6 collisions 7 total collisions above 4 16634 collisionality above 6700 46 for 981742491 1629592139 16 13 10
+distance: 0.04673703000000003 bicDistance 0.04461932530000001 worst collisionality 6986 worst 6 collisions 7 total collisions above 4 16998 collisionality above 6700 46 for 1075031187 -1369784915 14 14 10
+distance: 0.050223175600000024 bicDistance 0.055761861999999975 worst collisionality 6978 worst 6 collisions 7 total collisions above 4 16092 collisionality above 6700 46 for 1545237945 1701039403 17 13 12
+distance: 0.05712906409999989 bicDistance 0.045083544400000015 worst collisionality 6952 worst 6 collisions 7 total collisions above 4 16690 collisionality above 6700 47 for 879102893 1249400175 16 12 11
+distance: 0.056206262199999926 bicDistance 0.05815391109999999 worst collisionality 6968 worst 6 collisions 7 total collisions above 4 16909 collisionality above 6700 38 for -979006555 322110153 14 13 12
+distance: 0.04482657199999999 bicDistance 0.0531501837 worst collisionality 6936 worst 6 collisions 7 total collisions above 4 16962 collisionality above 6700 48 for 1668936853 -1854667481 16 15 12
+distance: 0.05634774939999991 bicDistance 0.05860845439999998 worst collisionality 6988 worst 6 collisions 7 total collisions above 4 16482 collisionality above 6700 45 for -669174711 -1951307417 17 12 12
+distance: 0.05455713009999999 bicDistance 0.05916186709999997 worst collisionality 6950 worst 6 collisions 7 total collisions above 4 16881 collisionality above 6700 43 for 582093493 -2006363293 19 14 12
+distance: 0.046043996300000015 bicDistance 0.04994474020000001 worst collisionality 6924 worst 6 collisions 7 total collisions above 4 16438 collisionality above 6700 31 for -204445261 -1166268715 16 15 12
+distance: 0.04847467520000006 bicDistance 0.04310550180000001 worst collisionality 6914 worst 6 collisions 7 total collisions above 4 16203 collisionality above 6700 36 for -9361755 1045311787 14 13 11
+distance: 0.04439004049999994 bicDistance 0.04348633620000001 worst collisionality 6980 worst 6 collisions 7 total collisions above 4 16976 collisionality above 6700 39 for 171607899 -57401703 16 12 11
+distance: 0.04845722440000001 bicDistance 0.0582993319 worst collisionality 6890 worst 6 collisions 7 total collisions above 4 16773 collisionality above 6700 35 for -1472418665 865987887 13 16 12
+distance: 0.04624370439999998 bicDistance 0.0439498233 worst collisionality 6958 worst 6 collisions 7 total collisions above 4 16561 collisionality above 6700 34 for 1331827943 -978975349 15 14 11
+
+
+ */
